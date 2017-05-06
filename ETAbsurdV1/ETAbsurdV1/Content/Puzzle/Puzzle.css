@@ -1,0 +1,205 @@
+﻿.puzzle-showcase-box{
+    margin-top:20px;
+    background-color:#3A3A3C;
+
+    box-shadow:5px 5px 7px 0px black;
+    text-shadow:1px 1px black;
+    color:white;
+    padding:40px;
+    
+    font-family:'Philosopher-Regular';
+}
+
+.post-option{
+    color: #EEBA4C;
+    font-size:120%;
+    cursor:pointer;
+    padding-left:7px;
+    padding-right:7px;
+}
+
+.post-option:hover{
+    text-decoration:underline;
+}
+
+
+
+/*Voting*/
+
+
+.voter {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 10%;
+    height: 100%;
+}
+
+
+.vote-section{
+    position:absolute;
+    
+    height:100%;
+    width:100%;
+    min-width:30px;
+    text-align:center;
+
+    font-size:25px;
+    text-shadow:1px 1px #EEBA4C;
+}
+
+.up-vote {
+    position: relative;
+    right: 0;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+.down-vote{
+    transform:translateY(-100px);
+    position:relative;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top:140px;   
+
+}
+
+/*Comment Section*/
+
+.blog-comment-create{
+    padding:20px;
+}
+.blog-comment-create-button{
+    padding:20px;
+}
+
+.blog-comment-create-button > input{
+    width:50%;
+    float:right;
+
+}
+
+
+
+
+
+
+.post-submit-load{
+    overflow:hidden;
+    height:34px;
+    position:relative;
+
+    border-radius:15px;
+    border:1px solid black;
+    box-shadow:0 0 5px 0 black;
+
+    background-color:#535356;
+}
+
+.post-load-line{
+    position:absolute;
+    width:100%;
+    top:15px;
+
+    height:1px;
+    background-color:#7fffd4;
+    box-shadow:0 0 7px 2px #7fffd4;
+}
+
+.post-load-blip{
+    position:absolute;
+    width:7px;
+    height:7px;    
+    top:13px;
+    left:-10%;
+
+    border-radius:100%;
+    
+    background-color:#EEBA4C;
+
+    box-shadow:0 0 7px 2px #EEBA4C;
+    box-shadow:0 0 40px 50px #EEBA4C;
+
+    -moz-animation:post-blip 1s infinite;
+    -webkit-animation:post-blip 1s infinite;
+    animation:post-blip 1s infinite;
+}
+
+
+@keyframes post-blip {
+    0%{        
+    }    
+    100%{       
+        left:120%;
+        box-shadow:0 0 40px 50px #EEBA4C;
+    }
+}
+
+
+.blog-submit-load{
+    display:none;
+    overflow:hidden;
+    height:34px;
+    position:relative;
+
+    border-radius:15px;
+    border:1px solid black;
+    box-shadow:0 0 5px 0 black;
+
+    background-color:#535356;
+    width:50%;
+    left:50%;
+}
+
+.blog-load-line{
+    position:absolute;
+    width:100%;
+    top:15px;
+
+    height:1px;
+    background-color:#7fffd4;
+    box-shadow:0 0 7px 2px #7fffd4;
+}
+
+.blog-load-blip{
+    position:absolute;
+    width:7px;
+    height:7px;    
+    top:13px;
+    left:-10%;
+
+    border-radius:100%;
+    
+    background-color:#EEBA4C;
+
+    box-shadow:0 0 7px 2px #EEBA4C;
+    box-shadow:0 0 40px 50px #EEBA4C;
+
+    -moz-animation:post-blip 1s infinite;
+    -webkit-animation:post-blip 1s infinite;
+    animation:post-blip 1s infinite;
+}
+
+
+.this-comment{
+    padding:15px;
+    border-bottom:3px ridge #EEBA4C;
+}
+
+.comment-author{
+    font-weight:800;
+}
+
+.comment-body{
+    border-left:3px ridge #EEBA4C;
+    padding-left:5px;
+}
+
+.comment-date{
+    float:right;
+    font-size:80%;
+}
+

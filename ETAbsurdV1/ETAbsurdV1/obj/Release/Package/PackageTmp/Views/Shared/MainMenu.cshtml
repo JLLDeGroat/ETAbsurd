@@ -1,0 +1,176 @@
+﻿
+<li class="navigation-button">
+    <a>Menu</a>
+    <div class="navigation-secondary">
+        <ul class="navigation-secondary-list">
+            <li class="navigation-to-tertiary" onclick="window.location = '@Url.Action("HomePage","Home")'">
+                Home Page               
+            </li>
+            <li class="navigation-list-divider"></li>
+            <li class="navigation-to-tertiary">
+                Settings
+                <div class="navigation-tertiary">
+                    <ul class="navigation-tertiary-list">
+                        <li class="" onclick="window.location = '@Url.Action("ControlPanel","Account")'">
+                            Control Panel
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="" onclick="window.location = '@Url.Action("Index", "Forum")'">
+                            Recent
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="" onclick="window.location = '@Url.Action("Followedindex","Blog", new { User.Identity.Name })'">
+                            Followed Users
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="" onclick="window.location = '@Url.Action("ControlPanel","Account")'">
+                            Settings
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navigation-list-divider"></li>
+            <li class="navigation-to-tertiary">
+                Blogs
+                <div class="navigation-tertiary">
+                    <ul class="navigation-tertiary-list">
+                        <li class="" onclick="window.location = '@Url.Action("Index","Blog")'">
+                            Index
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="" onclick="window.location = '@Url.Action("NewBlog","Blog")'">
+                            New Blog
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="" onclick="window.location = '@Url.Action("Bloggers","Blog")'">
+                            Bloggers
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navigation-list-divider"></li>
+            <!--
+            <li class="" onclick="window.location = '@Url.Action("Home", "Faction")'">
+                Faction
+            </li>
+            <li class="navigation-list-divider"></li>
+            -->
+            <li class="navigation-to-tertiary">
+                Lastest
+                <div class="navigation-tertiary">
+                    <ul class="navigation-tertiary-list">
+                        <li class="" onclick="window.location = '@Url.Action("Index","Blog")'">
+                            Blogs
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="" onclick="window.location = '@Url.Action("Index", "Forum")'">
+                            forum
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="" onclick="window.location = '@Url.Action("Index","Faction")'">
+                            Faction
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navigation-list-divider"></li>
+            <!--
+            <li class="navigation-to-tertiary">
+                Games
+                <div class="navigation-tertiary">
+                    <ul class="navigation-tertiary-list">
+                        <li class="" onclick="window.location = '@Url.Action("Index", "Game")'">
+                            Index
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="">
+                            Genre
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="">
+                            Makers
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navigation-list-divider"></li>
+            -->
+            <li class="navigation-to-tertiary">
+                Contact
+                <div class="navigation-tertiary">
+                    <ul class="navigation-tertiary-list">
+                        <li class="" onclick="window.location = '@Url.Action("Contact", "ContactUs")'">
+                            Contact Us
+                        </li>
+                        <li class="navigation-list-divider"></li>  
+                    </ul>
+                </div>
+            </li>
+            <li class="navigation-list-divider"></li>
+        </ul>
+    </div>
+</li>
+
+<li class="navigation-button" id="Faction-Navigation-Button">
+    <a id="Faction-Navigation-Faction"></a>
+    <div class="navigation-secondary">
+        <ul class="navigation-secondary-list">
+            <li class="navigation-to-tertiary">
+                Faction Home
+                <div class="navigation-tertiary">
+                    <ul class="navigation-tertiary-list">
+                        <li class="" onclick="window.location = '@Url.Action("Home","Faction")'">
+                            Dashboard
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <!--
+                        <li classs="">
+                            Contribution
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        -->
+                    </ul>
+                </div>
+            </li>
+            <li class="navigation-list-divider"></li>
+            <!--
+            <li class="navigation-to-tertiary">
+                Games
+                <div class="navigation-tertiary">
+                    <ul class="navigation-tertiary-list">
+                        <li class="">
+                            Riddles
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="">
+                            Lateral thinking
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navigation-list-divider"></li>
+            <li class="navigation-to-tertiary">
+                Info
+                <div class="navigation-tertiary">
+                    <ul class="navigation-tertiary-list">
+                        <li class="">
+                            Faction
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                        <li class="">
+                            Other
+                        </li>
+                        <li class="navigation-list-divider"></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navigation-list-divider"></li>
+            -->
+        </ul>
+    </div>
+</li>

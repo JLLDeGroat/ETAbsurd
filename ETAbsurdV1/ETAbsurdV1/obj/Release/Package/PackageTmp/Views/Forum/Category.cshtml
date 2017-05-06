@@ -1,0 +1,224 @@
+﻿@model ETAbsurdV1.Models.ForumSearchRefinementModel
+
+@{
+    ViewBag.Title = "Category";
+
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> ThreadList = ViewData["ThreadList"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> RefineList = ViewData["RefinedThreads"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> SubRefineList = ViewData["SubRefinedThreads"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+}
+@Styles.Render("~/Content/Forum/css")
+
+@Html.Partial("BannerAd")
+
+@Html.Partial("Crumbs")
+
+<div class="row">
+    <div class="col-md-12 forum-row">
+        <h2 class="h-speak">
+            Category: @ViewData["ClickedCategory"]
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-md-push-9">
+            <div class="forum-search-refine">
+                <h5 class="h-speak">
+                    Options and refinement
+                </h5>
+                @using (Html.BeginForm())
+                {
+                    <h5 class="advance-refinement" id="Advance-Refinement">Advanced</h5>
+                    <h3 class="forum-refine-title">Phrase</h3>
+                    @Html.TextBoxFor(p => p.SearchPhrase, new { @class = "form-control" })
+                    <div class="advanced-option">
+                        <!--
+                        <h3 class="forum-refine-title">Tags</h3>   Tags not in proper use yet
+                        @Html.TextBoxFor(p => p.SearchTags, new { @class = "form-control" })
+                        -->
+                        <br />
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h4 class="forum-refine-title">Recent</h4>
+                            </div>
+                            <div class="col-xs-6">
+                                <select class="form-control" id="forum-search-refine-date">
+                                    <option disabled="disabled" selected="selected">Date</option>
+                                    <option value="1">Past 24 Hours</option>
+                                    <option value="7">Past Week</option>
+                                    <option value="30">Past Month</option>
+                                    <option value="365">Past Year</option>
+                                </select>
+                                @Html.TextBoxFor(p => p.SearchDate, new { @class = "form-control hdn" })
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <input type="submit" class="form-control submit-button" value="Refine" />
+                }
+            </div>
+        </div>
+        <div class="col-md-9 col-md-pull-3">
+            @if (ThreadList != null)
+            {
+                if (RefineList != null)
+                {
+                    foreach (var item in RefineList)
+                    {
+                        <div class="row forum-row thread-row spawn-in" onclick="window.location = '@Url.Action("Thread","Forum", new { Id = @item.Id })'">
+                            <div class="thread-row-after">
+
+                            </div>
+                                <div class="row">
+                                    <div class="col-sm-10 col-xs-10">
+                                        <p class="forum-thread-title">@item.Name</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <p class="forum-author">@item.Author</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-offset-4 col-sm-6 col-md-offset-4 col-md-6 col-xs-10">
+                                        <div class="row forum-stats">
+                                            <div class="col-xs-4 forum-upvotes">
+                                                <p class="vote-title">Up</p>
+                                                <hr />
+                                                @item.UpVotes
+                                            </div>
+                                            <div class="col-xs-4 forum-downvotes">
+                                                <p class="vote-title">Down</p>
+                                                <hr />
+                                                @item.DownVotes
+                                            </div>
+                                            <div class="col-xs-4 forum-votes">
+                                                <p class="vote-title">Sum</p>
+                                                <hr />
+                                                @item.Votes
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 hidden-xs">
+                                        <img src="@item.AuthorAvatar" class="forum-thumb-img" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <article class="forum-body">@item.Body</article>
+                                        <p class="forum-date">@item.Date</p>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    }
+                    if (SubRefineList != null)
+                    {
+                        foreach (var subitem in SubRefineList)
+                        {
+                            <div class="row forum-row thread-row spawn-in" onclick="window.location = '@Url.Action("Thread","Forum", new { Id = @subitem.Id })'">
+                                <div class="thread-row-after">
+
+                                </div>
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-10">
+                                            <p class="forum-thread-title">@subitem.Name</p>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <p class="forum-author">@subitem.Author</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-offset-4 col-sm-6 col-md-offset-4 col-md-6 col-xs-10">
+                                            <div class="row forum-stats">
+                                                <div class="col-xs-4 forum-upvotes">
+                                                    <p class="vote-title">Up</p>
+                                                    <hr />
+                                                    @subitem.UpVotes
+                                                </div>
+                                                <div class="col-xs-4 forum-downvotes">
+                                                    <p class="vote-title">Down</p>
+                                                    <hr />
+                                                    @subitem.DownVotes
+                                                </div>
+                                                <div class="col-xs-4 forum-votes">
+                                                    <p class="vote-title">Sum</p>
+                                                    <hr />
+                                                    @subitem.Votes
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 hidden-xs">
+                                            <img src="@subitem.AuthorAvatar" class="forum-thumb-img" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <article class="forum-body">@subitem.Body</article>
+                                            <p class="forum-date">@subitem.Date</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (var item in ThreadList)
+                    {
+                        <div class="row forum-row thread-row spawn-in" onclick="window.location = '@Url.Action("Thread","Forum", new { Id = @item.Id })'">
+                            <div class="thread-row-after">
+
+                            </div>
+                                <div class="row">
+                                    <div class="col-sm-10 col-xs-10">
+                                        <p class="forum-thread-title">@item.Name</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <p class="forum-author">@item.Author</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-offset-4 col-sm-6 col-md-offset-4 col-md-6 col-xs-10">
+                                        <div class="row forum-stats">
+                                            <div class="col-xs-4 forum-upvotes">
+                                                <p class="vote-title">Up</p>
+                                                <hr />
+                                                @item.UpVotes
+                                            </div>
+                                            <div class="col-xs-4 forum-downvotes">
+                                                <p class="vote-title">Down</p>
+                                                <hr />
+                                                @item.DownVotes
+                                            </div>
+                                            <div class="col-xs-4 forum-votes">
+                                                <p class="vote-title">Sum</p>
+                                                <hr />
+                                                @item.Votes
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 hidden-xs">
+                                        <img src="@item.AuthorAvatar" class="forum-thumb-img" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <article class="forum-body">@item.Body</article>
+                                        <p class="forum-date">@item.Date</p>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    }
+                }
+            }
+            else
+            {
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
+@Scripts.Render("~/Scripts/Forum/Category/js")

@@ -1,0 +1,215 @@
+﻿.forum-row{
+    background-color:#3A3A3C;
+    color:white;
+    text-shadow: 1px 1px black;
+}
+
+.category-index-box{
+    padding:0px;
+}
+
+.category-box{
+    display:inline-block;
+    min-width:10%;
+    max-width:40%;
+    padding:2px;
+
+    text-align:center;
+    border-radius:10px;
+    border: 1px solid #EEBA4C;
+}
+
+.category-row-box{
+    height:62px;
+    cursor:pointer;  
+}
+.category-row-box:hover> .colour-percentage{
+    -webkit-transition:ease 1s;
+    -moz-transition:ease 1s;
+    transition:ease 1s;
+
+    background-color:black;
+}
+.category-row-box > .colour-percentage {
+    -webkit-transition:ease 1s;
+    -moz-transition:ease 1s;
+    transition:ease 1s;
+}
+
+
+.category-row{
+    padding:10px;
+}
+
+.category-row > div{
+    border:1px solid #EEBA4C;
+    background-color:rgba(127,255,212, 0.7);
+    border-radius:25px;    
+
+    box-shadow: 0px 0px 10px 10px #7FFFD4 inset;
+
+    overflow:hidden;
+}
+
+.colour-percentage{
+    position:absolute;
+
+    left:50%;
+    height:62px;
+    width:1px;
+    
+    z-index:1;
+    text-align:center;
+
+    box-shadow:0px 0px 200px 100px #EEBA4C;
+    border-radius:50px;
+    /*background-color: #EEBA4C;*/
+}
+
+
+.forum-title,
+.percentage{
+    font-family:'Segoe MDL2 Assets';
+    opacity:0;
+}
+
+
+/*Forum Test section 3*/
+.category-top-section{
+    border-radius:10px;
+    border:1px black solid;
+    padding:5px;
+
+    cursor:pointer;
+
+    background-color: rgba(127, 255, 212, 0.3);
+    border:3px ridge #58b294; 
+   
+    color:black;
+
+    text-shadow: 1px 1px #EEBA4C;
+
+    -webkit-transition:ease 1s;
+    -moz-transition:ease 1s;
+    transition:ease 1s;
+}
+
+.category-top-section:hover{
+    -moz-animation:lighting 1s ease;
+    -webkit-animation:lighting 1s ease;
+    animation:lighting 1s ease;
+    animation-fill-mode:forwards;
+}
+
+.category-top-name{
+    font-family: CGFLocustResistance;
+    text-align: center;
+}
+.category-top-details{
+
+}
+
+.latest{
+    font-family: CGFLocustResistance;
+    font-size:10px
+}
+.latest-item{
+    font-family:ASENINE;
+    font-size:15px;
+
+    
+}
+.popular{
+    font-family: CGFLocustResistance;
+    font-size:10px;
+}
+.popular-item{
+    font-family:ASENINE;
+    font-size:15px;
+}
+
+.forum-thumb-img{
+    width:100%;
+}
+
+/*Menu Bar*/
+.option-row{
+    background-color:#3A3A3C;
+    padding:10px;
+}
+.option-row > div{
+    padding:10px;
+}
+
+.menu-btn{
+    width:100%;
+    font-family:CGFLocustResistance;
+    text-shadow: 1px 1px #EEBA4C;
+    border: 3px ridge #7FFFD4;
+    background-color:rgba(127, 255, 212, 0.3);
+
+     -webkit-transition:ease 1s;
+    -moz-transition:ease 1s;
+    transition:ease 1s;
+}
+.menu-btn:hover{
+    -webkit-transition:ease 1s;
+    -moz-transition:ease 1s;
+    transition:ease 1s;
+
+    color:#EEBA4C;
+    text-shadow: 1px 1px #7FFFD4;
+}
+
+
+
+
+@keyframes lighting {
+     0% {
+        
+    }
+    100%{
+        box-shadow: 0px -10px 50px 10px black inset;
+    }
+}
+@-moz-keyframes lighting {
+     0% {
+        
+    } 
+    100%{
+       box-shadow: 0px -10px 50px 10px black inset;
+    }
+}
+@-webkit-keyframes lighting {
+    0% {
+     
+    }
+    100%{
+        box-shadow: 0px -10px 50px 10px black inset;
+    }
+}
+
+@keyframes rev-lighting {
+     0% {
+        
+    }
+    100%{
+        box-shadow:0px 0px black;
+    }
+}
+@-moz-keyframes rev-lighting {
+     0% {
+        
+    } 
+    100%{
+       box-shadow:0px 0px black;
+    }
+}
+@-webkit-keyframes rev-lighting {
+    0% {
+     
+    }
+    100%{
+        box-shadow:0px 0px black;
+    }
+}

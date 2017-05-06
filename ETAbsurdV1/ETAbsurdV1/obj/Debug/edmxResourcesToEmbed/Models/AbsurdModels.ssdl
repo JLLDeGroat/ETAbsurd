@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SovereignModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ETA_Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="TitleImage" Type="nvarchar(max)" />
+    <Property Name="Image1" Type="nvarchar(max)" />
+    <Property Name="Image2" Type="nvarchar(max)" />
+    <Property Name="Image3" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar(max)" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Edits" Type="int" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="Views" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="KarmaVoters" Type="nvarchar(max)" />
+    <Property Name="KarmaUp" Type="int" Nullable="false" />
+    <Property Name="KarmaDown" Type="int" Nullable="false" />
+    <Property Name="KarmaTotal" Type="int" Nullable="false" />
+    <Property Name="KarmaPercent" Type="nvarchar(max)" />
+    <Property Name="KarmaVotes" Type="nvarchar(max)" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="Category" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ETA_BlogStorage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="TitleImage" Type="nvarchar(max)" />
+    <Property Name="Image1" Type="nvarchar(max)" />
+    <Property Name="Image2" Type="nvarchar(max)" />
+    <Property Name="Image3" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Edits" Type="int" />
+    <Property Name="EditDate" Type="date" />
+    <Property Name="Views" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="KarmaVoters" Type="nvarchar(max)" />
+    <Property Name="KarmaUp" Type="int" Nullable="false" />
+    <Property Name="KarmaDown" Type="int" Nullable="false" />
+    <Property Name="KarmaTotal" Type="int" Nullable="false" />
+    <Property Name="KarmaPercent" Type="nvarchar(max)" />
+    <Property Name="KarmaVotes" Type="nvarchar(max)" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="Category" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ETA_Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Blog" Type="bit" />
+    <Property Name="Game" Type="bit" />
+    <Property Name="Thread" Type="bit" />
+    <Property Name="Post" Type="bit" />
+    <Property Name="Puzzle" Type="bit" />
+    <Property Name="Author" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Votes" Type="int" Nullable="false" />
+    <Property Name="Upvotes" Type="int" Nullable="false" />
+    <Property Name="DownVotes" Type="int" Nullable="false" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ETA_CrossWord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GridX" Type="int" Nullable="false" />
+    <Property Name="GridY" Type="int" Nullable="false" />
+    <Property Name="GridTotal" Type="int" Nullable="false" />
+    <Property Name="Questions" Type="int" Nullable="false" />
+    <Property Name="Clues" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Positions" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Answers" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Directions" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Author" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Completed" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ETA_Error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Error" Type="nvarchar(max)" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Resolved" Type="bit" />
+    <Property Name="ResolvedDate" Type="date" />
+  </EntityType>
+  <EntityType Name="ETA_FactionPost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ThreadId" Type="int" Nullable="false" />
+    <Property Name="Faction" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quote" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AuthorAvatar" Type="nvarchar(max)" />
+    <Property Name="Votes" Type="int" Nullable="false" />
+    <Property Name="UpVotes" Type="int" Nullable="false" />
+    <Property Name="DownVotes" Type="int" Nullable="false" />
+    <Property Name="Voters" Type="nvarchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Edited" Type="date" />
+    <Property Name="Edit" Type="nvarchar(max)" />
+    <Property Name="EditAmounts" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ETA_FactionThread">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar(max)" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="Faction" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar(max)" />
+    <Property Name="AuthorAvatar" Type="nvarchar(max)" />
+    <Property Name="Voters" Type="nvarchar(max)" />
+    <Property Name="Votes" Type="int" Nullable="false" />
+    <Property Name="UpVotes" Type="int" Nullable="false" />
+    <Property Name="DownVotes" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="Tags" Type="nvarchar(max)" />
+    <Property Name="Views" Type="int" Nullable="false" />
+    <Property Name="Posts" Type="int" Nullable="false" />
+    <Property Name="Edited" Type="date" />
+    <Property Name="Edit" Type="nvarchar(max)" />
+    <Property Name="DateOfEdit" Type="date" />
+    <Property Name="EditAmounts" Type="int" />
+    <Property Name="LastPost" Type="date" />
+    <Property Name="LastPostId" Type="int" />
+  </EntityType>
+  <EntityType Name="ETA_Post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ThreadId" Type="int" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="Quote" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar(max)" />
+    <Property Name="AuthorAvatar" Type="nchar" MaxLength="10" />
+    <Property Name="Votes" Type="int" Nullable="false" />
+    <Property Name="UpVotes" Type="int" Nullable="false" />
+    <Property Name="DownVotes" Type="int" Nullable="false" />
+    <Property Name="Voters" Type="nvarchar(max)" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Edited" Type="date" />
+    <Property Name="Edit" Type="nvarchar(max)" />
+    <Property Name="EditAmounts" Type="int" />
+    <Property Name="Comments" Type="int" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ETA_Puzzles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="EditAmount" Type="int" />
+    <Property Name="EditDate" Type="date" />
+    <Property Name="Comments" Type="int" />
+    <Property Name="Votes" Type="int" Nullable="false" />
+    <Property Name="UpVotes" Type="int" Nullable="false" />
+    <Property Name="DownVotes" Type="int" Nullable="false" />
+    <Property Name="Voters" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="Difficulty" Type="nvarchar(max)" />
+    <Property Name="Completed" Type="nvarchar(max)" />
+    <Property Name="Image1" Type="nvarchar(max)" />
+    <Property Name="Image2" Type="nvarchar(max)" />
+    <Property Name="Image3" Type="nvarchar(max)" />
+    <Property Name="Answer" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ETA_Thread">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar(max)" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar(max)" />
+    <Property Name="AuthorAvatar" Type="nvarchar(max)" />
+    <Property Name="Voters" Type="nvarchar(max)" />
+    <Property Name="Votes" Type="int" Nullable="false" />
+    <Property Name="UpVotes" Type="int" Nullable="false" />
+    <Property Name="DownVotes" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="Tags" Type="nvarchar(max)" />
+    <Property Name="Views" Type="int" Nullable="false" />
+    <Property Name="Posts" Type="int" Nullable="false" />
+    <Property Name="Edited" Type="datetime" />
+    <Property Name="Edit" Type="nvarchar(max)" />
+    <Property Name="DateOfEdit" Type="datetime" />
+    <Property Name="EditAmounts" Type="int" />
+    <Property Name="LastPost" Type="datetime" />
+    <Property Name="LastPostId" Type="int" />
+  </EntityType>
+  <EntityType Name="ETA_User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="RegisterDate" Type="date" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Reputation" Type="decimal" Precision="8" Scale="8" Nullable="false" />
+    <Property Name="ReputationAverage" Type="int" />
+    <Property Name="ReputationVotes" Type="nvarchar(max)" />
+    <Property Name="ReputationVoteDates" Type="nvarchar(max)" />
+    <Property Name="RepTag" Type="nvarchar(max)" />
+    <Property Name="RepTagHistory" Type="nvarchar(max)" />
+    <Property Name="Posts" Type="int" Nullable="false" />
+    <Property Name="Threads" Type="int" Nullable="false" />
+    <Property Name="Avatar" Type="nvarchar(max)" />
+    <Property Name="TextColor" Type="nvarchar(max)" />
+    <Property Name="Signature" Type="nvarchar(max)" />
+    <Property Name="Font" Type="nvarchar(max)" />
+    <Property Name="UpVotes" Type="int" Nullable="false" />
+    <Property Name="DownVotes" Type="int" Nullable="false" />
+    <Property Name="CompetitionEntries" Type="int" Nullable="false" />
+    <Property Name="CompetitionsEntered" Type="nvarchar(max)" />
+    <Property Name="CompetitionsWon" Type="int" Nullable="false" />
+    <Property Name="CompetitionsSecond" Type="int" Nullable="false" />
+    <Property Name="CompetitionsThird" Type="int" Nullable="false" />
+    <Property Name="CompetitionsTopTen" Type="int" Nullable="false" />
+    <Property Name="Medals" Type="nvarchar(max)" />
+    <Property Name="HasVoted" Type="nvarchar(max)" />
+    <Property Name="GivenUpVotes" Type="int" Nullable="false" />
+    <Property Name="GivenDownVotes" Type="int" Nullable="false" />
+    <Property Name="GivenVoteDates" Type="nvarchar(max)" />
+    <Property Name="PasswordRetrievalCode" Type="nvarchar(max)" />
+    <Property Name="Blogger" Type="bit" Nullable="false" />
+    <Property Name="Blogs" Type="int" Nullable="false" />
+    <Property Name="BlogFrequency" Type="int" />
+    <Property Name="Following" Type="nvarchar(max)" />
+    <Property Name="KarmaUp" Type="int" Nullable="false" />
+    <Property Name="KarmaDown" Type="int" Nullable="false" />
+    <Property Name="KarmaTotal" Type="int" />
+    <Property Name="RecentBlog" Type="date" />
+    <Property Name="RecentThread" Type="date" />
+    <Property Name="RecentPost" Type="nchar" MaxLength="10" />
+    <Property Name="Faction" Type="nvarchar(max)" />
+    <Property Name="FactionPosts" Type="int" Nullable="false" />
+    <Property Name="FactionContribution" Type="int" />
+    <Property Name="FactionUpVotes" Type="int" Nullable="false" />
+    <Property Name="FactionDownVotes" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SovereignModelStoreContainer">
+    <EntitySet Name="ETA_Blog" EntityType="Self.ETA_Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_BlogStorage" EntityType="Self.ETA_BlogStorage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_Comment" EntityType="Self.ETA_Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_CrossWord" EntityType="Self.ETA_CrossWord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_Error" EntityType="Self.ETA_Error" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_FactionPost" EntityType="Self.ETA_FactionPost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_FactionThread" EntityType="Self.ETA_FactionThread" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_Post" EntityType="Self.ETA_Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_Puzzles" EntityType="Self.ETA_Puzzles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_Thread" EntityType="Self.ETA_Thread" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ETA_User" EntityType="Self.ETA_User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

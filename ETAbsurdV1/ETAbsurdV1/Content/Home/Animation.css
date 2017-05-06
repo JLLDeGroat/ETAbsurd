@@ -1,0 +1,359 @@
+﻿/*MAIN MENU FIRST FRAME ANIMATIONS*/
+
+@keyframes menu-fade {
+    0%{
+
+    }
+    100%{         
+         opacity:0;
+    }
+}
+@-moz-keyframes menu-fade {
+    0%{
+       
+    }
+    100%{        
+         opacity:0;
+    }
+}
+@-webkit-keyframes menu-fade {
+    0%{
+       
+    }
+    100%{        
+         opacity:0;
+    }
+}
+
+
+/*MAIN MENU BOX SECOND FRAME ANIMATIONS*/
+@keyframes carousel {
+    0% {
+        right: 0;
+    }
+    70%{
+        right: 0;
+    }
+    100% {
+        right: 100%;
+    }
+}
+@-moz-keyframes carousel {
+    0% {
+        right: 0;
+    }
+    70%{
+        right: 0;
+    }
+    100% {
+        right: 100%;
+    }
+}
+@-webkit-keyframes carousel {
+    0% {
+        right: 0;
+    }
+    70%{
+        right: 0;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+/*ANIMATION ONCE BOXES ARE HOVERED*/
+
+@keyframes box-title {
+    0% {
+        
+    }
+
+    100% {
+        color:#EEBA4C;   
+    }
+}
+@-moz-keyframes box-title {
+    0% { 
+    }
+
+    100% {
+        color:#EEBA4C;   
+    }
+}
+@-webkit-keyframes box-title {
+    0% {  
+    }
+
+    100% {
+        color:#EEBA4C;   
+    }
+}
+
+/*BLURRING ONCE MENUS ARE HOVERED ON*/
+
+@keyframes menu-blur {
+    0% {
+    }
+
+    100% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);       
+    }
+}
+@-moz-keyframes menu-blur {
+    0% {
+    }
+
+    100% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);       
+    }
+}
+@-webkit-keyframes menu-blur {
+    0% {
+    }
+
+    100% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);       
+    }
+}
+
+
+/*SPAWNING ANIMATION FOR ELEMENTS*/
+
+@keyframes spawn {
+     0% {
+        opacity:0;
+        transform:translateX(100px);
+    }
+     90%{
+        transform:translateX(-2px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+@-moz-keyframes spawn {
+     0% {
+        opacity:0;
+        transform:translateX(100px);
+    }
+     90%{
+        transform:translateX(-2px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+@-webkit-keyframes spawn {
+    0% {
+        opacity:0;
+        transform:translateX(100px);
+    }
+     90%{
+        transform:translateX(-2px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+
+/*SPAWNING OUT*/
+
+@keyframes spawn-out {
+    0% {
+        opacity:1;
+        transform:translateX(0px);
+    }
+    5%{
+        transform:translateX(2px);
+    }
+    100%{
+        opacity:0;
+        transform:translateX(-300px);
+    }
+}
+@-moz-keyframes spawn-out {
+    0% {
+        opacity:1;
+        transform:translateX(0px);
+    }
+     5%{
+        transform:translateX(2px);
+    }
+    100%{
+        opacity:0;
+        transform:translateX(-300px);
+    }
+}
+@-webkit-keyframes spawn-out {
+    0% {
+        opacity:1;
+        transform:translateX(0px);
+    }
+     5%{
+        transform:translateX(2px);
+    }
+    100%{
+        opacity:0;
+        transform:translateX(-300px);
+    }
+}
+
+
+
+/*Revearsing  Add the -rev suffix to original name*/
+
+/*MAIN MENU FIRST FRAME ANIMATIONS*/
+
+@keyframes menu-fade-rev {
+    0%{
+         opacity:0;
+    }
+    75%{
+         opacity:0;
+    }
+    100%{         
+         opacity:1;
+    }
+}
+@-moz-keyframes menu-fade-rev {
+    0%{
+        opacity:0;
+    }
+    75%{
+        opacity:0;
+    }
+    100%{        
+        opacity:1;
+    }
+}
+@-webkit-keyframes menu-fade-rev {
+    0%{
+        opacity:0;
+    }
+    75%{
+        opacity:0;
+    }
+    100%{        
+        opacity:1;
+    }
+}
+
+
+/*MAIN MENU BOX SECOND FRAME ANIMATIONS*/
+
+@keyframes carousel-rev {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+@-moz-keyframes carousel-rev {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+@-webkit-keyframes carousel-rev {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+
+/*DE-ANIMATION ONCE BOXES ARE HOVERED*/
+@keyframes box-title-rev {
+    0% {
+            color:#EEBA4C;   
+    }
+
+    100% {
+        color:black;   
+    }
+}
+@-moz-keyframes box-title-rev {
+    0% {
+            color:#EEBA4C;   
+    }
+
+    100% {
+        color:black;   
+    }
+}
+@-webkit-keyframes box-title-rev {
+    0% {
+            color:#EEBA4C;   
+    }
+
+    100% {
+        color:black;   
+    }
+}
+
+
+/*DE-BLURRING ONCE MENUS ARE HOVERED ON*/
+@keyframes menu-blur-rev {
+    0% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);       
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);       
+    }
+}
+@-moz-keyframes menu-blur-rev {
+    0% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);        
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);       
+    }
+}
+@-webkit-keyframes menu-blur-rev {
+    0% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);        
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);       
+    }
+}

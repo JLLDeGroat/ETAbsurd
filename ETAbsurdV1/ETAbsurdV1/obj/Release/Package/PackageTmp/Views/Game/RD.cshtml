@@ -1,0 +1,55 @@
+﻿
+<head>
+    @Styles.Render("~/Content/Game/RDGame/css")
+</head>
+
+
+
+<div id="load-box" class="row game-load-box">
+    <div class="loader loader-main">
+        <div id="Loader1" class="loader"></div>
+        <div id="Loader2" class="loader"></div>
+        <div id="Loader3" class="loader"></div>
+        <div id="Loader4" class="loader"></div>
+    </div>
+    <div class="load-counter">
+        <div class="progress"></div>
+    </div>
+</div>
+
+
+
+
+<div class="row game-box">
+    <div class="start-game-box">
+        <div class="col-lg-offset-5 col-lg-2 col-md-offset-5 col-md-2 col-sm-offset-4 col-sm-4 col-xs-12">
+            <h1 class="h-speak">R D</h1>
+            <input type="button" value="Start" class="submit-button form-control" id="StartGame"/>
+            <hr/>
+            <input type="button" value="Load"  class="submit-button form-control" id="LoadGame"/>
+        </div>
+    </div>
+
+    <div class="game-setting">
+        <div class="game-text">
+            <span class="error-text"></span>
+            <span class="separator"></span>
+            <span class="made-text"></span>
+            <span class="type-line">I</span>
+        </div>
+    </div>
+
+    <div class="row game-controls">
+        <div class="control-block">
+            <input type="text" class="form-control" id="control-text" />
+        </div>
+        <div class="item-block">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+@Scripts.Render("~/Scripts/Game/RDGame/js")

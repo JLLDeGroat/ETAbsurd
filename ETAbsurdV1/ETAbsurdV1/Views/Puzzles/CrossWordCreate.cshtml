@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "CrossWordCreate";
+}
+
+@Styles.Render("~/Content/Create/css")
+@Styles.Render("~/Content/CrossWord/css")
+
+<div class="puzzle-create-page">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="puzzle-create-box">
+                <article>
+                    You have chosen to start a Crossword
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="puzzle-create-box">
+                <h4 class="h-speak">Choose your Grid size</h4>
+                <select id="Grid-Select" class="form-control">
+                    <option value="" disabled selected>Please Select</option>
+                    <option value="10x10">10x10</option>
+                    <option value="15x10">15x10</option>
+                    <option value="15x15">15x15</option>
+                    <option value="20x15">20x15</option>
+                    <option value="20x20">20x20</option>
+                </select>
+                <hr/>
+                <h4 class="h-speak">Name</h4>
+                <input type="text" class="form-control submit-button" placeholder="Cross Word Name" id="CrossWord-Name"/>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="puzzle-create-box">
+                <article>
+                    Please try not to resize the window or flip your device whilst creating the crossword as its still in beta
+                    there could be some issues with the visuals if you resize/flip.
+                </article>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="puzzle-create-box">
+                <article>
+                    I would recommend that you form this on a desktop screen for the large dimensions.
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="puzzle-create-box">
+                <article>
+                    Please fill in the below, when you have click on insert and then click the box you want that word to start from.
+                    Then click "Add Line" box to add another word, rinse and repeat until you have completed your cross word. 
+                </article>
+                <hr/>
+                <article id="warning-message" class="warning">
+
+                </article>                
+            </div>
+            <hr/>
+            <div id="Instruction-List" class="puzzle-create-box">
+
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="cross-word-create-row">
+                <div class="cross-word-box">
+
+                </div>
+                <hr/>
+                <input type="button" class="form-control submit-button" value="Submit" id="Create-CrossWord" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="placement-ui-box puzzle-create-box" id="UI-Placement-Box">
+    <input type="button" class="submit-button form-control" id="UI-Placement-Close" value="Close"/>
+    <p id="Warning" class="warning"></p>
+    <hr />
+    <select class="form-control" id="Direction">
+        <option value="" disabled selected>Please Select</option>
+        <option value="Across">Across</option>
+        <option value="Down">Down</option>
+    </select>
+    <hr />
+    <textarea class="form-control" rows="3" placeholder="Please type your clue" id="Clue"></textarea>
+    <hr />
+    <input type="text" class="form-control" placeholder="The Word" id="Word" />
+    <hr />
+    <input type="button" class="form-control submit-button instruction-button" value="Insert" id="Insert" />
+</div>
+
+<div class="alter-ui-box puzzle-create-box" id="UI-Alter-Box">
+    <p id="AlterWarning" class="warning"></p>
+    <hr />
+    <select class="form-control" id="AlterDirection">
+        <option value="" disabled selected>Please Select</option>
+        <option value="Across">Across</option>
+        <option value="Down">Down</option>
+    </select>
+    <hr />
+    <textarea class="form-control" rows="3" placeholder="Please type your clue" id="AlterClue"></textarea>
+    <hr />
+    <input type="text" class="form-control" placeholder="The Word" id="AlterWord" />
+    <hr />
+    <input type="button" class="form-control submit-button instruction-button" value="Alter" id="AlterInsert" />
+</div>
+
+<div class="confirmation-box puzzle-create-box" id="Cross-word-Confirmation">
+    <input type="button" class="submit-button form-control" onclick="submitCrossWordToServer()" value="Submit CrossWord" />
+</div>
+
+@Scripts.Render("~/Scripts/Crossword/js")

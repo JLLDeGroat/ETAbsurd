@@ -1,0 +1,257 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> Threads = ViewData["Threads"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Post> Posts = ViewData["Posts"] as IEnumerable<ETAbsurdV1.Models.ETA_Post>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Comment> Comments = ViewData["Comments"] as IEnumerable<ETAbsurdV1.Models.ETA_Comment>;
+    IEnumerable<ETAbsurdV1.Models.ETA_User> ViewUser = ViewData["ViewUser"] as IEnumerable<ETAbsurdV1.Models.ETA_User>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Blog> Followed = ViewData["Followed"] as IEnumerable<ETAbsurdV1.Models.ETA_Blog>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Blog> UserBlog = ViewData["UserBlog"] as IEnumerable<ETAbsurdV1.Models.ETA_Blog>;
+}
+
+
+@Styles.Render("~/Content/Account/css")
+@Html.Partial("BannerAd")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="row user-row">
+            @foreach (var item in ViewUser)
+            {
+                <!--LEFT SIDE-->
+                <div class="col-md-3">
+                    <h2 class="mobile-username">@item.Username <br /><span class="tag"> @item.RepTag</span></h2>
+                    @if (item.Avatar != null)
+                    {
+                        <div class="user-image-box">
+                            <img class="avatar" src="@item.Avatar" alt="" />
+                        </div>    
+                    }                   
+                    <hr />
+                    <div class="user-stat-box">
+                        <h3>Stats</h3>
+                        <p class="stat-line">Conversations: <span class="stat">@item.Threads</span></p>
+                        <br />
+                        <p class="stat-line">Posts: <span class="stat">@item.Posts</span></p>
+                        <br />
+                        <p class="stat-line">Reputation<span class="stat">@item.Reputation</span></p>
+                        <br />
+                        <p class="stat-line">Reputation Change<span class="stat">@item.ReputationAverage</span></p>
+                        <br />
+                        <h3>Votes Given</h3>
+                        <p class="stat-line">Up <span class="stat">@item.UpVotes</span></p>
+                        <br />
+                        <p class="stat-line">Down <span class="stat">@item.DownVotes</span></p>
+                        <br />
+                        <h3>Votes Taken</h3>
+                        <p class="stat-line">Up <span class="stat">@item.GivenUpVotes</span></p>
+                        <br />
+                        <p class="stat-line">Down <span class="stat">@item.GivenDownVotes</span></p>
+                        <br />
+                        <h3>Total</h3>
+                        <p class="stat-line">Total <span class="stat">@ViewData["TotalVotes"]</span></p>
+                        <br />
+                        <h3>Events</h3>
+                        <p class="stat-line">Entered <span class="stat">@item.CompetitionEntries</span></p>
+                        <br />
+                        <p class="stat-line">Won <span class="stat">@item.CompetitionsWon</span></p>
+                        <br />
+                        <p class="stat-line">Second <span class="stat">@item.CompetitionsSecond</span></p>
+                        <br />
+                        <p class="stat-line">Third <span class="stat">@item.CompetitionsThird</span></p>
+                        <br />
+                        <p class="stat-line">Top Ten <span class="stat">@item.CompetitionsTopTen</span></p>
+                        <br />
+                        @if (item.Blogger == true)
+                        {
+                            <h3>Blogs</h3>
+                            <p class="stat-line">Total <span class="stat">@item.Blogs</span></p>
+                            <br />
+                            <p class="stat-line">Karma <span class="stat">@ViewData["KarmaPercentage"].ToString()</span></p>
+                            <br />
+                            <p class="stat-line">Paragon <span class="stat paragon">@item.KarmaUp</span></p>
+                            <br />
+                            <p class="stat-line">Renegade <span class="stat renegade">@item.KarmaDown</span></p>
+                        }
+                    </div>
+                </div>
+                <!--MIDDLE SIDE-->
+                <div class="col-md-7">
+                    <div class="row overflow-control">
+                        <div class="user-profile">
+                            <h2>@item.Username <span class="tag"> @item.RepTag</span></h2>
+                            <hr />
+                            <h3 class="underline c-panel-title">Biography</h3>
+                            <article class="user-bio">                               
+                                    <article class="user-signature">
+                                        @item.Signature
+                                    </article>    
+                            </article>
+                            <hr />                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3 class="underline c-panel-title">Font</h3>
+                                        <p>Font: <span style="font-family:@item.Font">@item.Font.</span></p>                                        
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="underline c-panel-title">Colour</h3>
+                                   
+                  
+                                            <p>Curent Colour: <span style="color:@item.TextColor;">@item.TextColor.</span></p>
+                                                                          </div>
+                            </div>
+                        </div>
+                        <div class="activity-center">
+                            <h2>Activity</h2>
+                            <hr />
+                            <h2>Threads</h2>
+                            <div class="activity-box">
+                                @if (Threads.Count() != 0)
+                                {
+                                    foreach (var t in Threads)
+                                    {
+                                        <div class="activity">
+                                            <div class="row" onclick="window.location = '@Url.Action("Thread","Forum",new { Id = @t.Id })'">
+                                                <div class="col-xs-12">
+                                                    <p class="activity-name">@t.Name</p>
+                                                </div>
+                                                <div class="col-xs-7 activity-column">
+                                                    <p class="activity-body">@t.Body</p>
+                                                </div>
+                                                <div class="col-xs-5 activity-column">
+                                                    <p class="activity-votes">@t.UpVotes / @t.DownVotes</p>
+                                                    <p class="activity-details">@t.Date</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <h3 class="h-speak">You have not started any conversations</h3>
+                                }
+                            </div>
+                            <hr />
+                            <h2>Posts</h2>
+                            <div class="activity-box">
+                                @if (Posts.Count() != 0)
+                                {
+                                    foreach (var p in Posts)
+                                    {
+                                        <div class="activity">
+                                            <div class="row" onclick="window.location = '@Url.Action("Thread","Forum",new { Id = @p.ThreadId })'">
+                                                <div class="col-xs-7 activity-column">
+                                                    <p class="activity-body">@p.Body</p>
+                                                </div>
+                                                <div class="col-xs-5 activity-column">
+                                                    <p class="activity-votes">@p.UpVotes / @p.DownVotes</p>
+                                                    <p class="activity-details">@p.Date</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <h3 class="h-speak">You have not joined in any conversations</h3>
+                                }
+                            </div>
+                            <hr />
+                        </div>
+                        <!--INCOMPLETE-->
+                        <div class="row recent-blog-row">
+                            <h3 class="underline c-panel-title">Blogs</h3>
+                            @if (@item.Blogger == true)
+                            {
+                                if (UserBlog.Count() == 0)
+                                {
+                                    <h3 class="h-speak">There are no Blogs</h3>
+                                }
+                                else
+                                {
+                                    foreach (var F in UserBlog)
+                                    {
+                                        <div class="col-md-4 followed-blog-box" onclick="window.location = '@Url.Action("Blog","Blog", new { Id = @F.Id })'">
+                                            <div class="blog-item-box">
+                                                <p class="followed-blog-title">@F.Title</p>
+                                                <img src="@F.Image1" class="responsive-image blog-image" alt="" />
+                                                <article class="blog-text">
+                                                    @F.Body
+                                                </article>
+                                                <p class="followed-blog-stamp">
+                                                    @F.Date
+                                                    <br />
+                                                    @F.Author
+                                                </p>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                <a class="update-begin-button follow-link">See All Blogs</a>
+                            }
+                            else
+                            {
+                                <!--Not a blogger-->
+                            }
+                        </div>
+                        <div class="row follow-row">
+                            <h3 class="underline c-panel-title">Followed activity</h3>
+                            @if (ViewData["Followed"] == null)
+                            {
+
+                            }
+                            else
+                            {
+                                if (Followed.Count() == 0)
+                                {
+                                    <h3 class="h-speak">no Followed Content</h3>
+                                }
+                                else
+                                {
+                                    foreach (var F in Followed)
+                                    {
+                                        <div class="col-md-4 followed-blog-box" onclick="window.location = '@Url.Action("Blog","Blog", new { Id = @F.Id })'">
+                                            <div class="blog-item-box">
+                                                <p class="followed-blog-title">@F.Title</p>
+                                                <img src="@F.Image1" class="responsive-image blog-image" alt="" />
+                                                <article class="blog-text">
+                                                    @F.Body
+                                                </article>
+                                                <p class="followed-blog-stamp">
+                                                    @F.Date
+                                                    <br />
+                                                    @F.Author
+                                                </p>
+                                            </div>
+                                        </div>
+                                    }
+                                    <a class="update-begin-button follow-link">See All Followed</a>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+                <!--RIGHT SIDE-->
+                <div class="col-lg-2">
+                    <div class="user-stat-box">
+                        <h3>Medals</h3>
+                        <!--Need to add Medals to the table-->
+                    </div>
+                </div>
+                <!--
+                <div class="col-md-4">
+                    <div class="user-ad">
+                        <img class="responsive-image" src="http://freedesignfile.com/upload/2015/09/Funny-cartoon-pencil-vector-material-05.jpg" />
+                    </div>
+                </div>
+                -->
+            }
+        </div>        
+    </div>
+</div>
+
+
+
+@Scripts.Render("~/Scripts/Account/js")

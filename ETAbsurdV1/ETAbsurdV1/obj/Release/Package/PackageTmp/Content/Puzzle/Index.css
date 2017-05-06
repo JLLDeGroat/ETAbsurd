@@ -1,0 +1,13 @@
+﻿body{
+    font-family:'Philosopher-Regular';
+    color:white;
+}
+
+.date-stamp{
+    font-size:80%;
+    text-align:right;
+}
+
+.author-stamp{
+    float:left;
+}

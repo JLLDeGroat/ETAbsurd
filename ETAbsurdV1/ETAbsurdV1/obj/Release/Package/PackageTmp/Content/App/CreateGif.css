@@ -1,0 +1,32 @@
+﻿body{
+    color:white;
+    font-family:'Philosopher-Regular';
+}
+
+.app-row{
+    margin-top:20px;
+}
+
+.app-box{
+    padding:10px;
+
+    background-color:#3A3A3C;
+    box-shadow:5px 5px 7px 0px black;
+}
+.app-option-box{
+    padding:25px;
+}
+.app-option-box > article{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.app-article{
+    text-align:center;
+}
+
+.app-gif-img{
+    max-width:100%;
+    display:block;
+    margin:auto;
+}

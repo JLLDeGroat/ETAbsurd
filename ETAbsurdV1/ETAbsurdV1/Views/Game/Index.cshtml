@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+
+
+@Styles.Render("~/Content/Game/Index/css")
+
+@Html.Partial("BannerAd")
+
+<div class="row game-row">
+    <div class="col-sm-offset-1 col-sm-10">
+        <h3>The game</h3>
+        <hr/>
+        <div class="col-md-1 game-icon" id="RD">
+            <p class="game-name">
+                Ard Net
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+@Scripts.Render("~/Scripts/Game/Index/js")

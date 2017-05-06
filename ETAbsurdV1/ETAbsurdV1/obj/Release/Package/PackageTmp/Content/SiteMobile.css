@@ -1,0 +1,157 @@
+﻿.navbar-toggle{
+    margin-right:25px;
+}
+
+.mobile-username{
+    display:none;
+}
+
+@media (max-width: 1200px){
+    .submit-button{
+        font-size:10px;
+    }
+}
+
+@media (max-width: 767px) {
+    /*THREAD*/
+    .avatar-section{
+        margin:auto;
+        display:block;
+    }
+    .thread-image{
+        width:30% !important;
+        float:left;
+        margin-right:15px;
+    }
+    .avatar-section {
+        text-align: left !important;
+    }
+    /*Buttons*/
+    .submit-button{
+        font-size:10px;
+    }
+
+}
+@media (max-width: 991px) {
+    /*General*/
+    .tag{
+        font-size:10px;
+    }
+    /*HOMEPAGE*/
+    
+    /*ControlPanel*/
+    .mobile-username {
+        display: block;
+        text-align:center;
+        font-size:150%;
+    }
+    .user-profile{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    .overflow-control {
+        overflow-x: hidden;
+    }
+     /*Blog*/
+    .blog-image,
+    .avatar{
+        display:block;
+        margin:auto;
+        width:initial;
+        max-width:100%;
+    }
+    .avatar{
+        border: none;
+        box-shadow: none;
+        
+        width:50%;
+        height:50%;
+
+        margin:auto;
+        
+    }
+    .user-image-box{
+       border:none !important;
+       box-shadow:none !important;
+        
+    }
+    .help-button{
+        left:75% !important;
+        width:25% !important;
+    }
+    /*Thread*/
+    .circle{
+        width:30px;
+        height:30px;
+    }
+    .triangle {
+        margin-top:-2px;
+        width:25px;
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-bottom: 26px solid gray;
+
+        transform:translateX(1px);
+    }
+    .triangle-down{
+        margin-top:4px;
+        width:25px;
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-top: 26px solid gray;
+
+
+        transform:translateX(1px);
+    }
+    .circle:hover > .triangle{
+        border-bottom: 25px solid #7FFFD4;
+    }
+    .circle:hover > .triangle-down{
+        border-top: 25px solid #7FFFD4;
+    }   
+    .voter{
+        margin-right:15px;
+    }
+
+    /*Buttons*/
+    .submit-button{
+        font-size:10px !important;
+    }
+
+}
+
+@media (max-width: 511px){
+    /*Blog*/
+    .blog-image {
+        width: 100%;
+    }
+    /*Thread*/
+    .avatar-section{
+        border:none !important;
+    }    
+    .voter{
+        margin-right:15px;
+    }
+    /*HomePAge*/
+    .main-description > article{
+        font-size:100% !important;
+    }
+    .site-title{
+        font-size:300% !important;
+    }
+    .navbar-header,
+    .navbar{
+        height:50px;
+    }
+    footer > div{
+        font-size:8px !important;
+    }
+}
+
+@media (max-width: 600px){
+    
+}
+
+@media (max-width: 400px){
+    
+}

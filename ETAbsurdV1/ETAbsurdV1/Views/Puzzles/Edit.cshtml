@@ -1,0 +1,127 @@
+﻿@model ETAbsurdV1.Models.ETA_Puzzles
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+@Styles.Render("~/Content/Create/css")
+
+<div class="puzzle-create-page">
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="puzzle-create-box">
+                    <article>
+                        You have chosen to start a @ViewData["Puzzle"]
+                    </article>
+                </div>
+            </div>
+            <div class="col-sm-offset-4">
+                <div class="puzzle-create-box">
+                    <article>
+                        If you have read them, and want to remove the advice to concentrate on your puzzle, please click below
+                        <input type="button" class="submit-button form-control" value="Hide" onclick="HideAdvice()" id="Advice-Btn" />
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        if (ViewData["Style"].ToString() == "Normal")
+        {
+            <div class="row">
+                <div class="puzzle-create-box advice">
+                    <article>
+                        The basic premise is to have a answer that is typed out into a box, whether it be a number or word, sentence or code. They must be able to get
+                        to this answer through the information you make available in the Description. So... Lets Begin.
+                    </article>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="puzzle-create-box">
+                            <h3 class="h-speak">Name your creation</h3>
+                            @Html.TextBoxFor(p => p.Name, new { @Class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="puzzle-create-box advice">
+                            <article>
+                                Try to keep your puzzle unique, if its been done before no doubt people will let you know. However if its an age old
+                                puzzle that is not already on the site then feel free to add it in for others to see but do note either where you
+                                got it from or how you found out about it.
+                                <br />
+                                If it is a home grown puzzle, feel free to give it any identity you wish barring nonsense of course.
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="puzzle-create-box advice">
+                            <article>
+                                Please ensure that all information needed to solve the puzzle is on the page. It does get tedious if we
+                                need to go off and start finding this mythical link, or book. References should be made clear so people
+                                will once figured know how to solve the puzzle.
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="puzzle-create-box">
+                            <h3 class="h-speak">Your Puzzle</h3>
+                            @Html.TextAreaFor(p => p.Body, new { @Class = "form-control", @rows = "10" })
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="puzzle-create-box advice">
+                            <article>
+                                Also as a general reminder, plase make sure everything is spelt correct, double check and please none of that
+                                racist/descrimanotory, or material bound to offend people needlessly. However also dont feel like a subject can not
+                                be approached due to this and if you are worried please contact me by clicking below.
+                            </article>
+                            <input type="button" class="submit-button form-control" value="Contact"
+                                   onclick="window.location = '@Url.Action("Contact", "ContactUs")'" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="puzzle-create-box advice">
+                            <article>
+                                You must spend your answer correctly, otherwise it will become almost impossible to answer unless someone
+                                makes the exact same mistake as you do of course. People who have answered it will have their answer mailed to you
+                                so you can put the forum out of its misery by letting everyone know who got it first.
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="puzzle-create-box">
+                            <h3 class="h-speak">What is the Answer</h3>
+                            @Html.TextBoxFor(p => p.Answer, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-3 col-sm-6">
+                        <div class="puzzle-create-box">
+                            <input type="submit" class="submit-button form-control" value="Submit" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else if (ViewData["Style"].ToString() == "crossword")
+        {
+            <h3 class="h-speak">In Creation</h3>
+        }
+    }
+</div>
+
+
+
+
+
+@Scripts.Render("~/Scripts/Creation/js")
+
+
+
+

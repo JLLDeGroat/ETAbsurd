@@ -1,0 +1,80 @@
+﻿body{
+    color:white;
+}
+
+.box{
+    background-color:#3A3A3C;
+    padding:20px;
+    margin-top:25px;
+    box-shadow:5px 5px 7px 0px black;
+}
+
+.box-number{
+    position:absolute;
+    font-size:12px;
+}
+
+single-box{
+    font-size:0 !important;
+}
+
+.unused{
+    opacity:0;
+    cursor:none;
+}
+
+.box-letter{
+    position:absolute;
+    width:inherit;
+    height:inherit;
+    text-align:center;
+}
+
+
+/*LETTER ENTER*/
+.letter-enter-box{
+    position:fixed;
+    width:80%;
+    height:150px;
+    top:100px;
+    left:10%;
+}
+
+.letter-input{
+    margin:auto;
+    display:block;
+    width:50px;
+}
+
+.correct{
+    -moz-animation:correct-box 2s ease;
+    -webkit-animation:correct-box 2s ease;
+    animation:correct-box 2s ease;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes correct-box {
+    0%{
+        background-color:forestgreen;
+    }
+    100%{         
+         background-color:white;
+    }
+}
+@-moz-keyframes correct-box {
+0%{
+        background-color:forestgreen;
+    }
+    100%{         
+         background-color:white;
+    }
+}
+@-webkit-keyframes correct-box {
+    0%{
+        background-color:forestgreen;
+    }
+    100%{         
+         background-color:white;
+    }
+}

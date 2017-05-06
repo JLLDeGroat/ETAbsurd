@@ -1,0 +1,186 @@
+﻿
+@{
+    ViewBag.Title = "FurBeana";
+}
+
+@Styles.Render("~/Content/Create/css")
+
+<div class="overflow-control">
+
+    <div class="puzzle-create-box">
+        <img class="responsive-image" src="~/Documents/Personal/To Mummy.png" />
+        <hr />
+        <input type="button" class="form-control submit-button" value="Continue" id="Phase1-Btn" />
+        <span>please click, pretend its like opening a card?</span>
+    </div>
+
+    <div id="Phase2" class="puzzle-create-box hdn">
+        <h4 id="Phase2-Message"></h4>
+        <input type="button" class="submit-button form-control" onclick="changeMessage()" value="New Message"/>
+        <span>To make up for not getting you a physical card, I have included 25 different card messages just for YOU!</span>
+        <hr/>
+        <input type="button" class="form-control submit-button" value="Next Step" onclick="nextStep()"/>
+    </div>
+
+    <div class="puzzle-create-box hdn" id="Phase3">
+        <article>
+            Sooooo... This is really the childs time to shine, so considering their best efforts to explain the images your about to see...
+            Most of it is my interpretation and asking questions resulting in very badly grouped words that dont really mean much.
+        </article>
+        <input type="button" class="submit-button form-control" value="First Image" onclick="firstImage()" />
+    </div>
+
+    <div class="puzzle-create-box hdn" id="First-Image-Box">
+        <img src="~/Documents/Personal/Mummy.png" class="responsive-image" />
+        <article>
+            This one needs no explanation at all, although the journey to it probably does. Guiding featureless he sketched what was to be a heart,
+            HOWEVER, when he finally got round one side he decided to draw a rock... So you are rock mummy which kinda looks like a bean. THEREFORE...
+            <br/>
+            I DUB THEE BEAN ROCK MUM OR BROCK MUM ORRRR BRUM.
+        </article>
+        <input type="button" class="form-control submit-button" onclick="secondImage()" value="next image" />
+    </div>
+
+    <div class="puzzle-create-box hdn" id="Second-Image-Box">
+        <img class="responsive-image" src="~/Documents/Personal/Airplane.png" />
+        <article>
+            This one was done by, wait you have a second to guess...
+            <br/>
+            HARRISON woop, he started out saying mumbled words, saying mummy every so often... Then when he finished, I asked and he told me it was an
+            airplane. I don't know how to make this out to be a mothers day gift however, maybe you make him fly in a squiggly jumbo jet :D.
+        </article>
+        <input type="button" class="form-control submit-button" onclick="thirdImage()" value="next image" />
+    </div>
+
+    <div class="puzzle-create-box hdn" id="Third-Image-Box">
+        <img class="responsive-image" src="~/Documents/Personal/HarrisonFruit.png" />
+        <article>
+            There was no explanation for this one, Carmine with Harrison giving instructions drew this, one said it was fruit... The other said Dadan.
+            I'll let you figure out which said which.
+        </article>
+        <input type="button" class="form-control submit-button" onclick="fourthImage()" value="next image" />
+    </div>
+
+    <div class="puzzle-create-box hdn" id="Fourth-Image-Box">
+        <img class="responsive-image" src="~/Documents/Personal/CarminePerson.png" />
+        <article>
+            Oh... Carmine drew himself :P
+        </article>
+        <input type="button" class="form-control submit-button" onclick="fithImage()" value="next image" />
+    </div>
+
+    <div class="puzzle-create-box hdn" id="Fith-Image-Box">
+        <img class="responsive-image" src="~/Documents/Personal/Harrison.png" />
+        <article>
+            I am bewildered at how Carmine sees Harrison... I wish to see through his eyes.
+        </article>
+        <input type="button" class="form-control submit-button" onclick="sixthImage()" value="next image" />
+    </div>
+
+    <div class="puzzle-create-box hdn" id="Last-Box">
+        <article>
+            All that was left to see was that they love you bean, in their own weird and bumb to the face kinda of way. The way that means they slap
+            there face into the bed laughing at my pops, constantly... RELENTLESSLY, unstoppably asking for food. 
+            <br/>
+            The way they say Okai mummy when you ask them to finish their waffles, chicken and cheesy puffs. The way harrison runs way every god dam time
+            at bum change time, or laughing as he pours water on the floor.
+            <br/>
+            the way carmine, the bloody master criminal, the rasputin... Whispering in harrisons ear, do this myahahaha... Touch those plugs, open mummys
+            art case... THROW CAUTION TO THE WIND and jump off the sofa.
+            <br/>
+            All these, and many more are they weird ways they love you for not for you they could not.
+        </article>
+        <img class="responsive-image" src="~/Documents/Personal/HarrisonSig.png" />
+        <img class="responsive-image" src="~/Documents/Personal/CarmineSig.png" />
+    </div>
+
+</div>
+
+<style>
+    .hdn{
+        display:none;
+    }
+    body{
+        color:white;
+    }
+</style>
+
+<script>
+    var MDM = ["Raising me took a lot of patience and determination. Thanks mum for not giving up on me.",
+     "To my mom, my friend, my angel. Happy Mother’s Day!",
+     "Thanks for making our home the happiest place to be and for being the best mum we could wish for! Your Kids",
+     "“Mothers hold their children’s hands for a short while, but their hearts forever.” – Unknown",
+     "Though I can never repay you for your love and care, I cant miss to express my gratitude, love and reverence on this beautiful day of the year! Special Mothers Day Greetings to my special mom!",
+     "Thank you for loving me, teaching me, encouraging me, and raising me. You’ve worked hard!",
+     "Being a mom is a thankless job until Mother’s day. Here’s your annual thank you!",
+     "I never get worried, I never feel disappointed. I never feel ignored. I know you are here for me always! Lots of love on Mothers Day to my dearest mom!",
+     "May your Mother’s Day be as great as you. This is a special wish from you-don’t-know-who! Happy Mother’s Day!",
+     "Mum, you’re the glue that holds us together. Happy Mother’s Day!",
+     "Thank you for your hard work, as you can see I turned out great! Happy Mother’s Day!",
+     "“No influence is so powerful as that of the mother.” -Sarah Josepha Hale",
+     "You are a blessing to many people, but I am especially grateful for the amazing work you have done being my mom.",
+     "One of my most awesome friends just so happens to be one of the most awesome moms on the planet! Happy Mother’s Day!",
+     "You are off to such a sweet start as a mom. Happy 1st Mother’s Day!",
+     "No matter what I possess and what I gained or what I lost, I was never unfortunate and lost in life just because of your divine presence in my life! Wish you Happiest Mothers Day!",
+     "For the best mum in the world, you make me smile, you brighten my day and give my life a meaning. I can’t imagine spending a day without your smile. Happy Mother’s Day!",
+     "Happy Mothers Day! You’re the most special and important woman in my life, now and forever. Love you mum!",
+     "No one can be as selfless as you; as sacrificing as you and as understanding as you! Lots of love and good wishes for Mothers Day!",
+     "“All women become like their mothers. That is their tragedy. No man does. That’s his.” -Oscar Wilde",
+     "May you find everything that your heart desires on this special day! Happy Mothers Day Mum!",
+     "To my friend, my guardian angel, Robin to my Batman. Love you mum!",
+     "A world without you would be a hollow place. You fill my heart with joy, love and support. I’m so happy to have the best mum in the world!",
+     "I cannot image a day without your smile, your support and love. Happy Mother’s Day!",
+     "Happy Mother’s Day to my beautiful, caring, loving sweet mummy. You make the best cookies and today I will be baking the same for you! Put your feet up and let me take care of you today! Love you mum!"];
+
+    var number = 1;
+
+    $('#Phase1-Btn').click(function () {
+        $('#Phase2').removeClass('hdn');
+        number = 1 + Math.floor(Math.random() * 25);
+        $('#Phase2-Message').html(MDM[number]);
+    }) 
+    function changeMessage() {
+        number = 1 + Math.floor(Math.random() * 25);
+        $('#Phase2-Message').html(MDM[number]);
+        console.log(number);
+    }
+
+
+    function nextStep() {
+        $('#Phase3').removeClass('hdn');
+
+    }
+
+
+    function firstImage()
+    {
+        $('#First-Image-Box').removeClass('hdn');
+    }
+
+    function secondImage()
+    {
+        $('#Second-Image-Box').removeClass('hdn');
+    }
+    
+    function thirdImage()
+    {
+        $('#Third-Image-Box').removeClass('hdn');
+    }
+
+    function fourthImage()
+    {
+        $('#Fourth-Image-Box').removeClass('hdn');
+    }
+
+    function fithImage()
+    {
+        $('#Fith-Image-Box').removeClass('hdn');
+    }
+
+    function sixthImage()
+    {
+        $('#Last-Box').removeClass('hdn');
+    }
+   
+
+</script>

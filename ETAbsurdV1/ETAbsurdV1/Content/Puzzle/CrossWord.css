@@ -1,0 +1,105 @@
+﻿.cross-word-create-row{
+    max-width:800px;
+    max-height:800px;
+    min-height:100%;
+    max-height:100%;
+
+    margin:auto;
+    display:block;
+}
+
+.single-box{
+    display:inline-block;
+    font-size:8px;
+    margin:0;
+    padding:0;
+
+    background-color:white;
+    border:1px black solid;
+    color:black;
+
+    text-shadow:none;
+}
+
+.single-box:hover{
+    background-color:#EEBA4C;
+    cursor:pointer;
+}
+
+.single-letter{
+    position:absolute;
+    font-size:20px;
+    text-align:center;
+    width:inherit;
+    height:inherit;
+}
+
+instruction-set{
+    background-color:rgb(50,50,50);
+    color:rgb(220,220,220);
+}
+
+.invalid-box{
+    background-color:indianred !important;
+}
+.valid-box{
+    background-color:forestgreen !important;
+}
+.used-box{
+    background-color:#EEBA4C !important;
+}
+
+.placement-ui-box,
+.alter-ui-box{
+    display:none;
+
+    position:absolute;
+
+    height:300px;
+    width:300px;
+    padding:10px;
+
+    border: 3px ridge #EEBA4C;
+
+    color:white;
+
+    overflow-y:scroll;
+}
+
+.warning{
+    text-align:center;
+    color:red;
+}
+
+
+#Create-CrossWord{
+    display:none;
+}
+
+.puzzle-create-page{
+    padding-bottom:100px;
+}
+
+/*CONFIRMATION*/
+.confirmation-box{
+    position:fixed;
+    display:none;
+    width:80%;
+    height:80%;
+
+    left:10%;
+    top:10%;
+
+    background-color:#3A3A3C;
+    color:white;
+
+    border:3px ridge #EEBA4C;
+    border-radius:15px;
+
+}
+
+.confirmation-box > div{
+    text-align:center;
+    padding-top:10px;
+    padding-bottom:10px;
+}

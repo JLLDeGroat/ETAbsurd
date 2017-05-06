@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "CreateGif";
+}
+
+
+@Styles.Render("~/Content/App/Gif")
+@Styles.Render("~/DragDealer/css")
+@Scripts.Render("~/DragDealer/js")
+
+
+@Html.Partial("BannerAd")
+@Html.Partial("VoteFail")
+
+<div class="overflow-control">
+    <div class="row app-row">
+        <div class="col-md-4">
+            <div class="app-box">
+                <h3 class="h-speak">Create a Gif</h3>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="app-box">
+                <article class="app-article">
+                    A GIF (Graphics Interchange Format) pronounced as jif by its creator Steve Willwhite because of peanut butter.
+                    Nowadays however, they are used to fixate on extremely small details, blow them up to absurd sizes and to take
+                    the full context of the original media away to fit the makers own purpose. It's time to do the same.
+                    <br />
+                    Take something now, and deprive it of meaning. Please make it worth the destruction.
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="row app-row">
+        <div class="col-md-6">
+            <div class="app-box">
+                <div class="image-upload">
+                    <span class="btn btn-default btn-file">
+                        Upload Multiple Files<input type="file" name="fileToUpload" id="Gif-To-Upload" onchange="fileSelected(this);" accept="image/*" multiple />
+                    </span>
+                </div>
+                <h4 id="Progress" class="h-speak"></h4>
+                <h4 id="uploadPercentage" class="h-speak"></h4>
+            </div>
+
+            <hr />
+
+            <div class="app-box app-option-box hdn spawn-in" id="Gif-Option-Box">
+                <div id="Frame-Speed-Slider" class="dragdealer">
+                    <div id="Gif-MS" class="handle red-bar"></div>
+                </div>
+                <article class="app-article">
+                    Drag this bar to change the lenth of time each image is displayed before moving on the the next. It slides
+                    between 5-105 milliseconds. Although 105 does not seem like long, you will certainly notice the difference.
+                    I would suggest that option used when each frame is impactful. Our default value is 20ms
+                </article>
+                <input type="button" class="submit-button form-control" value="Update" onclick="updateGif()" />
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="app-box hdn spawn-in" id="Gif-Display-Box">
+                <img id="Gif-Display" class="app-gif-img" src="" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="app-row row hdn spawn-in" id="Gif-Save-Box">
+        <div class="col-md-8">
+            <div class="app-box">
+                <article class="app-article">
+                    Once you have experimented with the timings of the gif, gotten it to its most self. Happy that it portrays
+                    the exact amount of humour needed, or the message is potent enough to envoke an emotion. Of course also make
+                    sure you are happy with the image and save it so you can re-use it anywhere from your control panel.
+                </article>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="app-box">
+                <input type="button" class="form-control submit-button" value="Save Gif" onclick="saveGif()" />
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@Scripts.Render("~/Scripts/App/Gif")

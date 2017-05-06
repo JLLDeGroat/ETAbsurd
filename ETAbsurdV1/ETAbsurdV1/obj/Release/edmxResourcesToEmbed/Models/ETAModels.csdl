@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sovereignModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="sovereignEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ETA_Error" EntityType="sovereignModel.ETA_Error" />
+    <EntitySet Name="ETA_Thread" EntityType="sovereignModel.ETA_Thread" />
+    <EntitySet Name="ETA_Post" EntityType="sovereignModel.ETA_Post" />
+    <EntitySet Name="ETA_Blog" EntityType="sovereignModel.ETA_Blog" />
+    <EntitySet Name="ETA_UserStorage" EntityType="sovereignModel.ETA_UserStorage" />
+    <EntitySet Name="ETA_User" EntityType="sovereignModel.ETA_User" />
+    <EntitySet Name="ETA_FactionPost" EntityType="sovereignModel.ETA_FactionPost" />
+    <EntitySet Name="ETA_FactionThread" EntityType="sovereignModel.ETA_FactionThread" />
+    <EntitySet Name="ETA_Comment" EntityType="sovereignModel.ETA_Comment" />
+    <EntitySet Name="ETA_Puzzles" EntityType="sovereignModel.ETA_Puzzles" />
+  </EntityContainer>
+  <EntityType Name="ETA_Error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Resolved" Type="Boolean" />
+    <Property Name="ResolvedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ETA_Thread">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorAvatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Voters" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Votes" Type="Int32" Nullable="false" />
+    <Property Name="UpVotes" Type="Int32" Nullable="false" />
+    <Property Name="DownVotes" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comments" Type="Int32" />
+    <Property Name="Tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Views" Type="Int32" Nullable="false" />
+    <Property Name="Posts" Type="Int32" />
+    <Property Name="Edited" Type="DateTime" Precision="3" />
+    <Property Name="Edit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfEdit" Type="DateTime" Precision="3" />
+    <Property Name="EditAmounts" Type="Int32" />
+    <Property Name="LastPost" Type="DateTime" Precision="3" />
+    <Property Name="LastPostId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ETA_Post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ThreadId" Type="Int32" Nullable="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Quote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorAvatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Votes" Type="Int32" />
+    <Property Name="UpVotes" Type="Int32" />
+    <Property Name="DownVotes" Type="Int32" />
+    <Property Name="Voters" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Edited" Type="DateTime" Precision="3" />
+    <Property Name="Edit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EditAmounts" Type="Int32" />
+    <Property Name="Comments" Type="Int32" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ETA_Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TitleImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Edits" Type="Int32" />
+    <Property Name="EditDate" Type="DateTime" Precision="3" />
+    <Property Name="Views" Type="Int32" Nullable="false" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="KarmaUp" Type="Int32" Nullable="false" />
+    <Property Name="KarmaDown" Type="Int32" Nullable="false" />
+    <Property Name="KarmaTotal" Type="Int32" Nullable="false" />
+    <Property Name="KarmaPercent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KarmaVoters" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ETA_UserStorage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RegisterDate" Type="DateTime" Precision="0" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reputation" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ReputationAverage" Type="Int32" />
+    <Property Name="ReputationVotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReputationVoteDates" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RepTag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RepTagHistory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Posts" Type="Int32" />
+    <Property Name="Threads" Type="Int32" />
+    <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TextColor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Signature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Font" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpVotes" Type="Int32" />
+    <Property Name="DownVotes" Type="Int32" />
+    <Property Name="CompetitionEntries" Type="Int32" />
+    <Property Name="CompetitionsEntered" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompetitionsWon" Type="Int32" />
+    <Property Name="CompetitionsSecond" Type="Int32" />
+    <Property Name="CompetitionsThird" Type="Int32" />
+    <Property Name="CompetitionsTopTen" Type="Int32" />
+    <Property Name="Medals" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HasVoted" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GivenUpVotes" Type="Int32" />
+    <Property Name="GivenDownVotes" Type="Int32" />
+    <Property Name="GivenVoteDates" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordRetrievalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Blogger" Type="Boolean" Nullable="false" />
+    <Property Name="Blogs" Type="Int32" Nullable="false" />
+    <Property Name="KarmaUp" Type="Int32" Nullable="false" />
+    <Property Name="KarmaDown" Type="Int32" Nullable="false" />
+    <Property Name="KarmaTotal" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ETA_User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RegisterDate" Type="DateTime" Precision="0" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reputation" Type="Decimal" Nullable="false" Precision="18" Scale="13" />
+    <Property Name="ReputationAverage" Type="Int32" />
+    <Property Name="ReputationVotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReputationVoteDates" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RepTag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RepTagHistory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Posts" Type="Int32" />
+    <Property Name="Threads" Type="Int32" />
+    <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TextColor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Signature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Font" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpVotes" Type="Int32" />
+    <Property Name="DownVotes" Type="Int32" />
+    <Property Name="CompetitionEntries" Type="Int32" />
+    <Property Name="CompetitionsEntered" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompetitionsWon" Type="Int32" />
+    <Property Name="CompetitionsSecond" Type="Int32" />
+    <Property Name="CompetitionsThird" Type="Int32" />
+    <Property Name="CompetitionsTopTen" Type="Int32" />
+    <Property Name="Medals" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HasVoted" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GivenUpVotes" Type="Int32" />
+    <Property Name="GivenDownVotes" Type="Int32" />
+    <Property Name="GivenVoteDates" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordRetrievalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Blogger" Type="Boolean" Nullable="false" />
+    <Property Name="Blogs" Type="Int32" Nullable="false" />
+    <Property Name="BlogFrequency" Type="Int32" />
+    <Property Name="Following" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KarmaUp" Type="Int32" Nullable="false" />
+    <Property Name="KarmaDown" Type="Int32" Nullable="false" />
+    <Property Name="KarmaTotal" Type="Int32" Nullable="false" />
+    <Property Name="RecentBlog" Type="DateTime" Precision="0" />
+    <Property Name="RecentThread" Type="DateTime" Precision="0" />
+    <Property Name="RecentPost" Type="DateTime" Precision="0" />
+    <Property Name="Faction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FactionPosts" Type="Int32" Nullable="false" />
+    <Property Name="FactionContribution" Type="Decimal" Nullable="false" Precision="18" Scale="3" />
+    <Property Name="FactionUpVotes" Type="Int32" Nullable="false" />
+    <Property Name="FactionDownVotes" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ETA_FactionPost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ThreadId" Type="Int32" Nullable="false" />
+    <Property Name="Faction" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Quote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorAvatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Votes" Type="Int32" />
+    <Property Name="UpVotes" Type="Int32" />
+    <Property Name="DownVotes" Type="Int32" />
+    <Property Name="Voters" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Edited" Type="DateTime" Precision="3" />
+    <Property Name="Edit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EditAmounts" Type="Int32" />
+    <Property Name="Comments" Type="Int32" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ETA_FactionThread">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Faction" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorAvatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Voters" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Votes" Type="Int32" Nullable="false" />
+    <Property Name="UpVotes" Type="Int32" Nullable="false" />
+    <Property Name="DownVotes" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comments" Type="Int32" />
+    <Property Name="Tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Views" Type="Int32" Nullable="false" />
+    <Property Name="Posts" Type="Int32" />
+    <Property Name="Edited" Type="DateTime" Precision="3" />
+    <Property Name="Edit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfEdit" Type="DateTime" Precision="3" />
+    <Property Name="EditAmounts" Type="Int32" />
+    <Property Name="LastPost" Type="DateTime" Precision="3" />
+    <Property Name="LastPostId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ETA_Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Blog" Type="Boolean" />
+    <Property Name="Game" Type="Boolean" />
+    <Property Name="Thread" Type="Boolean" />
+    <Property Name="Post" Type="Boolean" />
+    <Property Name="Puzzle" Type="Boolean" />
+    <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Votes" Type="Int32" />
+    <Property Name="Upvotes" Type="Int32" />
+    <Property Name="DownVotes" Type="Int32" />
+    <Property Name="ParentId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ETA_Puzzles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="EditAmount" Type="Int32" />
+    <Property Name="EditDate" Type="DateTime" Precision="0" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="Votes" Type="Int32" />
+    <Property Name="UpVotes" Type="Int32" />
+    <Property Name="DownVotes" Type="Int32" />
+    <Property Name="Voters" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Difficulty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Completed" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

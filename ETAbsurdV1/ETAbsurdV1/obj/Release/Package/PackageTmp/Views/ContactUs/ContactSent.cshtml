@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "ContactSent";
+}
+
+@Styles.Render("~/Content/Contact/css")
+
+<div class="row overflow-control">
+    <div class="col-md-offset-4 col-md-4 col-sm-12 form spawn-in">
+        <h3>
+            Your statement which could possible be negative or positive has
+            been recorded somewhere virtually, and also in written format sent
+            directly to my e-mail. I can either have my soul uplifted or
+            destroyed, it seems you have considerable power and now knowing it, Does it
+            make you regret; does it make you proud of the statement you have requested a human
+            read.
+        </h3>
+        <hr />
+       <h3>
+           At least, you took the time to do it so I managed to envoke a reaction in you
+           either to be nice or horrid. <br/>
+           Now that it is all sorted lets go back to the homepage
+       </h3>
+        <input type="button" class="form-control submit-button" value="Home Page"
+               onclick="window.location = '@Url.Action("Index","Home")'" />
+        @if (User.Identity.IsAuthenticated)
+        {
+            <hr/>
+            <input type="button" class="form-control submit-button" value="control panel"
+                   onclick="window.location = '@Url.Action("ControlPanel", "Account")'" />
+        }
+    </div>
+</div>
+
+
+
+@Scripts.Render("~/Scripts/Contact/js")
+

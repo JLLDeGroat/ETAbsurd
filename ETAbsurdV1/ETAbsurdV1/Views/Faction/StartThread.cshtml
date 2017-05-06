@@ -1,0 +1,66 @@
+﻿@model ETAbsurdV1.Models.ETA_FactionThread
+@{
+    ViewBag.Title = "StartThread";
+    var CategoriesArray = (string[])ViewData["Categories"];
+}
+
+
+@Styles.Render("~/Content/Forum/css")
+@Html.Partial("BannerAd")
+<div class="row spawn-in form">
+    <div class="col-md-offset-3 col-md-6 forum-row start-box">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true, "I don't think you are doing it right")
+            <h1 class="info-title">Create Post <span id="Advanced" class="advanced"> show Advanced </span></h1>
+            <hr />
+
+            <h2 class="info-title">Category of your topic</h2>
+            @Html.TextBoxFor(p => p.Category, new { @class = "form-control hdn" })
+            <select class="form-control" id="CategoryList">
+                <option selected disabled>Choose Your Category</option>
+                @for (var i = 0; i < CategoriesArray.Length; i++)
+                {
+                    <option value="@CategoriesArray[i]">
+                        @CategoriesArray[i]
+                    </option>
+                }
+            </select>
+            @Html.ValidationMessageFor(p => p.Category, "", new { @class = "text-danger validation-text" })
+            <h2 class="info-title">Title</h2>
+            @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Name, "", new { @class = "text-danger validation-text" })
+            <div class="advanced-option">
+                <h2 class="info-title">Subject</h2>
+                @Html.TextBoxFor(p => p.Subject, new { @class = "form-control" })
+            </div>
+            <h2 class="info-title">Content</h2>
+            @Html.TextAreaFor(p => p.Body, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Body, "", new { @class = "text-danger validation-text" })
+            <div class="advanced-option">
+                <h2 class="info-title">Tags<span class="advanced"> separate with commas </span></h2>
+                @Html.TextBoxFor(p => p.Tags, new { @class = "form-control" })
+            </div>
+            <h2 class="info-title">Image</h2>
+            @Html.TextBoxFor(p => p.Image, new { @class = "form-control" })
+            <h5 class="h-speak">
+                Copy and Paste or C/V your image Url here. If you feel experienced use the advance feature to upload your own.
+            </h5>
+            <div class="advanced-option">
+                <h2 class="info-title">Upload</h2>
+                <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected(this);" accept="image/*" class="responsive-image" />
+                <p id="Progress"></p>
+                <p id="uploadPercentage"></p>
+            </div>
+
+            <hr />
+            <input type="submit" value="Create" class="form-control submit-button" />
+        }
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Forum/Start/js")
+
+
+
+

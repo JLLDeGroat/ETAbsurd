@@ -1,0 +1,24 @@
+﻿<link href="~/Content/Partial/NoticeBoard.css" rel="stylesheet" />
+
+
+<div class="notice-box spawn-in">
+    <h3 class="h-speak" id="Notice-Title"></h3>
+    <article id="Notice-Body"></article>
+    <hr/>
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-9">
+            <input type="button" class="form-control submit-button" value="Decide" onclick="Decide($('#Notice-Title').html())"/>
+        </div>
+    </div>
+</div>
+
+<div class="notice-box-confirmation spawn-in">
+    <h3 class="h-speak">Confirm Decision</h3>
+    <h3 id="Notice-Confirm" class="h-speak"></h3>
+    <input type="button" class="form-control submit-button" value="Confirm" onclick="ConfirmDecision($('#Notice-Confirm').html())" />
+</div>
+
+
+
+
+<script src="~/Scripts/Partial/NoticeBoard.js"></script>

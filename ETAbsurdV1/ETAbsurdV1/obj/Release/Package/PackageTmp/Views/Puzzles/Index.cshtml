@@ -1,0 +1,56 @@
+﻿@model ETAbsurdV1.Models.PuzzleSearch
+@{
+    IEnumerable<ETAbsurdV1.Models.ETA_Puzzles> Puzzles = ViewData["Puzzles"] as IEnumerable<ETAbsurdV1.Models.ETA_Puzzles>;
+    IEnumerable<ETAbsurdV1.Models.ETA_CrossWord> CrossWord = ViewData["CrossWords"] as IEnumerable<ETAbsurdV1.Models.ETA_CrossWord>;
+
+
+    ViewBag.Title = "Index";
+}
+
+@Styles.Render("~/Content/CrossWord/css")
+@Styles.Render("~/Content/Puzzle/css")
+@Styles.Render("~/Content/Puzzle/Index")
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="box">
+            <h3 class="h-speak">Puzzles and CrossWords</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-push-8 col-md-4">
+        <div class="box">
+            Woop
+        </div>
+    </div>
+    <div class="col-md-pull-4 col-md-8">
+        @foreach (var item in Puzzles)
+            {           
+                <div class="col-md-4 puzzle-box">
+                    <div class="box">
+                        <h4 class="">
+                            @item.Name
+                        </h4>
+                        <pre>@item.Body</pre>
+                        <p class="date-stamp">
+                            <span class="author-stamp">@item.Author</span>@item.Date
+                        </p>
+                    </div>
+                </div>
+            }
+        <hr/>
+        @foreach(var item in CrossWord)
+        {
+            <div class="col-md-4 puzzle-box">
+                <div class="box">
+                    <h4 class="">@item.Name</h4>
+                    <p class="date-stamp">
+                        <span class="author-stamp"></span>
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

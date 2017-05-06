@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SovereignModelStoreContainer" CdmEntityContainer="AbsurdEntities">
+    <EntitySetMapping Name="ETA_Comment">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_Comment">
+        <MappingFragment StoreEntitySet="ETA_Comment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Blog" ColumnName="Blog" />
+          <ScalarProperty Name="Game" ColumnName="Game" />
+          <ScalarProperty Name="Thread" ColumnName="Thread" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="Puzzle" ColumnName="Puzzle" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Votes" ColumnName="Votes" />
+          <ScalarProperty Name="Upvotes" ColumnName="Upvotes" />
+          <ScalarProperty Name="DownVotes" ColumnName="DownVotes" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_Error">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_Error">
+        <MappingFragment StoreEntitySet="ETA_Error">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Resolved" ColumnName="Resolved" />
+          <ScalarProperty Name="ResolvedDate" ColumnName="ResolvedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_FactionPost">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_FactionPost">
+        <MappingFragment StoreEntitySet="ETA_FactionPost">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ThreadId" ColumnName="ThreadId" />
+          <ScalarProperty Name="Faction" ColumnName="Faction" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Quote" ColumnName="Quote" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="AuthorAvatar" ColumnName="AuthorAvatar" />
+          <ScalarProperty Name="Votes" ColumnName="Votes" />
+          <ScalarProperty Name="UpVotes" ColumnName="UpVotes" />
+          <ScalarProperty Name="DownVotes" ColumnName="DownVotes" />
+          <ScalarProperty Name="Voters" ColumnName="Voters" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Edited" ColumnName="Edited" />
+          <ScalarProperty Name="Edit" ColumnName="Edit" />
+          <ScalarProperty Name="EditAmounts" ColumnName="EditAmounts" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_Blog">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_Blog">
+        <MappingFragment StoreEntitySet="ETA_Blog">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="KarmaVotes" ColumnName="KarmaVotes" />
+          <ScalarProperty Name="KarmaPercent" ColumnName="KarmaPercent" />
+          <ScalarProperty Name="KarmaTotal" ColumnName="KarmaTotal" />
+          <ScalarProperty Name="KarmaDown" ColumnName="KarmaDown" />
+          <ScalarProperty Name="KarmaUp" ColumnName="KarmaUp" />
+          <ScalarProperty Name="KarmaVoters" ColumnName="KarmaVoters" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="Edits" ColumnName="Edits" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="TitleImage" ColumnName="TitleImage" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_FactionThread">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_FactionThread">
+        <MappingFragment StoreEntitySet="ETA_FactionThread">
+          <ScalarProperty Name="LastPostId" ColumnName="LastPostId" />
+          <ScalarProperty Name="LastPost" ColumnName="LastPost" />
+          <ScalarProperty Name="EditAmounts" ColumnName="EditAmounts" />
+          <ScalarProperty Name="DateOfEdit" ColumnName="DateOfEdit" />
+          <ScalarProperty Name="Edit" ColumnName="Edit" />
+          <ScalarProperty Name="Edited" ColumnName="Edited" />
+          <ScalarProperty Name="Posts" ColumnName="Posts" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DownVotes" ColumnName="DownVotes" />
+          <ScalarProperty Name="UpVotes" ColumnName="UpVotes" />
+          <ScalarProperty Name="Votes" ColumnName="Votes" />
+          <ScalarProperty Name="Voters" ColumnName="Voters" />
+          <ScalarProperty Name="AuthorAvatar" ColumnName="AuthorAvatar" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Faction" ColumnName="Faction" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_User">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_User">
+        <MappingFragment StoreEntitySet="ETA_User">
+          <ScalarProperty Name="FactionDownVotes" ColumnName="FactionDownVotes" />
+          <ScalarProperty Name="FactionUpVotes" ColumnName="FactionUpVotes" />
+          <ScalarProperty Name="FactionContribution" ColumnName="FactionContribution" />
+          <ScalarProperty Name="FactionPosts" ColumnName="FactionPosts" />
+          <ScalarProperty Name="Faction" ColumnName="Faction" />
+          <ScalarProperty Name="RecentPost" ColumnName="RecentPost" />
+          <ScalarProperty Name="RecentThread" ColumnName="RecentThread" />
+          <ScalarProperty Name="RecentBlog" ColumnName="RecentBlog" />
+          <ScalarProperty Name="KarmaTotal" ColumnName="KarmaTotal" />
+          <ScalarProperty Name="KarmaDown" ColumnName="KarmaDown" />
+          <ScalarProperty Name="KarmaUp" ColumnName="KarmaUp" />
+          <ScalarProperty Name="Following" ColumnName="Following" />
+          <ScalarProperty Name="BlogFrequency" ColumnName="BlogFrequency" />
+          <ScalarProperty Name="Blogs" ColumnName="Blogs" />
+          <ScalarProperty Name="Blogger" ColumnName="Blogger" />
+          <ScalarProperty Name="PasswordRetrievalCode" ColumnName="PasswordRetrievalCode" />
+          <ScalarProperty Name="GivenVoteDates" ColumnName="GivenVoteDates" />
+          <ScalarProperty Name="GivenDownVotes" ColumnName="GivenDownVotes" />
+          <ScalarProperty Name="GivenUpVotes" ColumnName="GivenUpVotes" />
+          <ScalarProperty Name="HasVoted" ColumnName="HasVoted" />
+          <ScalarProperty Name="Medals" ColumnName="Medals" />
+          <ScalarProperty Name="CompetitionsTopTen" ColumnName="CompetitionsTopTen" />
+          <ScalarProperty Name="CompetitionsThird" ColumnName="CompetitionsThird" />
+          <ScalarProperty Name="CompetitionsSecond" ColumnName="CompetitionsSecond" />
+          <ScalarProperty Name="CompetitionsWon" ColumnName="CompetitionsWon" />
+          <ScalarProperty Name="CompetitionsEntered" ColumnName="CompetitionsEntered" />
+          <ScalarProperty Name="CompetitionEntries" ColumnName="CompetitionEntries" />
+          <ScalarProperty Name="DownVotes" ColumnName="DownVotes" />
+          <ScalarProperty Name="UpVotes" ColumnName="UpVotes" />
+          <ScalarProperty Name="Font" ColumnName="Font" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="TextColor" ColumnName="TextColor" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Threads" ColumnName="Threads" />
+          <ScalarProperty Name="Posts" ColumnName="Posts" />
+          <ScalarProperty Name="RepTagHistory" ColumnName="RepTagHistory" />
+          <ScalarProperty Name="RepTag" ColumnName="RepTag" />
+          <ScalarProperty Name="ReputationVoteDates" ColumnName="ReputationVoteDates" />
+          <ScalarProperty Name="ReputationVotes" ColumnName="ReputationVotes" />
+          <ScalarProperty Name="ReputationAverage" ColumnName="ReputationAverage" />
+          <ScalarProperty Name="Reputation" ColumnName="Reputation" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_BlogStorage">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_BlogStorage">
+        <MappingFragment StoreEntitySet="ETA_BlogStorage">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="KarmaVotes" ColumnName="KarmaVotes" />
+          <ScalarProperty Name="KarmaPercent" ColumnName="KarmaPercent" />
+          <ScalarProperty Name="KarmaTotal" ColumnName="KarmaTotal" />
+          <ScalarProperty Name="KarmaDown" ColumnName="KarmaDown" />
+          <ScalarProperty Name="KarmaUp" ColumnName="KarmaUp" />
+          <ScalarProperty Name="KarmaVoters" ColumnName="KarmaVoters" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="Edits" ColumnName="Edits" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="TitleImage" ColumnName="TitleImage" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_CrossWord">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_CrossWord">
+        <MappingFragment StoreEntitySet="ETA_CrossWord">
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Directions" ColumnName="Directions" />
+          <ScalarProperty Name="Answers" ColumnName="Answers" />
+          <ScalarProperty Name="Positions" ColumnName="Positions" />
+          <ScalarProperty Name="Clues" ColumnName="Clues" />
+          <ScalarProperty Name="Questions" ColumnName="Questions" />
+          <ScalarProperty Name="GridTotal" ColumnName="GridTotal" />
+          <ScalarProperty Name="GridY" ColumnName="GridY" />
+          <ScalarProperty Name="GridX" ColumnName="GridX" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_Post">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_Post">
+        <MappingFragment StoreEntitySet="ETA_Post">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="EditAmounts" ColumnName="EditAmounts" />
+          <ScalarProperty Name="Edit" ColumnName="Edit" />
+          <ScalarProperty Name="Edited" ColumnName="Edited" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Voters" ColumnName="Voters" />
+          <ScalarProperty Name="DownVotes" ColumnName="DownVotes" />
+          <ScalarProperty Name="UpVotes" ColumnName="UpVotes" />
+          <ScalarProperty Name="Votes" ColumnName="Votes" />
+          <ScalarProperty Name="AuthorAvatar" ColumnName="AuthorAvatar" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Quote" ColumnName="Quote" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="ThreadId" ColumnName="ThreadId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_Puzzles">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_Puzzles">
+        <MappingFragment StoreEntitySet="ETA_Puzzles">
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="Difficulty" ColumnName="Difficulty" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Voters" ColumnName="Voters" />
+          <ScalarProperty Name="DownVotes" ColumnName="DownVotes" />
+          <ScalarProperty Name="UpVotes" ColumnName="UpVotes" />
+          <ScalarProperty Name="Votes" ColumnName="Votes" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditAmount" ColumnName="EditAmount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETA_Thread">
+      <EntityTypeMapping TypeName="SovereignModel.ETA_Thread">
+        <MappingFragment StoreEntitySet="ETA_Thread">
+          <ScalarProperty Name="LastPostId" ColumnName="LastPostId" />
+          <ScalarProperty Name="LastPost" ColumnName="LastPost" />
+          <ScalarProperty Name="EditAmounts" ColumnName="EditAmounts" />
+          <ScalarProperty Name="DateOfEdit" ColumnName="DateOfEdit" />
+          <ScalarProperty Name="Edit" ColumnName="Edit" />
+          <ScalarProperty Name="Edited" ColumnName="Edited" />
+          <ScalarProperty Name="Posts" ColumnName="Posts" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DownVotes" ColumnName="DownVotes" />
+          <ScalarProperty Name="UpVotes" ColumnName="UpVotes" />
+          <ScalarProperty Name="Votes" ColumnName="Votes" />
+          <ScalarProperty Name="Voters" ColumnName="Voters" />
+          <ScalarProperty Name="AuthorAvatar" ColumnName="AuthorAvatar" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

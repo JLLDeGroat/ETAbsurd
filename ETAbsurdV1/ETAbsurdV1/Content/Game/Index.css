@@ -1,0 +1,33 @@
+﻿.game-row{
+    background-color: #3A3A3C;
+    color:white;
+    text-shadow:1px 1px #EEBA4C;
+
+    padding:20px;
+}
+
+.game-icon{
+    background-color:blueviolet;
+    background-size: cover;
+    background-color:rgba(127, 255, 212, 0.3);
+    position:relative;
+    border: 3px ridge #58b294;  
+    box-shadow: -50px 0px 100px -20px inset;
+
+    cursor:pointer;
+}
+
+.game-name{
+    font-family:CGFLocustResistance;
+    text-align:center;
+}
+
+@media (max-width:1285px){
+    .game-name{
+        font-size:8px;
+    }
+}
+
+@media (max-width:970px){
+
+}

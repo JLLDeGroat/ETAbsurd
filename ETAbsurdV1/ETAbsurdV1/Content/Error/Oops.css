@@ -1,0 +1,43 @@
+﻿::selection {
+  background: black; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: black; /* Gecko Browsers */
+}
+
+
+.error-box{
+    background-color:#3A3A3C;
+    color:white;
+    text-shadow: 1px 1px black;
+    margin-top:25px;
+    padding:25px;
+
+    font-family:'dream orphans';
+}
+
+
+.error-box > h3{
+    text-align:center;
+}
+h3, h4 {
+    font-family:'dream orphans';
+} 
+
+.codes, .tips{
+    padding:10px;
+}
+
+.error-send{
+  padding:40px;
+  text-align:center;
+}
+.error-send-button{
+   font-family:CGFLocustResistance;
+}
+
+
+.gratitude-row > div > div,
+.return-buttons{
+    padding:30px;
+}

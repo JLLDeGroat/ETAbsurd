@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "TestRep";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <input type="button" class="submit-button form-control" value="Submit" 
+               onclick="TestRep()" />
+    </div>
+    <div class="col-md-3">
+        <input type="text" class="form-control" id="Voter" />
+    </div>
+    <div class="col-md-3">
+        <div id="result" style="color:white; font-size:200%;">0.00</div>
+    </div>
+</div>
+
+<script>
+    function TestRep() {
+        $.post("/ZTest/TestRepCalc", { Rep: $('#result').html(), Vote: $('#Voter').val(),  }, function (data) {
+            $('#result').html(data);
+        })
+    }
+
+</script>

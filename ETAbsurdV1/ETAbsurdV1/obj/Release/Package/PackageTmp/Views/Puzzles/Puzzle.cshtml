@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Puzzle";
+    IEnumerable<ETAbsurdV1.Models.ETA_Puzzles> Puzzle = ViewData["Puzzle"] as IEnumerable<ETAbsurdV1.Models.ETA_Puzzles>;
+}
+@Styles.Render("~/Content/Puzzle/css")
+@Html.Partial("VoteFail")
+@Html.Partial("Report")
+<div class="row">
+    @foreach (var item in Puzzle)
+    {
+        <div class="col-md-8">
+            <div class="puzzle-showcase-box">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <span class="post-option" onclick="ReportClicked('@item.Author', 'Puzzle')">Report</span>
+                }
+                @if (User.Identity.Name == item.Author)
+                {
+                    <span class="post-option" onclick="window.location = '@Url.Action("Edit","Puzzles", new { Id = @item.Id, Category = @item.Category })'">Edit</span>
+                }
+                <h3>@item.Name</h3>
+                <article>
+                    <pre class="blog-body" id="Blog-Body">@item.Body</pre>
+                </article>
+            </div>
+            <div class="voter">
+                <div class="circle up-vote" onclick="voteClicked('@item.Id','up', this)">
+                    <div class="triangle"></div>
+                </div>
+                <div class="vote-section">@item.Votes</div>
+                <div class="circle down-vote" onclick="voteClicked('@item.Id','down', this)">
+                    <div class="triangle-down"></div>
+                </div>
+            </div>
+            <hr/>       
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 puzzle-showcase-box">
+                    <h3 class="h-speak">Attempt an answer</h3>
+                    <input type="text" class="form-control" id="Answer-Text"/>
+                    <hr/>
+                    <input type="button" class="submit-button form-control" value="submit" id="Answer-Button" />
+                </div>
+            </div>
+            <div class="post-submit-load">
+                <div class="post-load-line"></div>
+                <div class="post-load-blip"></div>
+            </div>  
+            <div class="blog-comment-section puzzle-showcase-box">
+                <div id="Comment-Box"></div>
+            </div>
+            <div class="blog-comment-section puzzle-showcase-box">
+                <h3 class="h-speak">Leave a comment</h3>
+                <hr />
+                <div class="blog-comment-create">
+                    <textarea class="form-control" rows="3" id="Comment-Text"></textarea>
+                    <div class="blog-comment-create-button">
+                        <input type="button" onclick="SubmitComment($('#Comment-Text').val(), '@item.Id', this)" class="submit-button form-control" value="Comment" />
+                        <div class="blog-submit-load">
+                            <div class="blog-load-line"></div>
+                            <div class="blog-load-blip"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <h3 class="h-speak">
+                Please <span class="login-option"
+                             onclick="window.location = '@Url.Action("Login", "Login", new { SentFromBlog = item.Id })'">
+                    Login
+                </span>
+                to comment or attempt an answer.
+            </h3>
+        }
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <div class="puzzle-showcase-box">
+
+            </div>
+        </div>
+    }
+</div>
+
+
+
+@Scripts.Render("~/Scripts/Puzzle/js")

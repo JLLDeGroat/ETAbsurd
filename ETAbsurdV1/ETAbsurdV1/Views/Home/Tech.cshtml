@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Tech";
+}
+
+<h2>Tech</h2>
+
+
+<h2 id="num" style="color:white;">1</h2>
+<input type="button" class="form-control submit-button" onclick="addOne()" />
+
+<hr/>
+
+<h2 id="nu" style="color:white;">1</h2>
+<input type="button" class="form-control submit-button" value="c" 
+       onclick="csharp()"/>
+
+
+<script>
+    function addOne() {
+        var n = parseInt($('#num').html());
+        console.log(n);
+        if (n > 9) {
+            $('#num').html("Failed");
+        }
+        else {
+            $('#num').html(n + 1);
+        }        
+    }
+
+
+    function csharp() {
+        var x = $('#nu').html();
+        $.post("/Home/Techsharp", { Data: x, }, function (data) {
+            console.log(data);
+        })
+    }
+</script>

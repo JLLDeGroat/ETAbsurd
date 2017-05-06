@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="43431327ab3345659227d0a843939ebb" Name="Diagram1" ZoomLevel="53">
+        <EntityTypeShape EntityType="SovereignModel.ETA_Comment" Width="1.5" PointX="5.375" PointY="0.75" IsExpanded="true" FillColor="Ivory" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_Error" Width="1.5" PointX="2.125" PointY="0.75" IsExpanded="true" FillColor="Firebrick" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_FactionPost" Width="1.5" PointX="8.625" PointY="6.5" IsExpanded="true" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_Blog" Width="1.5" PointX="7" PointY="0.75" FillColor="Gold" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_FactionThread" Width="1.5" PointX="8.625" PointY="0.75" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_User" Width="1.5" PointX="0.5" PointY="0.75" FillColor="RoyalBlue" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_BlogStorage" Width="1.5" PointX="2.125" PointY="3.125" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_CrossWord" Width="1.5" PointX="10.25" PointY="5.625" FillColor="MediumSpringGreen" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_Post" Width="1.5" PointX="3.75" PointY="6.375" IsExpanded="true" FillColor="Tan" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_Puzzles" Width="1.5" PointX="10.25" PointY="0.75" FillColor="MediumSpringGreen" />
+        <EntityTypeShape EntityType="SovereignModel.ETA_Thread" Width="1.5" PointX="3.75" PointY="0.75" FillColor="Tan" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

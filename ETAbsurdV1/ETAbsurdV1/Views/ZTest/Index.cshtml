@@ -1,0 +1,210 @@
+﻿@{ 
+    IEnumerable<ETAbsurdV1.Models.ETA_User> XXX = ViewData["XXX"] as IEnumerable<ETAbsurdV1.Models.ETA_User>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Post> Posts = ViewData["Posts"] as IEnumerable<ETAbsurdV1.Models.ETA_Post>;
+}
+@{
+    ViewBag.Title = "Index";
+}
+@{ 
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> Threads = ViewData["ThreadList"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+}
+<link href="~/Content/ZTest/Ztest.css" rel="stylesheet" />
+<div class="row">
+    <div class="col-md-12">
+        @foreach (var item in XXX)
+        {
+            <a onclick="window.location = '@Url.Action("Index","ZTest", new { Ident = @item.Id })'">@item.Username @item.Id</a>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="form-control" value="Test String Generator Button" 
+               onclick="window.location = '@Url.Action("StringGen","Ztest")' "/>
+        <h1>@ViewData["TheTag"]</h1>
+    </div>
+    <hr/>
+    <div class="col-md-12">
+        @foreach(var item in Threads)
+        {
+            if(item.Date == null)
+            {
+                <input type="button" onclick="window.location = '@Url.Action("DateMaker","Ztest", new { ID = item.Id })'" class="btn btn-lg" value="Make a Date" />
+            }
+        }
+    </div>
+</div>
+<div class="row">
+    <h1>Text writing test</h1>
+    <input type="button" class="btn btn-lg" value="test text" id="test-text" />
+    <h2 id="Test"></h2>
+    <h1 id="Test2"></h1>
+    <h1 id="results"></h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            <input type="text" class="form-control" id="testcontrol" />
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-lg" id="testcontrolbutton" value="test submit" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    @Html.Partial("Crumbs")
+</div>
+
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        @foreach (var item in Posts)
+        {
+            <a onclick="window.location = '@Url.Action("DeletePost","Ztest", new { id = item.Id })'">@item.Author @item.Id</a>
+        }
+    </div>
+</div>
+<div class="row">
+    <h1>Email</h1>
+    <input type="button" onclick="window.location = '@Url.Action("TestMail","Ztest")'" value="TestEmail" class="btn btn-lg" />
+</div>
+
+<div class="row">
+    <div class="col-xs-2">
+        <div class="padded-circle">
+            <div class="circle2">
+                <div class="triangle2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="row">    
+    <div class="col-xs-2" style="padding:15px;">
+        <div class="padding">
+            <div class="circle">
+                <div class="triangle">
+
+                </div>
+            </div>
+        </div>
+        <div class="padding">
+            <div class="circle">
+                <div class="triangle-down">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    @foreach (var item in Posts)
+    {
+        <div onclick="window.location = '@Url.Action("DeleteVotes","Ztest", new { @item.Id })'">
+            <h1>@item.Author.ToLower()</h1>
+            <h1>@item.Voters|@item.UpVotes|@item.DownVotes</h1>
+        </div>
+        <hr/>
+    }
+</div>
+
+
+<hr/>
+
+<div class="row">
+    <input type="button" value="Vote Fail Notice" id="VoteFail" class="submit-button form-control" />
+    <input type="button" value="Report Div" id="Report" class="submit-button form-control" />
+</div>
+
+<div class="row">
+    <input type="button" value="change avatars from null" class="submit-button form-control" onclick="ChangeAvatars()"/>
+</div>
+
+<div class="row vote-fail">
+    @Html.Partial("VoteFail")
+</div>
+
+
+@Html.Partial("Report")
+
+<style>
+    
+</style>
+
+
+
+<script src="~/Scripts/Plugins/typed.js"></script>
+
+<script> 
+    $("#Test").typed({
+        strings: ["Initialising..."],
+        typeSpeed: 150,
+
+        callback: function () {
+            setTimeout(initialised, 1000);
+        },
+    });
+    function initialised() {
+        $("#Test").typed({
+            strings: ["Initialised"],
+            typeSpeed: 150,
+        });
+    }
+
+    var gameData = { X: 10, Y: 10, Z: 10,
+        Instruction: "new Instruction",
+        Information: "",
+    };
+    $('#test-text').click(function () {
+        $.post("/Game/GetResult", { GameData: JSON.stringify(gameData), }, function (data) {
+            $('#results').html(data);
+            console.log(data);
+            console.log(gameData);
+            $("#Test").typed({
+                strings: [data.Instruction, data.X.toString()],
+                typeSpeed: 150,
+            });
+        })
+    })
+
+    $('#testcontrolbutton').click(function () {
+        gameData.Instruction = $('#testcontrol').val()
+        $.post("/Game/GetResult", { GameData: JSON.stringify(gameData), }, function (data) {
+            $("#Test2").typed({
+                strings: [data.Information],
+                typeSpeed: 150,
+            });
+
+            //update Data
+            gameData.X = data.X;
+            gameData.Y = data.Y;
+            gameData.Z = data.Z;
+        })
+    })    
+    var voteFail = false;
+    $('#VoteFail').click(function () {
+        console.log(voteFail);
+        if(voteFail == false){
+            $('.vote-message-box').css('display', 'block');
+            voteFail = true;
+            setTimeout(function(){
+                voteFail = false;
+                $('.vote-message-box').css('display', 'none');
+            }, 3000);
+        }
+    })
+
+    $('#Report').click(function () {
+        $('.report-row').css('display', 'block');
+        $('.report-row').removeClass('spawn-out');
+    })
+
+
+    function ChangeAvatars() {
+        $.post("/Ztest/ChangeAvatar", {}, function (data) {
+            console.log("win");
+        })
+    }
+
+</script>
+
+
+

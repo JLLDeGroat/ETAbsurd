@@ -1,0 +1,151 @@
+﻿
+
+.loader {   
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid #990000;
+    animation: up 1s;
+    animation-iteration-count: infinite;
+    transition: 2s;
+    border-bottom: none;
+    border-right: none;
+    animation-timing-function: linear;
+    margin-left: -46px;
+	margin-top: -46px;
+	left:50%;
+	top:50%;
+    z-index:9;
+}
+#Loader1 {
+    width: 90px;
+    height: 90px;
+    left: 50px;
+    top: 50px;
+    animation-delay: .2s;
+}
+#Loader2 {
+    width: 80px;
+    height: 80px;
+    left: 54px;
+    top: 54px;
+    animation-delay: .4s;
+}
+#Loader3 {
+    width: 70px;
+    height: 70px;
+    left: 58px;
+    top: 58px;
+    animation-delay: .6s;
+}
+#Loader4 {
+    width: 60px;
+    height: 60px;
+    left: 62px;
+    top: 62px;
+    animation-delay: .8s;
+}
+
+.game-load-box{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:black;
+    z-index:9;
+}
+
+
+.load-counter{   
+    height:30px;
+    width:90%;
+    bottom:20px;
+    position:absolute;
+    left:5%;
+    right:5%;
+
+    border:1px solid white;
+
+    overflow:hidden;
+
+    border-radius:25px;
+}
+
+
+.progress{
+    height:inherit;
+    width:0%;
+    
+    background-color:#990000;
+    border-radius:25px;
+}
+
+@keyframes up {
+    from {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes up {
+    from {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes up {
+    from {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.loaded{
+    animation: load-complete 1s;
+    transition: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+
+.progress-loaded{
+    animation: progress-complete 1s;
+    transition: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes progress-complete{
+    0%{
+
+    }
+    50%{
+
+    }
+    100%{
+        background-color:#0E8C3A;
+    }
+}

@@ -1,0 +1,40 @@
+﻿@model ETAbsurdV1.Models.ContactUs
+@{
+    ViewBag.Title = "Contact";
+}
+@Styles.Render("~/Content/Contact/css")
+
+<div class="row overflow-control">
+    <div class="col-md-offset-4 col-md-4 col-sm-12 form spawn-in">
+        <h2>Contact Us</h2>
+        <hr />
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true, "This is not the best start is it.");
+            if(!User.Identity.IsAuthenticated)
+            { 
+                <h2>USER NAME</h2>
+                @Html.TextBoxFor(p => p.UserName, new { @class = "form-control" })
+            }
+            <h2>REASONING</h2>
+            @Html.TextBoxFor(p =>p.Reason, new { @class = "form-control" })
+            <h2>CONTENT</h2>
+            @Html.TextAreaFor(p => p.Body, new { @class = "form-control", @rows = 6 })
+            <h2>IMAGE</h2>
+            @Html.TextBoxFor(p => p.Image, new { @class = "form-control" })
+            <hr />
+            <input type="submit" value="Submit" class="form-control submit-button" />
+        }
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <div class="options">
+                <a class="option-1" onclick="window.location = '@Url.Action("Register","Login")'">Register</a><br />
+                <a class="option-2" onclick="window.location = '@Url.Action("PasswordRetrieval", "Login")'">Forgot Password</a>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+@Scripts.Render("~/Scripts/Contact/js")

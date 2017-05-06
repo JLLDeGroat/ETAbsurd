@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    @Styles.Render("~/Content/Homepage/css");
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+</head>
+
+
+<div class="main-portal">
+    @Html.Partial("BannerAd")
+    <!--MENU SECTION-->
+    <div class="row">
+        <div class="col-md-4">
+            <div id="box1" class="menu-box">
+                <ul class="menu-box-header">
+                    <li class="menu-box-addon">
+                        <div class="menu-box-addon-1">
+                            <span class="menu-box-first-frame menu-box-1">
+                                Blogs
+                            </span>
+                        </div>
+                    </li>
+                    <li class="menu-box-addon-2">
+                        <div class="menu-box-second-frame menu-box-1-2">
+                            <img class="background-image-gif" src="~/Test/Portal/Portal.gif" />
+                            <h2 class="menu-box-second-header">Blogs</h2>
+                            <input id="a-1" type="button" value="index" class="menu-button category-1" 
+                                    onclick="window.location = '@Url.Action("Index", "Blog")'"/>
+                            <input id="a-2" type="button" value="Bloggers" class="menu-button category-2"
+                                   onclick="window.location = '@Url.Action("Bloggers", "Blog")'" />
+                            <input id="a-3" type="button" value="New" class="menu-button category-3" 
+                                   onclick="window.location = '@Url.Action("NewBlog", "Blog")'"/>
+                            <div class="video-holder">
+                                <iframe id="video-1" class="mini-video" src="https://www.youtube.com/embed/czbTr5V8Rjw?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0;" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="box2" class="menu-box">
+                <ul class="menu-box-header">
+                    <li class="menu-box-addon">
+                        <div class="menu-box-addon-1">
+                            <span class="menu-box-first-frame menu-box-1">
+                                Games
+                            </span>
+                        </div>
+                    </li>
+                    <li class="menu-box-addon-2">
+                        <div class="menu-box-second-frame menu-box-1-2">
+                            <img class="background-image-gif" src="~/Test/Portal/Portal.gif" />
+                            <h2>Games</h2>
+                            <input id="b-1" type="button" value="Index" class="menu-button category-1" 
+                                   onclick="window.location = '@Url.Action("Index","Game")'"/>
+                            <input id="b-2" type="button" value="unused" class="menu-button category-2 unused" />
+                            <input id="b-3" type="button" value="unused" class="menu-button category-3 unused" />
+                            <div class="video-holder">
+                                <iframe id="video-2" class="mini-video" src="https://www.youtube.com/embed/TgqiSBxvdws?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0;start=15" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="box3" class="menu-box">
+                <ul class="menu-box-header">
+                    <li class="menu-box-addon">
+                        <div class="menu-box-addon-1">
+                            <span class="menu-box-first-frame menu-box-1">
+                                Forum
+                            </span>
+                        </div>
+                    </li>
+                    <li class="menu-box-addon-2">
+                        <div class="menu-box-second-frame menu-box-1-2">
+                            <img class="background-image-gif" src="~/Test/Portal/Portal.gif" />
+                            <h2>Forum</h2>
+                            <input id="c-1" type="button" value="Recent" class="menu-button category-1" 
+                                   onclick="window.location = '@Url.Action("Category","Forum")'"/>
+                            <input id="c-2" type="button" value="Index" class="menu-button category-2" 
+                                   onclick="window.location = '@Url.Action("Index","Forum")'"/>
+                            <input id="c-3" type="button" value="unused" class="menu-button category-3 unused" />
+                            <div class="video-holder">
+                                <iframe id="video-3" class="mini-video" src="https://www.youtube.com/embed/I1188GO4p1E?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0;start=8" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row message-section">
+        <div class="col-sm-offset-1 col-sm-10 message-body">
+            <h1>Current Competitions</h1>
+            <div class="row">
+                <div class="col-md-4 comp-box">
+                    <div class="comp">
+                        <p class="comp-text">
+                            Concept Art
+                        </p>
+                    </div>
+                    <p>Commense your judgement on our entries to find new material posted on the site</p>
+                </div>
+                <div class="col-md-4 comp-box">
+                    <div class="comp">
+                        <p class="comp-text">
+                            The Debate
+                        </p>
+                    </div>
+                    <p>Become community debater, extra points for not insulting others</p>
+                </div>
+                <div class="col-md-4 comp-box">
+                    <div class="comp">
+                        <p class="comp-text">
+                            Wouldnt it be cool
+                        </p>
+                    </div>
+                    <p>Finish this sentence with any number of words that make sense</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <img class="responsive-image flipped-image" src="http://68.media.tumblr.com/e15232e725ea94f0c04f3b31d682b57f/tumblr_myrrvmTdp61qm4xi6o1_500.gif" />
+                </div>
+                <div class="col-xs-6">
+                    <img class="responsive-image" src="http://68.media.tumblr.com/e15232e725ea94f0c04f3b31d682b57f/tumblr_myrrvmTdp61qm4xi6o1_500.gif" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Homepage/js");
+

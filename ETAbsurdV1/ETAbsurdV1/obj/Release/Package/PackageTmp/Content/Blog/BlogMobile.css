@@ -1,0 +1,17 @@
+﻿@media (Max-Width:500px){
+    .blog-body{
+        font-size:90%;
+        letter-spacing:0em;
+        text-align:justify;
+    }
+    .paragon{
+        text-align:right;
+    }
+    .renegade,
+    .paragon{
+        font-size:100%;
+    }
+    .blog-comment-create-button > input{
+        width:100%;
+    }
+}

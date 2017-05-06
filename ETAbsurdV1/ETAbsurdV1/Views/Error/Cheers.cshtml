@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Cheers";
+}
+
+@Styles.Render("~/Content/Error/css")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 error-box">
+        <h2>Thank you for bringing this to my attention. IF it is a valid report and needs attention then you will receive some positive feed back</h2>
+        <hr/>
+        <div class="gratitude-row row">
+            <div class="col-md-6">
+                <div>
+                    You can now go back to whatever it was you were doing originally, unless you can not because otherwise you wouldnt be here.
+                </div>
+            </div>
+            <div class="col-md-6 return-buttons">
+                <input type="button" class="form-control error-send-button" value="Account" 
+                       onclick="window.location = '@Url.Action("ControlPanel","Account")'"/>
+                <hr/>
+                <input type="button" class="form-control error-send-button" value="Home Page" 
+                       onclick="window.location = '@Url.Action("Index","Home")'"/>
+            </div>            
+        </div>
+        <hr />
+        <!--This could be where we put some random stuff-->
+    </div>
+</div>
+

@@ -1,0 +1,186 @@
+﻿::selection {
+  background: black; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: black; /* Gecko Browsers */
+}
+
+.menu-box{
+    overflow:hidden;
+    width:100%;
+    height:300px;
+}
+
+.menu-box-1{
+    font-family: CGFLocustResistance;
+    font-size:50px;
+}
+.menu-box-1-2,
+.menu-box-1-2 > h2{
+    font-family: CGFLocustResistance;
+    text-shadow: 2px 2px #ff7f50;
+}
+
+.menu-box-header{
+    list-style:none;
+    position:relative;
+    width:200%; /* Number of panes * 100% */
+    overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+    padding:0px;          
+    
+    /*right:100%;*/
+    
+}
+.menu-box-addon{
+    background-size: cover;
+    background-color:rgba(127, 255, 212, 0.3);
+    position:relative;
+    float:left;
+    width:50%; /*/ 100 / number of panes */
+    border: 3px ridge #58b294;  
+    /*border-radius:10px;*/
+    border-right:none;
+    box-shadow: -50px 0px 100px -20px inset;
+}
+.menu-box-addon-1{
+    display:table; 
+    height:294px;
+    width:100%;
+    border-radius:10px;
+}
+
+.menu-box-addon-2{
+    
+}
+
+.menu-box-first-frame{
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    border-radius:10px;
+    
+    /*
+    font-size:36px;
+    font-style:italic;
+    text-decoration:underline;
+    */
+    cursor:pointer;
+}
+
+@media (max-width: 1127px){
+    .menu-box-first-frame{
+        font-size:36px;
+    }
+}
+.menu-box-second-frame{
+    
+}
+.menu-box-second-frame > h2{
+    text-align:center;
+    color:white;
+}
+.menu-button{
+    position:relative;
+    background-color: rgba(255, 127, 80, 0.4);
+    
+    
+    font-size:30px;
+    float:right;
+
+    border:none;
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    width:35%;
+    text-align:left;
+
+    margin-bottom:10px;
+}
+.category-1,
+.category-2,
+.category-3{
+    cursor:crosshair !important;
+    box-shadow:10px 0 10px 7px coral;
+}
+.category-2{
+    width:30% !important;
+    transform:translateY(20px);
+}
+.category-3{
+    width:25% !important;
+    transform:translateY(40px);
+
+}
+
+.mini-video{
+    width:50%;
+    position:relative;
+
+    height:305px;
+    z-index:-10;
+    
+    transform:translateY(-223px);
+
+}
+
+
+
+
+
+.message-section{
+    
+}
+.message-body{
+    margin-top:25px;
+    background-color:#3A3A3C;
+    border-radius:5px;
+    color:white;
+}
+.message-body > h1{
+    font-family: Halo;
+    text-shadow:1px 1px #EEBA4C;
+}
+
+.comp-box{
+    padding:30px;
+}
+
+.comp {
+    border: 1px solid rgba(127, 255, 212, 0.3);
+    box-shadow: 0px 0px 30px 0px rgba(127, 255, 212, 0.3) inset;
+    font-family: CGFLocustResistance;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    min-width:33.33333333333333%;
+    padding:0px;
+}
+.comp:hover{
+    cursor:crosshair;
+}
+.comp-text{
+    -moz-transform: rotate(-45deg);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    font-size:25px;
+    text-shadow:1px 1px black;
+    background-color:transparent;
+}
+.comp:hover > .comp-text{
+    -moz-transform: scale(1.25);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    color:#EEBA4C;
+    text-shadow:2px 2px black;
+}
+.col-md-4 > p{
+    font-family:CGFLocustresistance;
+    font-size:15px;
+    text-align:center;
+    padding:15px;
+    text-shadow:2px 2px black;
+}
+
+
+

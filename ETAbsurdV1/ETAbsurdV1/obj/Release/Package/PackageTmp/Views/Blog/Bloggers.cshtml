@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Bloggers";
+    IEnumerable<ETAbsurdV1.Models.ETA_User> Bloggers = ViewData["Bloggers"] as IEnumerable<ETAbsurdV1.Models.ETA_User>;
+
+    string[] Followers = ViewData["Followers"] as string[];
+}
+@Styles.Render("~/Content/Blog/Blog/css")
+@Html.Partial("BannerAd")
+@Html.Partial("VoteFail")
+
+<div class="row overflow-control">
+    <div class="col-md-10 blog-section">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 blog-background">
+                @foreach(var item in Bloggers)
+                {
+                    <div class="col-md-4 col-sm-6 blogger-box">
+                        <h3 class="h-speak">@item.Username</h3>
+                        @if(@item.Avatar == null)
+                        {
+                            <h4 class="h-speak">need a default Avater</h4>
+                        }
+                        else
+                        {
+                            <img src="@item.Avatar" class="responsive-image" alt="" />
+                        }
+                        <hr/>
+                        <p>Reputation <span class="blog-stat">@item.Reputation</span></p>
+                        <p>Blogs <span class="blog-stat">@item.Blogs</span></p>
+                        <p>
+                            Last Blog
+                            @if (item.RecentBlog == null)
+                            {
+                                <span class="blog-stat">
+                                    N/A
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="blog-stat">
+                                    item.RecentBlog.ToString().Substring(0, 10);
+                                </span>
+                            }
+                        </p>
+                        <p>Activity Rate 
+                        @if(@item.BlogFrequency == null) {
+                            <span class="blog-stat">N/A</span>
+                        }
+                        else { 
+                        <span class="blog-stat">
+                            @item.BlogFrequency
+                            </span>
+                        }
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-6">     
+                                <div style="display:none;" class="post-submit-load">
+                                    <div class="post-load-line"></div>
+                                    <div class="post-load-blip"></div>
+                                </div>                         
+                                @if (User.Identity.IsAuthenticated & Followers != null)
+                                {
+                                    bool Followed = false;
+                                    foreach (var follow in Followers)
+                                    {
+                                        if (follow == item.Username)
+                                        {
+                                            <input type="button" class="submit-button unfollow form-control" value="Stop" onclick="UnfollowBlog(this, '@item.Username')"/>
+                                            <input type="button" class="submit-button form-control hdn-follow-btn" value="Follow" onclick="FollowBlog(this, '@item.Username')" />
+                                            Followed = true;
+                                            break;
+                                        }
+                                        else
+                                        {
+
+                                        }
+                                    }
+                                    if (Followed == false)
+                                    {
+                                        <input type="button" class="submit-button form-control" value="Follow" onclick="FollowBlog(this, '@item.Username')" />
+                                        <input type="button" class="submit-button unfollow hdn-follow-btn form-control" value="Stop" onclick="UnfollowBlog(this, '@item.Username')" />
+                                    }
+                                }
+                                else
+                                {
+                                    <input type="button" class="submit-button form-control" value="Follow" onclick="FollowBlog(this, '@item.Username')" />
+                                    <input type="button" class="submit-button unfollow hdn-follow-btn form-control" value="Stop" onclick="UnfollowBlog(this, '@item.Username')" />
+                                }
+                            </div>
+                            <div class="col-xs-6">
+                                <input type="button" class="submit-button form-control" value="Profile" onclick="window.location = '@Url.Action("ViewProfile","Account",new { UserName = @item.Username })'"/>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Scripts.Render("~/Scripts/Blog/Bloggers/js")

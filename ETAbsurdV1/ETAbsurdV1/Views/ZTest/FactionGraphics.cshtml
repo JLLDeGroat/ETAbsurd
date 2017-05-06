@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "FactionGraphics";
+}
+
+
+@Styles.Render("~/Content/Faction/Index/css")
+
+
+@Html.Partial("BannerAd")
+@Html.Partial("NoticeBoard")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 faction-row">
+        @if (ViewData[""].ToString() == "")
+        {
+            <h1 class="h-speak">Choose your faction</h1>
+            <hr/>
+        }
+        <h3 class="h-speak">Phylosophical Factions</h3>
+        <div class="row faction-bar-box">
+            <div class="faction-bar">
+                <div class="faction-bar-segments" id="Faction-User">
+                    <div class="faction-segment faction-1"></div>
+                    <div class="faction-segment faction-2"></div>
+                    <div class="faction-segment faction-3"></div>
+                    <div class="faction-segment faction-4"></div>
+                    <div class="faction-segment faction-5"></div>
+                    <div class="faction-segment faction-6"></div>
+                </div>
+            </div>
+        </div>       
+        <div class="row">
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Theology')">
+                <img src="~/Faction/Logos/Theology.jpg" class="faction-image" />
+                <h4 class="h-speak">Theology</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Narcassism')">
+                <img src="~/Faction/Logos/Narcassism.jpg" class="faction-image" />
+                <h4 class="h-speak">Narcassism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Agnostic')">
+                <img src="~/Faction/Logos/Agnostic.jpg" class="faction-image" />
+                <h4 class="h-speak">Agnostic</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Nihilism')">
+                <img src="~/Faction/Logos/Nihilism.jpg" class="faction-image" />
+                <h4 class="h-speak">Nihilism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('PostModernism')">
+                <img src="~/Faction/Logos/PostModernism.jpg" class="faction-image" />
+                <h4 class="h-speak">Modernism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Solipsism')">
+                <img src="~/Faction/Logos/Solipsism.jpg" class="faction-image" />
+                <h4 class="h-speak">Solipsism</h4>
+            </div>
+        </div>            
+        <hr />
+    </div>
+</div>
+
+
+@Scripts.Render("~/Scripts/Faction/Index/js");
+

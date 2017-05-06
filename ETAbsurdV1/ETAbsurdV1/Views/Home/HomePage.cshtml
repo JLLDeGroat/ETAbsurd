@@ -1,0 +1,159 @@
+﻿
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">   
+   
+</head>
+
+@{ 
+    ViewBag.Title = "Homepage";
+    IEnumerable<ETAbsurdV1.Models.ETA_Blog> Blogs = ViewData["Blogs"] as IEnumerable<ETAbsurdV1.Models.ETA_Blog>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> Threads = ViewData["Threads"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Puzzles> Puzzles = ViewData["Puzzles"] as IEnumerable<ETAbsurdV1.Models.ETA_Puzzles>;
+    IEnumerable<ETAbsurdV1.Models.ETA_CrossWord> CrossWords = ViewData["CrossWords"] as IEnumerable<ETAbsurdV1.Models.ETA_CrossWord>;
+}
+
+@Styles.Render("~/Content/Homepage2/css");
+@Styles.Render("~/MScrollBar/css")
+@Scripts.Render("~/MScrollBar/js")
+
+<div class="main-portal">
+    @Html.Partial("BannerAd")
+    <div class="row">
+        <div class="col-md-12">
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <div class="main-description box">
+                    <h3 class="h-speak">Welcome to your first independant thought of me.</h3>
+                    <article>
+                        Please allow me to take a moment of your time, and let you know that there are many thoughts out there that you have not had.
+                        These possibilities for internal development are quashed by daily life and thus considered an unnecessary hindrance on the
+                        general operation of a human.
+                        <br />
+                        They are not, these thoughts allow understanding far greater than what is currently known. Or simple distraction from the numbing
+                        monotony of life in general. Fancy delving into an age old question? Debate the existence of free will? Maybe, just maybe you will
+                        learn your initial thoughts were not your own but an installment of information from a generation lost.
+                        <br />
+                        A certain way of thinking states you should only worry about two things, what you think and what you do. Lets at least discuss 50%
+                        of everything in this world you control.
+                    </article>
+                </div>
+            }
+            else
+            {
+                <div class="main-description box">
+                    <h3 class="h-speak">Welcome back</h3>
+                    <article>
+                        @Html.Raw(@ViewData["Quote"])
+                    </article>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 scroll-box">
+            <div class="blog-box box">
+                <h3 class="h-speak">Articles</h3>
+                <span class="option-1" onclick="window.location = '@Url.Action("Index","Blog")'">Index</span>
+                <span class="option-2" onclick="window.location = '@Url.Action("NewBlog","Blog")'">Create</span>
+                <article class="box-article">
+                    Peruse through our thoughtful/thoughtless rants and ideas that interest and amuse you.
+                </article>
+                    @foreach (var item in Blogs)
+                    {
+                        <div class="blog-item" onclick="window.location = '@Url.Action("Blog", "Blog", new { Id = @item.Id })'">
+                            <div class="blog-item-box">
+                                <div class="blog-karma">
+                                    <div class="karma-bar">@item.KarmaPercent</div>
+                                </div>
+                                <p class="blog-title">@item.Title</p>
+                                <img src="@item.Image1" class="blog-image" alt="" />
+                                <article class="blog-text">
+                                    @item.Body
+                                </article>
+                                <p class="blog-stamp">
+                                    @item.Date
+                                    <br />
+                                    @item.Author
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thread-box box">
+                <h3 class="h-speak">Questions</h3>
+                <span class="option-1" onclick="window.location = '@Url.Action("Category","Forum", new { Category = "All" })'">Index</span>
+                <span class="option-2" onclick="window.location = '@Url.Action("Start","Forum")'">Ask</span>
+                <article class="box-article">
+                    A Forum
+                </article>
+                @foreach (var item in Threads)
+                {
+                    <div class="row forum-row thread-row spawn-in" onclick="window.location = '@Url.Action("Thread","Forum", new { Id = @item.Id })'">
+                        <div class="thread-row-after"></div>
+                        <p class="forum-thread-title">@item.Name</p>                        
+                        @item.Votes
+                        <img src="@item.AuthorAvatar" class="forum-thumb-img" />
+                        <article class="forum-body home-page-thread">@item.Body</article>
+                        <p class="forum-author">@item.Author</p>
+                        <p class="forum-date">@item.Date</p>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="puzzle-box box">
+                <h3 class="h-speak">Puzzles</h3>
+                <span class="option-1" onclick="window.location = '@Url.Action("Index","Puzzles")'">Index</span>
+                <span class="option-2" onclick="window.location = '@Url.Action("Create","Puzzles")'">Create</span>
+                <article class="box-article">
+                    Feel free to peruse the puzzles, answer any you fancy and generally have a good time thinking 
+                    things through
+                </article>
+                @foreach (var item in Puzzles)
+                {
+                    <div class="puzzle-create-box home-page-puzzle"
+                         onclick="window.location = '@Url.Action("Puzzle","Puzzles",new { Id=item.Id })'">
+                        <h3>@item.Name</h3>
+                        <article>
+                            <pre class="blog-body" id="Blog-Body">@item.Body</pre>
+                        </article>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="puzzle-box box">
+                <h3 class="h-speak">CrossWords</h3>
+                <span class="option-1" onclick="window.location = '@Url.Action("Index","Puzzles")'">Index</span>
+                <span class="option-2" onclick="window.location = '@Url.Action("CrossWordCreate","Puzzles")'">Create</span>
+                <article class="box-article">
+                    Feel free to peruse our crosswords and create at your leasure, I recommend creating a crossword 
+                    on a desktop or laptop due to size constrictions.
+                </article>
+                @foreach (var item in CrossWords)
+                {
+                    <div class="puzzle-create-box home-page-puzzle"
+                         onclick="window.location = '@Url.Action("CrossWord","Puzzles",new { Id=item.Id })'">
+                        <h3 class="h-speak">@item.Name</h3>
+                        <img class="responsive-image" src="~/Images/PHolders/Crossword.jpeg" />
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="puzzle-box box">
+                <h3 class="h-speak">Gifs</h3>
+                <span class="option-1" onclick="window.location = '@Url.Action("", "")'">Index</span>
+                <span class="option-2" onclick="window.location = '@Url.Action("CreateGif", "App")'">Create</span>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</div>
+
+@Scripts.Render("~/Scripts/Homepage2/js")

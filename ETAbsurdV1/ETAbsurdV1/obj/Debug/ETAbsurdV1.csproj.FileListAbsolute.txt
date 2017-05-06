@@ -1,0 +1,320 @@
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.csprojResolveAssemblyReference.cache
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\csc.exe
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Collections.Immutable.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\vbc.exe
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe.config
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll.config
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.pdb
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Web.Infrastructure.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Owin.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\WebGrease.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.pdb
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.dll
+c:\users\grievous\documents\visual studio 2015\Projects\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.pdb
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\csc.exe
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Collections.Immutable.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Reflection.Metadata.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\vbc.exe
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe
+G:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe.config
+G:\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll.config
+G:\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.pdb
+G:\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Web.Infrastructure.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Owin.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\WebGrease.dll
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.pdb
+G:\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.xml
+G:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.csprojResolveAssemblyReference.cache
+G:\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.dll
+G:\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.pdb
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\csc.exe
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\vbc.exe
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll.config
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.pdb
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Owin.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\WebGrease.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.pdb
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.dll
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.pdb
+C:\Users\User\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.csprojResolveAssemblyReference.cache
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\csc.exe
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\vbc.exe
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll.config
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.pdb
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.pdb
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.pdb
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.csprojResolveAssemblyReference.cache
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\csc.exe
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Collections.Immutable.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\System.Reflection.Metadata.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\vbc.exe
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe
+E:\ETAbsurdV1\ETAbsurdV1\bin\roslyn\VBCSCompiler.exe.config
+E:\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll.config
+E:\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\ETAbsurdV1.pdb
+E:\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Web.Infrastructure.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Owin.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\WebGrease.dll
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Helpers.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Mvc.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Optimization.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.Razor.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Deployment.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\System.Web.WebPages.Razor.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Antlr3.Runtime.pdb
+E:\ETAbsurdV1\ETAbsurdV1\bin\Newtonsoft.Json.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\EntityFramework.SqlServer.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Core.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Facebook.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Cookies.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.OAuth.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Google.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.Twitter.xml
+E:\ETAbsurdV1\ETAbsurdV1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.csprojResolveAssemblyReference.cache
+E:\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.dll
+E:\ETAbsurdV1\ETAbsurdV1\obj\Debug\ETAbsurdV1.pdb
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Magick.NET-Q16-AnyCPU.dll
+C:\Users\jay_d\Desktop\ETA\ETAbsurdV1\ETAbsurdV1\bin\Magick.NET-Q16-AnyCPU.xml

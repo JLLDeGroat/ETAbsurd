@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+    IEnumerable<ETAbsurdV1.Models.ETA_Blog> ThisBlog = ViewData["ThisBlog"] as IEnumerable<ETAbsurdV1.Models.ETA_Blog>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Blog> OtherBlogs = ViewData["OtherBlogs"] as IEnumerable<ETAbsurdV1.Models.ETA_Blog>;
+}
+
+@Styles.Render("~/Content/Blog/Blog/css")
+@Styles.Render("~/Content/Blog/Mobile/css")
+
+@Html.Partial("BannerAd")
+@Html.Partial("VoteFail")
+@Html.Partial("Report")
+
+<div class="row overflow-control">
+    <div class="col-md-8 blog-section">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 blog-background">               
+                @foreach (var item in ThisBlog)
+                {
+                    <span class="h-speak blog-options" onclick="window.location = '@Url.Action("ViewProfile","Account", new { UserName = @item.Author })'">@item.Author.</span>
+                    if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.Identity.Name != item.Author)
+                        {
+                            <span class="h-speak blog-options" onclick="BlogReportClicked('@item.Author, '@item.Title')">Report This Article</span>
+                        }
+                    }
+                    if (User.Identity.Name == item.Author)
+                    {
+                        <span class="h-speak blog-options" onclick="window.location = '@Url.Action("EditBlog","Blog", new { Type = "Blog", EditId = item.Id })'">Edit.</span>
+                    }
+                    <img src="@item.Image1" alt="Image" class="center-image" />
+                    <h3>@item.Title</h3>
+                    <hr />
+                    <article>
+                        <pre class="blog-body" id="Blog-Body">@item.Body</pre>
+                    </article>
+                    <div class="blog-karma">                       
+                        <div class="karma-bar">
+                            <span class="neg-karma-text">
+                                @ViewData["PosKarma"].ToString().Substring(0, 2)%
+                            </span>
+                            <span class="pos-karma-text">
+                                @ViewData["NegKarma"].ToString().Substring(0, 2)%
+                            </span>       
+                        </div>
+                    </div>     
+                    if (User.Identity.IsAuthenticated)
+                    {
+                    <h3 class="h-speak">Decide Karma</h3>
+                    <div class="row karma-row">
+                       <div class="col-xs-3">
+                           <h3 class="h-speak renegade">Renegade</h3>                           
+                           <div class="karma-orb" onclick="KarmaVote('@item.Id', 'Renegade')"></div>                           
+                       </div>
+                        <div class="col-xs-6"></div>
+                       <div class="col-sm-3 col-xs-3">
+                           <h3 class="h-speak paragon">Paragon</h3>                           
+                           <div class="karma-orb k-orb-r" onclick="KarmaVote('@item.Id', 'Paragon')"></div>                           
+                       </div>
+                    </div>
+                    }
+                    else
+                    {
+                        <h3 class="h-speak">
+                            Please <span class="login-option"
+                                     onclick="window.location = '@Url.Action("Login", "Login", new { SentFromBlog = item.Id })'">Login 
+                            </span>
+                            to pass judgement on this article.
+                        </h3>
+                    }
+                    <!--Blog comment Section-->
+                    if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="post-submit-load">
+                            <div class="post-load-line"></div>
+                            <div class="post-load-blip"></div>
+                        </div>
+
+
+                        <div class="blog-comment-section">
+                            <div id="Comment-Box"></div>
+                            <h3 class="h-speak">Leave a comment</h3>
+                            <hr />
+                            <div class="blog-comment-create">
+                                <textarea class="form-control" rows="3" id="Comment-Text"></textarea>
+                                <div class="blog-comment-create-button">
+                                    <input type="button" onclick="SubmitComment($('#Comment-Text').val(), '@item.Id', this)" class="submit-button form-control" value="Comment" />
+                                    <div class="blog-submit-load">
+                                        <div class="blog-load-line"></div>
+                                        <div class="blog-load-blip"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-offset-1 col-md-3 blog-section blog-background">
+        <h3 class="h-speak">More Blogs</h3>
+        @foreach (var item in OtherBlogs)
+        {
+            <div class="other-blog" onclick="window.location = '@Url.Action("Blog","Blog", new { Id = @item.Id })'">
+                <h3>@item.Title</h3>
+                <img class="center-image" src="@item.Image1" />
+                <hr />
+            </div>
+        }
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Blog/Blog/js")

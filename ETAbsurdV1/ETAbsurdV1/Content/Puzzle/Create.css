@@ -1,0 +1,84 @@
+﻿.puzzle-create-page{
+    color:white;
+    text-shadow:1px 1px black;
+}
+.row{
+    padding:10px;
+}
+
+.puzzle-create-box{   
+    padding:10px;
+    padding-left:10px;
+    padding-right:10px;
+
+    background-color:#3A3A3C;
+    box-shadow:5px 5px 7px 0px black;
+}
+
+.puzzle-create-box >article{
+    font-family:'Philosopher-Regular';
+    font-size:120%;
+}
+
+.puzzle-create-text{
+    font-family:'Philosopher-Regular';
+}
+
+
+.post-submit-load{
+    overflow:hidden;
+    height:34px;
+    position:relative;
+
+    border-radius:15px;
+    border:1px solid black;
+    box-shadow:0 0 5px 0 black;
+
+    background-color:#535356;
+}
+
+.post-load-line{
+    position:absolute;
+    width:100%;
+    top:15px;
+
+    height:1px;
+    background-color:#7fffd4;
+    box-shadow:0 0 7px 2px #7fffd4;
+}
+
+.post-load-blip{
+    position:absolute;
+    width:7px;
+    height:7px;    
+    top:13px;
+    left:-10%;
+
+    border-radius:100%;
+    
+    background-color:#EEBA4C;
+
+    box-shadow:0 0 7px 2px #EEBA4C;
+    box-shadow:0 0 40px 50px #EEBA4C;
+
+    -moz-animation:post-blip 1s infinite;
+    -webkit-animation:post-blip 1s infinite;
+    animation:post-blip 1s infinite;
+}
+
+
+@keyframes post-blip {
+    0%{        
+    }    
+    100%{       
+        left:120%;
+        box-shadow:0 0 40px 50px #EEBA4C;
+    }
+}
+
+@media (max-width: 767px) {
+    .puzzle-create-box{
+        margin-top:20px;
+    }
+
+}

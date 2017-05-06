@@ -1,0 +1,363 @@
+﻿@media (min-width: 768px) {
+    .navigation-button:hover > .navigation-secondary {
+        display: block;
+    }
+    .navigation-secondary {
+        display: none;
+        position: absolute;
+        min-width: 250px;
+        z-index: 1;
+    }
+    .navigation-secondary-list{
+        padding:0;
+    }
+    .navigation-secondary-list > li {   
+        opacity:0;   
+        background-color: #3A3A3C;
+        color:#EEBA4C;
+        text-shadow: 1px 1px black;
+        text-align: left;
+        padding-left:5px;
+        padding-top:5px;
+        padding-bottom:5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       
+        list-style: none;
+
+        /*Uses spawn-in class animation on delays*/
+        -moz-animation:spawn 1s ease;
+        -webkit-animation:spawn 1s ease;
+        animation:spawn 1s ease;
+        animation-fill-mode:forwards;
+
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        font-family:CGFLocustResistance;  
+        
+        cursor:pointer;      
+    }   
+    
+    .navigation-secondary-list > li:hover{
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        padding-left:30px;
+    }
+
+    .navigation-to-tertiary:hover > .navigation-tertiary{
+        display:block;
+    }
+
+    .navigation-tertiary {
+        display: none;
+        position: absolute;       
+        min-width: 250px;       
+        z-index: 2;
+        left:100%;
+        top:0;
+    }
+    .navigation-tertiary-list{
+        padding:0;
+    }
+    .navigation-tertiary-list > li {   
+        opacity:0;   
+        background-color: #3A3A3C;
+        color:#EEBA4C;
+        text-shadow: 1px 1px black;
+        text-align: left;
+        padding-left:5px;
+        padding-top:5px;
+        padding-bottom:5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       
+        list-style: none;
+
+        /*Uses spawn-in class animation on delays*/
+        -moz-animation:spawn 1s ease;
+        -webkit-animation:spawn 1s ease;
+        animation:spawn 1s ease;
+        animation-fill-mode:forwards;
+
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        font-family:CGFLocustResistance;  
+        
+        cursor:pointer;      
+    }
+
+  
+
+    .navigation-tertiary-list > li:hover{
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        padding-left:30px;
+    }
+
+    .navigation-list-divider{
+        width:100%;
+        height:7px;
+        cursor:auto;
+    }
+}
+
+
+/*Mobile setups*/
+
+@media (max-width:768px){
+     .navigation-button:hover > .navigation-secondary {
+        display: block;
+    }
+
+    .navigation-secondary {
+        display: none;
+        position: absolute;       
+        min-width: 250px;       
+        z-index: 1;
+        left:100%;
+        top:0;
+        
+    }
+    .navigation-secondary-list{
+        padding:0;
+    }
+    .navigation-secondary-list > li {   
+        opacity:0;   
+        background-color: #3A3A3C;
+        color:#EEBA4C;
+        text-shadow: 1px 1px black;
+        text-align: left;
+        padding-left:5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       
+        list-style: none;
+
+        /*Uses spawn-in class animation on delays*/
+        -moz-animation:spawn 1s ease;
+        -webkit-animation:spawn 1s ease;
+        animation:spawn 1s ease;
+        animation-fill-mode:forwards;
+
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        font-family:CGFLocustResistance;  
+        
+        cursor:pointer;      
+    }   
+    .navigation-secondary-list > li:hover{
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        padding-left:30px;
+    }
+
+    .navigation-to-tertiary:hover > .navigation-tertiary{
+        display:block;
+    }
+
+    .navigation-tertiary {
+        display: none;
+        position: absolute;       
+        min-width: 250px;       
+        z-index: 2;
+        left:100%;
+        top:0;
+    }
+    .navigation-tertiary-list{
+        padding:0;
+    }
+    .navigation-tertiary-list > li {   
+        opacity:0;   
+        background-color: #3A3A3C;
+        color:#EEBA4C;
+        text-shadow: 1px 1px black;
+        text-align: left;
+        padding-left:5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       
+        list-style: none;
+
+        /*Uses spawn-in class animation on delays*/
+        -moz-animation:spawn 1s ease;
+        -webkit-animation:spawn 1s ease;
+        animation:spawn 1s ease;
+        animation-fill-mode:forwards;
+
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        font-family:CGFLocustResistance;  
+        
+        cursor:pointer;      
+    }
+
+    .navigation-tertiary-list > li:hover{
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        padding-left:30px;
+    }
+
+    .navigation-list-divider{
+        width:100%;
+        height:7px;
+        cursor:auto;
+    }
+}
+
+/*Small Mobile Setups*/
+
+
+@media (max-width:568px){
+     .navigation-button:hover > .navigation-secondary {
+        display: block;
+    }
+
+    .navigation-secondary {
+        display: none;
+        position: absolute;       
+        min-width: 100px; 
+        max-width:120px;      
+        z-index: 1;
+        left:100%;
+        top:0;     
+        font-size:80%;   
+        
+    }
+    .navigation-secondary-list{
+        padding:0;
+    }
+    .navigation-secondary-list > li {   
+        opacity:0;   
+        background-color: #3A3A3C;
+        color:#EEBA4C;
+        text-shadow: 1px 1px black;
+        text-align: left;
+        padding-left:5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       
+        list-style: none;
+
+        /*Uses spawn-in class animation on delays*/
+        -moz-animation:spawn 1s ease;
+        -webkit-animation:spawn 1s ease;
+        animation:spawn 1s ease;
+        animation-fill-mode:forwards;
+
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        font-family:CGFLocustResistance;  
+        
+        cursor:pointer;      
+    }
+   
+    
+    .navigation-secondary-list > li:hover{
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        padding-left:30px;
+    }
+
+    .navigation-to-tertiary:hover > .navigation-tertiary{
+        display:block;
+    }
+
+    .navigation-tertiary {
+        display: none;
+        position: absolute;       
+        min-width: 100px; 
+        max-width:120px;       
+        z-index: 2;
+        left:100%;
+        top:0;
+    }
+    .navigation-tertiary-list{
+        padding:0;
+    }
+    .navigation-tertiary-list > li {   
+        opacity:0;   
+        background-color: #3A3A3C;
+        color:#EEBA4C;
+        text-shadow: 1px 1px black;
+        text-align: left;
+        padding-left:5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       
+        list-style: none;
+
+        /*Uses spawn-in class animation on delays*/
+        -moz-animation:spawn 1s ease;
+        -webkit-animation:spawn 1s ease;
+        animation:spawn 1s ease;
+        animation-fill-mode:forwards;
+
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        font-family:CGFLocustResistance;  
+        
+        cursor:pointer;      
+    }
+
+    .navigation-tertiary-list > li:hover{
+        transition: 0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+
+        padding-left:30px;
+    }
+
+    .navigation-list-divider{
+        width:100%;
+        height:7px;
+        cursor:auto;
+    }
+}
+
+
+#Faction-Navigation-Button{
+    display:none;
+}
+
+
+.navigation-secondary-list > li:nth-child(1) { animation-delay: 0s }
+.navigation-secondary-list > li:nth-child(2) { animation-delay: 0.2s }
+.navigation-secondary-list > li:nth-child(3) { animation-delay: 0.4s }
+.navigation-secondary-list > li:nth-child(4) { animation-delay: 0.6s }
+.navigation-secondary-list > li:nth-child(5) { animation-delay: 0.8s }
+.navigation-secondary-list > li:nth-child(6) { animation-delay: 1s }
+.navigation-secondary-list > li:nth-child(7) { animation-delay: 1.2s }
+.navigation-secondary-list > li:nth-child(8) { animation-delay: 1.4s }
+.navigation-secondary-list > li:nth-child(9) { animation-delay: 1.6s }
+.navigation-secondary-list > li:nth-child(10) { animation-delay: 1.8s }
+.navigation-secondary-list > li:nth-child(11) { animation-delay: 2s }
+.navigation-secondary-list > li:nth-child(12) { animation-delay: 2.2s }
+
+.navigation-tertiary-list > li:nth-child(1) { animation-delay: 0s }
+.navigation-tertiary-list > li:nth-child(2) { animation-delay: 0.2s }
+.navigation-tertiary-list > li:nth-child(3) { animation-delay: 0.4s }
+.navigation-tertiary-list > li:nth-child(4) { animation-delay: 0.6s }
+.navigation-tertiary-list > li:nth-child(5) { animation-delay: 0.8s }
+.navigation-tertiary-list > li:nth-child(6) { animation-delay: 1s }
+.navigation-tertiary-list > li:nth-child(7) { animation-delay: 1.2s }
+.navigation-tertiary-list > li:nth-child(8) { animation-delay: 1.4s }
+.navigation-tertiary-list > li:nth-child(9) { animation-delay: 1.6s }
+.navigation-tertiary-list > li:nth-child(10) { animation-delay: 1.8s }
+.navigation-tertiary-list > li:nth-child(11) { animation-delay: 2s }
+.navigation-tertiary-list > li:nth-child(12) { animation-delay: 2.2s }

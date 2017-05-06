@@ -1,0 +1,38 @@
+﻿@model ETAbsurdV1.Models.SuggestCategoryModel
+@{
+    ViewBag.Title = "CategorySuggest";
+}
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+@Styles.Render("~/Content/Forum/css")
+@Html.Partial("BannerAd")
+<div class="row spawn-in form">
+    <div class="col-md-offset-3 col-md-6 forum-row start-box">
+        @if (ViewData["Suggested"].ToString() == "false")
+        {
+            <h2 class="info-title">Suggest a category</h2>
+            <h4 class="h-speak">I'll do my best to let you know if its already a category.</h4>
+            using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true, "")
+                @Html.TextBoxFor(p => p.Category, new { @class = "form-control" })
+                @Html.ValidationMessageFor(p => p.Category, "", new { @class = "text-danger validation-text" })
+                <hr/>
+                <input type="submit" class="form-control submit-button" value="Submit Suggestion" />
+            }
+        }
+        else
+        {
+            <h4 class="h-speak">You have opted to offer me @ViewData["Suggested"].ToString() as a suggestion
+                Thank you
+            </h4>
+            <hr/>
+            <h4 class="h-speak">
+                that gesture of gratification will be sarcastic depending on the seriousness of your suggestion.
+            </h4>
+            <input type="button" class="form-control submit-button" value="Back" 
+                   onclick="window.location = '@Url.Action("Index","Home")'"/>
+
+        }
+    </div>
+</div>

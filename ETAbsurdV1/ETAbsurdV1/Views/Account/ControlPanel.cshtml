@@ -1,0 +1,416 @@
+﻿@model ETAbsurdV1.Models.ETA_User
+
+@{
+    ViewBag.Title = "ControlPanel";
+}
+@{ 
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> Threads = ViewData["Threads"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Post> Posts = ViewData["Posts"] as IEnumerable<ETAbsurdV1.Models.ETA_Post>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Comment> Comments = ViewData["Comments"] as IEnumerable<ETAbsurdV1.Models.ETA_Comment>;
+    IEnumerable<ETAbsurdV1.Models.ETA_User> LoggedUser = ViewData["LoggedUser"] as IEnumerable<ETAbsurdV1.Models.ETA_User>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Blog> Followed = ViewData["Followed"] as IEnumerable<ETAbsurdV1.Models.ETA_Blog>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Blog> UserBlog = ViewData["UserBlog"] as IEnumerable<ETAbsurdV1.Models.ETA_Blog>;
+    List<String> Gifs = ViewData["Gifs"] as List<String>;
+}
+
+@Styles.Render("~/Content/Account/css")
+@Html.Partial("BannerAd")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="row user-row">
+            @foreach (var item in LoggedUser)
+            {
+                <!--LEFT SIDE-->
+                <div class="col-md-3">
+                    <h2 class="mobile-username">@item.Username <br/><span class="tag"> @item.RepTag</span></h2>
+                    @if (item.Avatar != null)
+                    {
+                        <div class="user-image-box">
+                            <img class="avatar" src="@item.Avatar" alt="" />
+                        </div>
+                        <a class="update-begin-button" id="ChangeAvatar" onclick="ShowUpdateSection(this)">Change</a>
+                            <div id="ChangeAvatarSection" class="hidden-update">
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.TextBoxFor(p => p.Avatar, new { @class = "form-control" })
+                                    <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected(this);" accept="image/*" class="responsive-image" />
+                                    <p id="Progress"></p>
+                                    <p id="uploadPercentage"></p>
+                                    <br />
+                                    <input type="submit" value="Update" class="form-control update-button" />
+                                    <!--UPLOAD FILE SECTION-->
+                                }
+                            </div>
+                    }
+                    @if (item.Avatar == null)
+                    {
+                        <p class="h-speak">An attention seeking image will ensure the persona you create whilst you are @item.Username is remembered.</p>
+                        using (Html.BeginForm())
+                        {
+                            @Html.TextAreaFor(p => p.Avatar, new { @class = "form-control" })
+                            <div class="update-section">
+                                <input type="submit" class="form-control update-button" value="Update" />
+                            </div>
+                        }
+                    }
+                    <hr />
+                    <div class="user-stat-box">
+                        <h3>Stats</h3>
+                        <p class="stat-line">Conversations: <span class="stat">@item.Threads</span></p>
+                        <br />
+                        <p class="stat-line">Posts: <span class="stat">@item.Posts</span></p>
+                        <br />
+                        <p class="stat-line">Reputation<span class="stat">@item.Reputation</span></p>
+                        <br />
+                        <p class="stat-line">Reputation Change<span class="stat">@item.ReputationAverage</span></p>
+                        <br />
+                        <h3>Votes Given</h3>
+                        <p class="stat-line">Up <span class="stat">@item.UpVotes</span></p>
+                        <br />
+                        <p class="stat-line">Down <span class="stat">@item.DownVotes</span></p>
+                        <br />
+                        <h3>Votes Taken</h3>
+                        <p class="stat-line">Up <span class="stat">@item.GivenUpVotes</span></p>
+                        <br />
+                        <p class="stat-line">Down <span class="stat">@item.GivenDownVotes</span></p>
+                        <br />
+                        <h3>Total</h3>
+                        <p class="stat-line">Total <span class="stat">@ViewData["TotalVotes"]</span></p>
+                        <br />
+                        <h3>Events</h3>
+                        <p class="stat-line">Entered <span class="stat">@item.CompetitionEntries</span></p>
+                        <br />
+                        <p class="stat-line">Won <span class="stat">@item.CompetitionsWon</span></p>
+                        <br />
+                        <p class="stat-line">Second <span class="stat">@item.CompetitionsSecond</span></p>
+                        <br />
+                        <p class="stat-line">Third <span class="stat">@item.CompetitionsThird</span></p>
+                        <br />
+                        <p class="stat-line">Top Ten <span class="stat">@item.CompetitionsTopTen</span></p>
+                        <br />
+                        @if(item.Blogger == true)
+                        {
+                            <h3>Blogs</h3>
+                            <p class="stat-line">Total <span class="stat">@item.Blogs</span></p>
+                            <br />
+                            <p class="stat-line">Karma <span class="stat">@ViewData["KarmaPercentage"].ToString()</span></p>
+                            <br/>
+                            <p class="stat-line">Paragon <span class="stat paragon">@item.KarmaUp</span></p>
+                            <br/>
+                            <p class="stat-line">Renegade <span class="stat renegade">@item.KarmaDown</span></p>
+                        }
+                    </div>
+                    <div class="user-stat-box">
+                        <h3>Medals</h3>
+                        <!--Need to add Medals to the table-->
+                    </div>
+                </div>
+                <!--MIDDLE SIDE-->
+                <div class="col-md-7">
+                    <div class="row overflow-control">
+                        <div class="user-profile">
+                            <h2>@item.Username <span class="tag"> @item.RepTag</span></h2>
+                            <hr />
+                            <h3 class="underline c-panel-title">Biography</h3>
+                            <article class="user-bio">
+                                @if (item.Signature == null)
+                                {
+                                    <p class="h-speak">
+                                        I do not believe a human does not want to speak about themselves
+                                        <br />
+                                        whether it be for a sense of self importance
+                                        <br />
+                                        or a script for self gain
+                                        <br />
+                                        This is your chance to fill your narcissist box to the maximum.
+                                    </p>
+                                    using (Html.BeginForm())
+                                    {
+                                        @Html.TextAreaFor(p => p.Signature, new { @class = "form-control" })
+                                        <div class="update-section">
+                                            <input type="submit" class="form-control update-button" value="Update" />
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <article class="user-signature">
+                                        @item.Signature
+                                    </article>
+                                    <a id="ChangeSignature" class="update-begin-button" onclick="ShowUpdateSection(this)">Change</a>
+                                    using (Html.BeginForm())
+                                    {
+                                        <div id="ChangeSignatureSection" class="hidden-update">
+                                            @Html.TextAreaFor(p => p.Signature, new { @class = "form-control" })
+                                            <div class="update-section">
+                                                <input type="submit" class="form-control update-button" value="Update" />
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </article>
+                            <hr />
+                            <!--THE EXTRA 15PX IS CAUSED BY THIS DIV-->
+                            <div class="row">                                
+                                <div class="col-md-6">  
+                                    <h3 class="underline c-panel-title">Font</h3>                                  
+                                    @if (item.Font == null)
+                                    {
+                                        <p class="h-speak">
+                                            Set the mood of your potential readers in head voice by changing your font
+                                            <br />
+                                            Visuals are really the only thing that matters.
+                                        </p>
+                                        using (Html.BeginForm())
+                                        {
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <select class="form-control" id="font-family-select"></select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    @Html.TextBoxFor(p => p.Font, new { @class = "form-control" })
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h3 class="user-test-font-family">Test Text</h3>
+                                            </div>
+                                            <div class="update-section">
+                                                <input type="submit" class="form-control update-button" value="Update" />
+                                            </div>
+                                        }
+                                        <hr />
+                                    }
+                                    else
+                                    {
+                                        <p>Font: <span style="font-family:@item.Font">@item.Font.</span></p>
+                                        <a id="ChangeFont" class="update-begin-button" onclick="ShowUpdateSection(this)">Change</a>
+                                        <div class="hidden-update" id="ChangeFontSection">
+                                            @using (Html.BeginForm())
+                                            {
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <select class="form-control" id="font-family-select"></select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        @Html.TextBoxFor(p => p.Font, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h3 class="user-test-font-family">Test Text</h3>
+                                                </div>
+                                                <div class="update-section">
+                                                    <input type="submit" class="form-control update-button" value="Update" />
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="underline c-panel-title">Colour</h3>        
+                                    @if (item.TextColor == null)
+                                    {
+                                        <p class="h-speak">
+                                            I am putting a great deal of trust into you here
+                                            <br />
+                                            If you can not be trusted I will take this away from you
+                                            <br />
+                                            MAKE SURE THE COLOR IS STILL READABLE
+                                        </p>
+                                        using (Html.BeginForm())
+                                        {
+                                            @Html.TextBoxFor(p => p.TextColor, new { @class = "form-control" })
+                                            <div>
+                                                <h3 class="user-test-font-color">Test Text</h3>
+                                            </div>
+                                            <div class="update-section">
+                                                <input type="submit" class="form-control update-button" value="Update" />
+                                            </div>
+                                        }
+                                        <hr />
+                                    }
+                                    else
+                                    {
+                                        using (Html.BeginForm())
+                                        {
+                                            <p>Curent Colour: <span style="color:@item.TextColor;">@item.TextColor.</span></p>
+                                            <a id="ChangeColour" class="update-begin-button" onclick="ShowUpdateSection(this)">Change</a>
+                                            <div id="ChangeColourSection" class="hidden-update">
+                                                @Html.TextBoxFor(p => p.TextColor, new { @class = "form-control" })
+                                                <div>
+                                                    <h3 class="user-test-font-color">Test Text</h3>
+                                                </div>
+                                                <div class="update-section">
+                                                    <input type="submit" class="form-control update-button" value="Update" />
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="activity-center">
+                            <h2>Activity</h2>
+                            <hr />
+                            <h2>Threads</h2>
+                            <div class="activity-box">
+                                @if (Threads.Count() != 0)
+                                {
+                                    foreach (var t in Threads)
+                                    {
+                                        <div class="activity">
+                                            <div class="row" onclick="window.location = '@Url.Action("Thread","Forum",new { Id = @t.Id })'">
+                                                <div class="col-xs-12">
+                                                    <p class="activity-name">@t.Name</p>
+                                                </div>
+                                                <div class="col-xs-7 activity-column">
+                                                    <p class="activity-body">@t.Body</p>
+                                                </div>
+                                                <div class="col-xs-5 activity-column">     
+                                                    <p class="activity-votes">@t.UpVotes / @t.DownVotes</p>                                               
+                                                    <p class="activity-details">@t.Date</p>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <h3 class="h-speak">You have not started any conversations</h3>
+                                }
+                            </div>
+                            <hr />
+                            <h2>Posts</h2>
+                            <div class="activity-box">
+                                @if (Posts.Count() != 0)
+                                {
+                                    foreach (var p in Posts)
+                                    {
+                                        <div class="activity">
+                                            <div class="row" onclick="window.location = '@Url.Action("Thread","Forum",new { Id = @p.ThreadId })'">
+                                                <div class="col-xs-7 activity-column">
+                                                    <p class="activity-body">@p.Body</p>
+                                                </div>
+                                                <div class="col-xs-5 activity-column">
+                                                    <p class="activity-votes">@p.UpVotes / @p.DownVotes</p>
+                                                    <p class="activity-details">@p.Date</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <h3 class="h-speak">You have not joined in any conversations</h3>
+                                }
+                            </div>
+                            <hr />
+                        </div>
+                        <div class="row recent-blog-row">
+                            <h3 class="underline c-panel-title">Blogs</h3>
+                            @if(@item.Blogger == true) { 
+                                if (UserBlog.Count() == 0)
+                                {
+                                    <h3 class="h-speak">There are no Blogs</h3>
+                                }
+                                else
+                                {
+                                    foreach (var F in UserBlog)
+                                    {
+                                        <div class="col-md-4 followed-blog-box" onclick="window.location = '@Url.Action("Blog","Blog", new { Id = @F.Id })'">
+                                            <div class="blog-item-box">
+                                                <p class="followed-blog-title">@F.Title</p>
+                                                <img src="@F.Image1" class="responsive-image blog-image" alt="" />
+                                                <article class="blog-text">
+                                                    @F.Body
+                                                </article>
+                                                <p class="followed-blog-stamp">
+                                                    @F.Date
+                                                    <br />
+                                                    @F.Author
+                                                </p>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                <a class="update-begin-button follow-link" onclick="window.location = '@Url.Action("UserIndex","Blog", new { UserName = item.Username })'">See All Blogs</a>
+                            }
+                            else
+                            {
+                                <!--Not a blogger-->
+                            }
+                        </div>
+                        <div class="row follow-row">
+                            <h3 class="underline c-panel-title">Followed activity</h3>
+                            @if (ViewData["Followed"] == null)
+                            {
+                                <h3 class="h-speak">no Followed Content</h3>
+                            }
+                            else
+                            {
+                                if (Followed.Count() == 0)
+                                {
+                                    <h3 class="h-speak">no Followed Content</h3>
+                                }
+                                else
+                                {
+                                    foreach (var F in Followed)
+                                    {
+                                        <div class="col-md-4 followed-blog-box" onclick="window.location = '@Url.Action("Blog","Blog", new { Id = @F.Id })'">
+                                            <div class="blog-item-box">                                                
+                                                <p class="followed-blog-title">@F.Title</p>
+                                                <img src="@F.Image1" class="responsive-image blog-image" alt="" />
+                                                <article class="blog-text">
+                                                    @F.Body
+                                                </article>
+                                                <p class="followed-blog-stamp">
+                                                    @F.Date
+                                                    <br />
+                                                    @F.Author
+                                                </p>
+                                            </div>
+                                        </div>
+                                    }
+                                    <a class="update-begin-button follow-link" onclick="window.location = '@Url.Action("FollowedIndex","Blog", new { FollowedUsers = item.Following })'">See All Followed</a>
+                                }
+                            }
+                        </div>
+                        <div class="row follow-row">
+                            <h3 class="underline c-panel-title">Created content</h3>
+                            @if (Gifs.Count() != 0)
+                            {
+                                <article>Copy and paste the text below your gif to use it anywhere!</article>
+                                foreach (var gifs in Gifs)
+                                {
+                                <div class="col-md-4 gif-img-box">
+                                    <img class="gif-img" src="@gifs" alt=""/>
+                                    <textarea class="form-control embed-gif-text" onClick="this.setSelectionRange(0, this.value.length)"></textarea>
+                                </div>
+                                }
+                                <a class="update-begin-button follow-link" onclick="window.location = '@Url.Action("FollowedIndex","Blog", new { FollowedUsers = item.Following })'">See All Content</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <!--RIGHT SIDE-->
+                <div class="col-md-2">
+                   
+                </div>
+                <!--
+            <div class="col-md-4">
+                <div class="user-ad">
+                    <img class="responsive-image" src="http://freedesignfile.com/upload/2015/09/Funny-cartoon-pencil-vector-material-05.jpg" />
+                </div>
+            </div>
+            -->
+            }
+        </div>
+        <div class="row user-row ">
+            <hr />
+            <a>See how it looks to your public</a>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Account/js")

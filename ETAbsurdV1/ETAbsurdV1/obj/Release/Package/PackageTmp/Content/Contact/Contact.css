@@ -1,0 +1,43 @@
+﻿@font-face {
+    font-family: 'CGFLocustResistance';
+    src: url('../../Font/CGFLocustResistance.ttf') format('truetype');
+}
+.form{
+    margin-top:55px;
+    background-color:#3A3A3C;
+    border-radius:5px;
+    padding:30px;
+
+    color:white;   
+    
+    text-shadow:1px 1px #EEBA4C; 
+}
+.form > h2,
+form > h2 {
+    font-family: CGFLocustResistance;
+    text-shadow:1px 1px #EEBA4C;
+} 
+
+@media (max-width:755px){
+    form > h2{
+        font-size:100%;
+    }
+}
+.options{
+    padding-top:35px;
+    text-align:right;
+    float:right;
+}
+.option-1,
+.option-2{
+    color:white;
+    font-family:CGFLocustResistance;
+    font-size:15px;
+}
+.option-1:hover,
+.option-2:hover{
+    color:white;
+    cursor:pointer;
+    text-decoration:underline;
+    text-shadow:1px 1px black;
+}

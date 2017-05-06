@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Oops";
+}
+
+@Styles.Render("~/Content/Error/css")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 error-box">
+        <h3>There appears to have been a problem with either your computer or my ability to read. 
+            I apologise for this inconvenience.</h3>
+        <hr/>
+        <div class="row">
+            <div class="codes col-md-6">
+                <h4>The reason(s):</h4>
+                <hr />
+                <ul>
+                    <li>
+                        @ViewData["Code"]
+                    </li>
+                </ul>
+            </div>
+            <div class="tips col-md-6">
+                <h4>Unhelpful tip(s):</h4>
+                <hr />
+                <ul>
+                    <li>
+                        @ViewData["Tips"]
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr/>
+        <div class="col-md-offset-6 col-md-6 error-send">
+            <h3>If there is an issue that is causing you pain, and ridiculously hard to fix. Send it over 
+                it possibly might be sort of to a degree... Be my fault</h3>
+            <hr/>
+            <input type="button" class="form-control error-send-button" value="Make me Work" 
+                   onclick="window.location = '@Url.Action("SendError","Error", new { Exception = ViewData["Exception"], Sender = User.Identity.Name })'"/>
+            <div class="error-send-caveat">
+                I reserve the right to get righteously defensive when confronted with the very real aspect that I have caused issues. Thank you.
+            </div>
+        </div>
+    </div>
+</div>
+

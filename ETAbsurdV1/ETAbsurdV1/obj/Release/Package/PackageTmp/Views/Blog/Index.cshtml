@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@{ 
+    IEnumerable<ETAbsurdV1.Models.ETA_Blog> Blogs = ViewData["Blogs"] as IEnumerable<ETAbsurdV1.Models.ETA_Blog>;
+}
+
+
+@Styles.Render("~/Content/Blog/css")
+
+@Html.Partial("BannerAd")
+
+<div class="row blog-row">
+    <div class="col-md-offset-1 col-md-3 col-md-push-8 blog-section">
+        <div class="blog-options">
+            <h3 class="h-speak">Options</h3>
+            @if(ViewData["IsBlogger"].ToString() == "true")
+            {
+                <h4 class="h-speak">Welcome back <br/>@User.Identity.Name</h4>
+                <input type="button" class="form-control submit-button" value="New Blog" 
+                       onclick="window.location = '@Url.Action("NewBlog","Blog")'"/>
+            }
+            else
+            {
+                <input type="button" class="form-control submit-button" value="Start Blogging" 
+                       onclick="window.location = '@Url.Action("NewBlog","Blog", new { FirstBlog = true })'"/>
+            }
+            <h3 class="h-speak">Our Bloggers</h3>
+            <input type="button" class="form-control submit-button" value="Bloggers" 
+                   onclick="window.location = '@Url.Action("Bloggers","Blog", new { })'"/>
+        </div>
+    </div>
+    <div class="col-md-8 col-md-pull-4 blog-section">
+        @foreach (var item in Blogs)
+        {
+            <div class="col-md-4 blog-item" onclick="window.location = '@Url.Action("Blog","Blog", new { Id = @item.Id })'">
+                <div class="blog-item-box">
+                    <div class="blog-karma">
+                        <div class="karma-bar"></div>
+                    </div>
+                    <p class="blog-title">@item.Title</p>
+                    <img src="@item.Image1" class="responsive-image blog-image" alt="" />
+                    <article class="blog-text">
+                        @item.Body
+                    </article>                    
+                    <p class="blog-stamp">
+                        @item.Date
+                    <br/>
+                        @item.Author
+                    </p>                    
+                </div>
+            </div>          
+        }
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Blog/js")

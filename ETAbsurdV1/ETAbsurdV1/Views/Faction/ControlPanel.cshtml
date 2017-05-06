@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "ControlPanel";
+}
+
+@Html.Partial("BannerAd")
+
+@Styles.Render("~/Content/Faction/ControlPanel/css")
+
+<div class="row faction-row">
+    <div class="col-md-3 profile-box">
+        <h3 id="Faction-Panel-Title" class="h-speak">@ViewData["Faction"]</h3>
+        <img class="faction-profile-image" src="@ViewData["FactionImage"]" />
+        <hr/>
+        <h3 class="h-speak">Options</h3>
+        <h4 class="fc-panel-title">Start Thread</h4>
+        <input type="button" class="submit-button form-control" value="Create Thread" 
+               onclick="window.location = '@Url.Action("StartThread","Faction")'"/>
+        <h4 class="fc-panel-title">Your Stats</h4>
+        <input type="button" class="submit-button form-control" value="Statistics" />
+    </div>
+    <div class="col-md-8 col-md-push-1 profile-box">
+        <div class="user-box">
+            <h3 class="fc-panel-title">Fellow @ViewData["Faction"] Users</h3>
+            <div class="user-box-content" id="User-Box-Content"></div>
+            <div class="row">
+                <p><span class="link-button">See More</span></p>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="thread-box">
+                    <h3 class="fc-panel-title">@ViewData["Faction"] Meta</h3>
+                    <div id="Thread-Box-Content"></div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="post-box">
+                    <h3 class="fc-panel-title">Activities</h3>
+                    <div id="Post-Box-Content"></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+@Scripts.Render("~/Scripts/Faction/ControlPanel/js")

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@Styles.Render("~/Content/Faction/Index/css")
+                        
+
+@Html.Partial("BannerAd")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 faction-row">
+        <h3 class="h-speak">Phylisophical Factions</h3>
+        <div class="row">
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder">
+                <img src="~/Faction/Logos/Theology.jpg" class="faction-image"/>
+                <h4 class="h-speak">Theology</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder">
+                <img src="~/Faction/Logos/Narcassism.jpg"  class="faction-image"/>
+                <h4 class="h-speak">Narcassism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder">
+                <img src="~/Faction/Logos/Agnostic.jpg"  class="faction-image"/>
+                <h4 class="h-speak">Agnostic</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder">
+                <img src="~/Faction/Logos/Nihilism.jpg"  class="faction-image"/>
+                <h4 class="h-speak">Nihilism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder">
+                <img src="~/Faction/Logos/PostModernism.jpg"  class="faction-image"/>
+                <h4 class="h-speak">Modernism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder">
+                <img src="~/Faction/Logos/Solipsism.jpg"  class="faction-image"/>
+                <h4 class="h-speak">Solipsism</h4>
+            </div>
+        </div>
+
+        <hr/>
+
+        
+    </div>    
+</div>
+
+
+@Scripts.Render("~/Scripts/Faction/Index/js");

@@ -1,0 +1,122 @@
+﻿
+.faction-row{
+    margin:20px;
+    padding:25px;
+    border-radius:15px;
+    background-color:#3A3A3C;
+    box-shadow:5px 5px 7px 0px black;
+
+    color:white;
+    text-shadow: 1px 1px black;
+}
+
+.profile-box{
+    background-color:#3A3A3C;
+    box-shadow:5px 5px 7px 0px black;
+    border-radius:15px;
+    padding-bottom:20px;
+    margin:0px;
+}
+
+.faction-profile-image{
+    max-width:100%;
+    margin:auto;
+    position:relative;
+    display:block;
+}
+
+.fc-panel-title{
+    font-family:CGFLocustResistance;
+    text-decoration:underline;
+}
+
+.user-box{
+    padding-bottom:40px;
+}
+
+.user-box-content{
+    position:relative;
+}
+
+.faction-singleuser,
+.faction-thread-post,
+.faction-post{
+    box-shadow:5px 5px 7px 0px black;
+    border-radius:15px;
+    cursor:pointer;
+        transition:1s ease;
+    -webkit-transition:1s ease;
+    -moz-transition:1s;
+}
+.faction-thread-post{
+    font-family:'Philosopher-Regular';
+    text-align:center;
+    padding:25px;
+}
+.faction-user-avatar-box{
+    padding:10px;
+}
+.faction-user-avatar-image{
+    display:block;
+    margin:auto;
+    max-width:100%;
+}
+
+/*UserName*/
+.user-name-box{
+    position:relative;
+    top:0;
+    z-index:100;
+    opacity:0;
+
+     transition:1s ease;
+    -webkit-transition:1s ease;
+    -moz-transition:1s;
+
+    font-family:CGFLocustResistance;
+    font-size:50%;
+}
+
+.faction-singleuser:hover > .user-name-box{ 
+    transition:1s ease;
+    -webkit-transition:1s ease;
+    -moz-transition:1s;
+
+    display:block;
+    opacity:1;
+
+     transform:scale(1.7);
+    -webkit-transform:scale(1.7);
+    -moz-transform:scale(1.7);
+}
+.faction-singleuser:hover,
+.faction-thread-post:hover{
+     transition:1s ease;
+    -webkit-transition:1s ease;
+    -moz-transition:1s;
+
+     box-shadow:5px 5px 7px 0px #EEBA4C;
+}
+
+.faction-username{
+    text-align:center;
+    position:relative;
+}
+
+
+.link-button {
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px #EEBA4C;
+    float: right;
+    text-align: right;
+    padding-right:10px;
+}
+.link-button:hover{
+    text-decoration:underline;
+}
+.link-button:active{
+    text-shadow: 1px 1px rgb(127, 255, 212);
+    color:#EEBA4C;
+}
+

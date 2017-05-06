@@ -1,0 +1,102 @@
+﻿@model ETAbsurdV1.Models.BlogStart
+@{
+    ViewBag.Title = "NewBlog";
+}
+
+@Styles.Render("~/Content/Blog/css")
+
+@Html.Partial("BannerAd")
+
+<div class="row overflow-control">
+    <div class="col-md-offset-2 col-md-8 blog-creation-box spawn-in">
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <p onclick="NightMode()" class="h-speak advanced">writing in the dark</p>
+            </div>
+            <h2 class="h-speak">Title your blog</h2>
+            @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Name, "", new { @class = "text-danger validation-text" })
+            <h2 class="h-speak">Body</h2>
+            @Html.TextAreaFor(p => p.Body, new { @class = "form-control blog-body", @rows = 10, })
+            @Html.ValidationMessageFor(p => p.Body, "", new { @class = "text-danger validation-text" })
+            <hr />
+            <div class="row">
+                <h4 class="h-speak">
+                    Feel free to place images in your body to illustrate yourself <br /> I would recommend
+                    uploading your own images as others online could be taken down leaving your blog imageless
+                </h4>
+                <div class="col-sm-4 image-upload">
+                    <h4 class="h-speak">Image 1</h4>
+                    <div class="image-url">
+                        @Html.TextBoxFor(p => p.Image1, new { @class = "form-control" })
+                    </div>
+                    <div class="image-upload">
+                        <span class="btn btn-default btn-file">
+                            Browse...<input type="file" name="fileToUpload" id="fileToUpload-1" onchange="fileSelected(this);" accept="image/*" />
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-4 image-upload">
+                    <h4 class="h-speak">Image 2</h4>
+                    <div class="image-url">
+                        @Html.TextBoxFor(p => p.Image2, new { @class = "form-control" })
+                    </div>
+                    <div class="image-upload">
+                        <span class="btn btn-default btn-file">
+                            Browse...<input type="file" name="fileToUpload" id="fileToUpload-2" onchange="fileSelected(this);" accept="image/*" />
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-4 image-upload">
+                    <h4 class="h-speak">Image 3</h4>
+                    <div class="image-url">
+                        @Html.TextBoxFor(p => p.Image3, new { @class = "form-control" })
+                    </div>
+                    <div class="image-upload">
+                        <span class="btn btn-default btn-file">
+                            Browse...<input type="file" name="fileToUpload" id="fileToUpload-3" onchange="fileSelected(this);" accept="image/*" />
+                        </span>
+                    </div>
+                </div>
+                <h4 id="Progress" class="h-speak"></h4>
+                <h4 id="uploadPercentage" class="h-speak"></h4>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <input type="submit" class="form-control submit-button" value="submit" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<div class="help-button">
+    <p class="h-speak">Guide</p>
+</div>
+
+<div class="blog-guide spawn-in">
+    <ul class="blog-guide-text">
+        <h3 class="h-speak">Useful tips</h3>
+        <li>Please be grammatically correct; understand that your opinions are your own and to of course, be proud of them.</li>
+        <li>The title should be a short sentence to give an idea of what this is all about.</li>
+        <li>The image you have uploaded in Slot 1 will be the top most image in line with your title.</li>
+        <li>
+            If you would like any of those images to be in your text follow this example to acheive this:
+            <br />
+            <span>Text content. ~#Img1#~ Text Content</span>
+            <br />
+            Interchanging the number to which ever image you would like to use in that slot.
+        </li>
+        <hr/>
+        <li>Have at it.</li>
+        <li>
+            Click anywhere to remove this message.
+        </li>
+    </ul>
+</div>
+
+@Scripts.Render("~/Scripts/Blog/NewBlog/js")
+@Scripts.Render("~/Scripts/Blog/Edit.js")

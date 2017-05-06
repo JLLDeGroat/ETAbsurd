@@ -1,0 +1,30 @@
+﻿@model ETAbsurdV1.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@Styles.Render("~/Content/Login/css")
+
+<div class="row overflow-control">
+    <div class="col-md-offset-4 col-md-4 col-sm-12 form spawn-in">
+        <h2>Login</h2>
+        <hr />
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true, "This is not the best start is it.");
+            <h2>@ViewData["Reset"]</h2>
+            <h2>USER NAME</h2>
+            @Html.TextBoxFor(p => p.UserName, new { @class = "form-control" })
+            <h2>PASSWORD</h2>
+            @Html.PasswordFor(p => p.Password, new { @class = "form-control" })
+            <hr />
+            <input type="submit" value="Sign In" class="form-control submit-button" />
+        }
+
+        <div class="options">
+            <a class="option-1" onclick="window.location = '@Url.Action("Register","Login")'">Register</a><br />
+            <a class="option-2" onclick="window.location = '@Url.Action("PasswordRetrieval", "Login")'" >Forgot Password</a>
+        </div>
+    </div>
+</div>

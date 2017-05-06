@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "CrossWord";
+    IEnumerable<ETAbsurdV1.Code.Puzzle.PuzzleCrossWord> POS = ViewData["PosWord"] as IEnumerable<ETAbsurdV1.Code.Puzzle.PuzzleCrossWord>;
+
+    List<string> Across = ViewData["Across"] as List<string>;
+    List<string> Down = ViewData["Down"] as List<string>;
+}
+@Styles.Render("~/Content/CrossWord/css")
+@Styles.Render("~/Content/CrossWord/solve/css")
+<div class="box">
+    <h3 class="h-speak">CrossWord</h3>
+    <h3 class="h-speak" id="Grid-Size">@ViewData["SquaresX"] X @ViewData["SquaresY"]</h3>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="box">
+            <div class="cross-word-box">
+                @for (var i = 1; i <= Convert.ToInt32(ViewData["TotalSquares"]); i++)
+                {
+                    bool Made = false;
+                    foreach (var item in POS)
+                    {
+                        if (i == item.Position)
+                        {Made = true;<div class="single-box"><div class="box-number">@item.Question</div><div id="Box-Letter-@item.Position" class="box-letter"></div></div>}
+                    }
+                    if (Made == false)
+                    {<div class="single-box unused"><div class="box-number"></div></div>}
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="box">
+            <h3 class="h-speak">Questions</h3>
+            <h4>Across</h4>
+            @foreach (var item in Across)
+            {
+                <p>@item</p>
+            }
+            <h4>Down</h4>
+            @foreach (var item in Down)
+            {
+                <p>@item</p>
+            }
+        </div>
+        <hr/>
+        <div class="box">
+            <input type="button" class="submit-button form-control" value="check answers"
+                   onclick="getAnswers()" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="box">
+            <article>Please do not resize your window whilst attempting the cross word as this will leave you with very undesired side effects</article>
+        </div>
+    </div>
+</div>
+
+
+<div class="letter-enter-box hdn box spawn-in" id="Enter-Letter-Box">
+    <h3 class="h-speak">Enter Letter</h3>
+    <input type="text" class="form-control letter-input" />
+</div>
+
+@Scripts.Render("~/Scripts/Puzzle/Solve/js")

@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> Threads = ViewData["Threads"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+    IEnumerable<ETAbsurdV1.Code.ForumClass> CategoryList = ViewData["CategoryList"] as IEnumerable<ETAbsurdV1.Code.ForumClass>;
+
+}   
+<script src="http://www.google.com/jsapi"></script>
+@Styles.Render("~/Content/Forum/css")
+
+@Html.Partial("BannerAd")
+
+ <!-- Top four -->     
+<div class="row overflow-control">
+    <div class="row option-row">
+        <div class="col-md-6">
+            <input type="button" class="btn btn-lg menu-btn" value="Start Topic" 
+                   onclick="window.location = '@Url.Action("Start","Forum")'"/>
+        </div>
+        <div class="col-md-6">
+            <input type="button" class="btn btn-lg menu-btn" value="Start Category" 
+                   onclick="window.location = '@Url.Action("CategorySuggest","Forum")'"/>
+        </div>
+    </div>
+    <hr/>
+    @foreach (var item in CategoryList)
+    {
+        <div class="col-md-3 overflow-control" onclick="window.location = '@Url.Action("Category","Forum",new { ClickedCategory = @item.CategoryName })'">
+            <div class="category-top-section">
+                <p class="category-top-name">@item.CategoryName</p>
+                <p class="category-top-details">@item.CategoryTotal %</p>
+                <p class="latest">Latest</p>
+                <hr />
+                @foreach(var t in Threads.Where(x => x.Category.ToLower() == item.CategoryName.ToLower())) {
+                    int? x = 0;
+                    
+                        <div class="row">
+                            <div class="col-sm-2">                        
+                            </div>
+                            <div class="col-sm-10">
+                                <h4>@t.Name</h4>                       
+                            </div>                    
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                @if (@t.AuthorAvatar != null)
+                                {
+                                    <img src="@t.AuthorAvatar" class="forum-thumb-img" alt="Avatar" />
+                                }
+                                else
+                                {
+                                    <img src="" class="forum-thumb-img" alt="Placeholder" />
+                                }
+                            </div>
+                            <div class="col-sm-10">
+                                <p>@t.Body</p>
+                            </div>
+                        </div>
+                    
+                }               
+            </div>
+        </div>
+    }
+</div>
+<hr />
+@Scripts.Render("~/Scripts/Forum/js")

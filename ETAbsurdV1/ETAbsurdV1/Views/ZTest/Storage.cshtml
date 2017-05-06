@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Storage";
+}
+
+<h2>Storage</h2>
+
+<div class="col-md-4">
+    <h3>Store Blogs</h3>
+    <input type="button" class="submit-button form-control" value="Blogs Storage"
+           onclick="window.location = '@Url.Action("StoreBlogs","ZTest")'" />
+    <hr/>
+    <input type="button" class="submit-button form-control" value="Reupload Blog"
+           onclick="window.location = '@Url.Action("ReuploadBlog", "Ztest")'" />
+</div>

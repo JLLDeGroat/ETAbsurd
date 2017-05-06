@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "BackupUser";
+}
+
+<h2>BackupUser</h2>
+
+
+<input type="button" class="submit-button form-control" value="Backup" onclick="window.location = '@Url.Action("BackupUser", "ZTest", new { Order = "Transfer" })'"/>
+<hr/>
+<input type="button" class="submit-button form-control" value="Get From Back Up" onclick="window.location = '@Url.Action("BackupUser","Ztest",new { Order = "BackTransfer" })'" />

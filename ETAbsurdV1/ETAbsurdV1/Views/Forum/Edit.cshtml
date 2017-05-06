@@ -1,0 +1,103 @@
+﻿@model ETAbsurdV1.Models.ForumEdit
+@{
+    ViewBag.Title = "Edit";
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> Thread = ViewData["Thread"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Post> Post = ViewData["Post"] as IEnumerable<ETAbsurdV1.Models.ETA_Post>;
+}
+
+@Scripts.Render("~/bundles/JqueryUI")
+@Styles.Render("~/Content/Forum/css")
+@Styles.Render("~/Content/Forum/Thread/css")
+
+@Html.Partial("BannerAd")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 forum-row overflow-control">        
+        @foreach (var item in Thread)
+        {            
+                <div class="row thread-post">
+                    <div class="row">
+                        <div class="col-xs-11 col-sm-2 avatar-section">                            
+                            <p>
+                                @item.Author
+                            </p>
+                            @if (@item.AuthorAvatar != null)
+                            {
+                                <img src="@item.AuthorAvatar" class="thread-image" alt="Avatar" />
+                            }
+                            else
+                            {
+                                <img src="" class="responsive-image" alt="Placeholder" />
+                            }                           
+                        </div>
+                        <div class="col-xs-11 col-sm-9 body-section">
+                            <p class="post-body">@item.Body</p>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.TextAreaFor(p => p.Body, new { @class = "form-control", @rows = "10" })
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-offset-3 col-sm-6">
+                                        <input type="submit" class="submit-button form-control" value="Edit" />
+                                    </div>
+                                </div>                                
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-7">
+                            
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="forum-date">@item.Date</p>
+                        </div>
+                    </div>                   
+                </div>
+           
+        }
+        @if (Post != null)
+        {
+            foreach (var item in Post)
+            {
+               
+                    <div class="row thread-post">
+                        <div class="row">
+                            <div class="col-xs-11 col-sm-2 avatar-section">                                
+                                <p>
+                                    @item.Author
+                                </p>
+                                @if (@item.AuthorAvatar != null)
+                                {
+                                    <img src="@item.AuthorAvatar" class="thread-image" alt="Avatar" />
+                                }
+                                else
+                                {
+                                    <img src="" class="responsive-image" alt="Placeholder" />
+                                } 
+                            </div>
+                            <div class="col-xs-11 col-sm-9 body-section">
+                                <p class="post-body">@item.Body</p>
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.TextAreaFor(p => p.Body, new { @class = "form-control" })
+                                    <hr />
+                                    <input type="submit" class="submit-button form-control" value="Edit" />
+                                }
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                            </div>
+                            <div class="col-sm-10">
+                                <p class="forum-date">@item.Date</p>
+                            </div>
+                        </div>                        
+                    </div>                
+            }
+        }
+        
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Forum/Edit/js")

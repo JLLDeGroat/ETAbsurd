@@ -1,0 +1,223 @@
+﻿@model ETAbsurdV1.Models.ThreadPostModel
+
+@{
+    ViewBag.Title = "Thread";
+    IEnumerable<ETAbsurdV1.Models.ETA_Thread> Thread = ViewData["Thread"] as IEnumerable<ETAbsurdV1.Models.ETA_Thread>;
+    IEnumerable<ETAbsurdV1.Models.ETA_Post> Posts = ViewData["Posts"] as IEnumerable<ETAbsurdV1.Models.ETA_Post>;
+    IEnumerable<ETAbsurdV1.Models.ThreadPosterInfo> PostInfo = ViewData["PostInfo"] as IEnumerable<ETAbsurdV1.Models.ThreadPosterInfo>;
+    IEnumerable<ETAbsurdV1.Models.ETA_User> ThisUser = ViewData["ThisUser"] as IEnumerable<ETAbsurdV1.Models.ETA_User>;
+}
+
+@Scripts.Render("~/bundles/JqueryUI")
+@Styles.Render("~/Content/Forum/css")
+@Styles.Render("~/Content/Forum/Thread/css")
+
+@Html.Partial("BannerAd")
+@Html.Partial("VoteFail")
+@Html.Partial("Crumbs")
+@Html.Partial("Report")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 forum-row overflow-control">
+        <div class="row thread-row">
+            <p class="thread-title">@ViewData["ThreadName"].ToString()</p>
+            <hr />
+        </div>
+        @foreach (var item in Thread)
+        {
+            foreach (var info in PostInfo.Where(i => i.UserName.ToLower() == item.Author.ToLower()))
+            {
+                <div class="row thread-post">
+                    <div class="row">
+                        <div class="col-xs-11 col-sm-2 avatar-section">
+                            <span class="tag">@info.UserTag</span>
+                            <p>
+                                @item.Author
+                            </p>
+                            @if (@item.AuthorAvatar != null)
+                            {
+                                <img src="@info.Avatar" class="thread-image" alt="Avatar" />
+                            }
+                            else
+                            {
+                                <img src="" class="responsive-image" alt="Placeholder" />
+                            }
+                            <p>
+                                Posts: @info.UserPosts<br />
+                                Threads: @info.UserThreads
+                            </p>
+                            <p>Joined: @info.JoinDate</p>
+                        </div>
+                        <div class="col-xs-11 col-sm-9 body-section">
+                            <p class="post-body">@item.Body</p>
+                            @if(item.EditAmounts > 0)
+                            {
+                                <p class="forum-date">Last Edited: <span>@item.Edited.ToString()</span></p>
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-7">                           
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <span class="post-option" onclick="QuoteClicked('@item.Body', '@item.Author', '@item.Date')">Quote.</span>
+                                if (User.Identity.Name != item.Author)
+                                {
+                                    <span class="post-option" onclick="ReportClicked('@item.Author', '@item.Body')">Report This Thread</span>
+                                }
+                            }
+                            @if (User.Identity.Name == item.Author)
+                            {
+                                <span class="post-option" onclick="window.location = '@Url.Action("Thread","Forum", new { Edit = "Thread", EditId = item.Id })'">Edit.</span>
+                            }
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="forum-date">@item.Date</p>
+                        </div>
+                    </div>
+                    <div class="voter">
+                        <div class="circle up-vote" onclick="voteClicked('@item.Id','up', 'thread', this)">
+                            <div class="triangle"></div>
+                        </div>
+                        <div class="vote-section">@info.Votes</div>
+                        <div class="circle down-vote" onclick="voteClicked('@item.Id','down', 'thread', this)">
+                            <div class="triangle-down"></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        @if (Posts != null)
+        {
+            foreach (var item in Posts)
+            {
+                foreach (var info in PostInfo.Where(i => i.UserName.ToLower() == item.Author.ToLower()))
+                {
+                    <div class="row thread-post">
+                        <div class="row">
+                            <div class="col-xs-11 col-sm-2 avatar-section">
+                                <span class="tag">@info.UserTag</span>
+                                <p>
+                                    @item.Author
+                                </p>
+                                @if (@item.AuthorAvatar != null)
+                                {
+                                    <img src="@item.AuthorAvatar" class="thread-image" alt="Avatar" />
+                                }
+                                else
+                                {
+                                    <img src="" class="responsive-image" alt="Placeholder" />
+                                }
+                                <p>Posts: @info.UserPosts<br/>
+                                    Threads: @info.UserThreads</p>
+                                <p>Joined: @info.JoinDate</p>
+                            </div>
+                            <div class="col-xs-11 col-sm-9 body-section">
+                                @if (item.Quote != null)
+                                {
+                                    <div class="post-quote">
+                                        <div class="quote-section">
+                                            @item.Quote
+                                        </div>
+                                    </div>
+                                }
+                                <p class="post-body">@item.Body</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-offset-2 col-sm-7">                               
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <span class="post-option" onclick="QuoteClicked('@item.Body', '@item.Author', '@item.Date')">Quote.</span>
+                                    if (User.Identity.Name != item.Author)
+                                    {
+                                        <span class="post-option" onclick="ReportClicked('@item.Author', '@item.Body')">Report This Post</span>
+                                    }
+                                }
+                                @if (User.Identity.Name == item.Author)
+                                {
+                                    <span class="post-option" onclick="window.location = '@Url.Action("Thread","Forum", new { Edit = "Thread", EditId = item.Id })'">Edit.</span>
+                                }
+                            </div>
+                            <div class="col-sm-3">
+                                <p class="forum-date">@item.Date</p>
+                            </div>
+                        </div>
+                        <div class="voter">
+                            <div class="circle up-vote" onclick="voteClicked('@item.Id','up', 'post', this)">
+                                <div class="triangle"></div>
+                            </div>
+                            <div class="vote-section">@info.Votes</div>
+                            <div class="circle down-vote" onclick="voteClicked('@item.Id','down', 'post', this)">
+                                <div class="triangle-down"></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        }
+        <div class="row">
+            @if (User.Identity.IsAuthenticated)
+            {
+                foreach (var item in ThisUser)
+                {
+
+                <div class="row thread-post">
+                    <div class="col-xs-11 col-sm-2 avatar-section">
+                        <span class="tag">@item.RepTag</span>
+                        <p>
+                            @item.Username
+                        </p>
+                        @if (@item.Avatar != null)
+                        {
+                            <img src="@item.Avatar" class="thread-image" alt="Avatar" />
+                        }
+                        else
+                        {
+                            <img src="" class="responsive-image" alt="Placeholder" />
+                        }
+                        <p>
+                            Posts: @item.Posts<br />
+                            Threads: @item.Threads
+                        </p>
+                        <p>Joined: @item.RegisterDate.ToString().Substring(0,10)</p>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="thread-post-section">
+                            @using (Html.BeginForm())
+                            {
+                                <p>@User.Identity.Name<span>'s reply</span></p>
+                                <div id="Quote-Box"></div>
+                                @Html.TextAreaFor(p => p.Quote, new { @class = "form-control quote-area-text" })
+                                @Html.TextAreaFor(p => p.Post, new { @class = "form-control post-area-text" })
+                                @Html.ValidationMessageFor(p => p.Post, "", new { @class = "text-danger validation-text" })
+                                <div class="row">
+                                    <div class="col-sm-offset-6 col-sm-6">
+                                        <hr />
+                                        <input type="submit" class="submit-button form-control" value="Submit" id="Post-Submit" />
+                                        <div class="post-submit-load">
+                                            <div class="post-load-line"></div>
+                                            <div class="post-load-blip"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                        }
+                    }
+                    else
+                    {
+                <h3 class="h-speak">
+                    Please <span class="login-option"
+                                 onclick="window.location = '@Url.Action("Login", "Login", new { SentFromThread = ViewData["ThreadId"] })'">
+                        Login
+                    </span> to speak your mind
+                </h3>
+            }
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Forum/Thread/js")

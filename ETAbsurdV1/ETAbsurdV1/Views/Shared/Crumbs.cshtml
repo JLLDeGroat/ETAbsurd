@@ -1,0 +1,49 @@
+﻿
+@{ 
+    string Action = @ViewContext.RouteData.GetRequiredString("action");
+    string Controller = @ViewContext.RouteData.GetRequiredString("controller");
+    
+
+}
+
+
+
+<p class="crumbs">
+    <span class="crumb" onclick="window.location = '@Url.Action("Index", @Controller)'">
+        @Controller
+    </span>
+    >>
+    <span class="crumb" onclick="window.location = '@Url.Action(Action, @Controller)'">
+        @Action
+    </span>
+    >>
+
+    @if (ViewData["ClickedCategory"] != null)
+    {
+        <span class="crumb" onclick="window.location = '@Url.Action("Category","Forum", new { ClickedCategory = ViewData["ClickedCategory"].ToString() })'">
+            @ViewData["ClickedCategory"].ToString()
+        </span>
+    }
+
+    @if (ViewData["ThreadCategory"] != null)
+    {
+        <span class="crumb" onclick="window.location = '@Url.Action("Category","Forum", new { ClickedCategory = ViewData["ThreadCategory"].ToString() })'">
+            @ViewData["ThreadCategory"].ToString()
+        </span>
+    }
+    <span class="crumb">>></span>
+    @if (ViewData["ThreadName"] != null)
+    {
+        <span class="crumb">
+            @if (ViewData["ThreadName"].ToString().Length >= 25)
+            {
+                @ViewData["ThreadName"].ToString().Substring(0, 20);
+                <span>...</span>
+            }
+            else
+            {
+                @ViewData["ThreadName"].ToString()
+            }
+        </span>
+    }
+</p>

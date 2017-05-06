@@ -1,0 +1,107 @@
+﻿7
+@{
+    ViewBag.Title = "Index";
+}
+@Styles.Render("~/Content/Faction/Index/css")
+
+@Html.Partial("BannerAd")
+@Html.Partial("NoticeBoard")
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 faction-row">
+        <h3 class="h-speak">Phylosophical Factions</h3>
+        <h1 class="h-speak">Choose your faction</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <article class="faction-intro-text">
+                    This is the first time you have ended up/entered here, if you would like to take part in the discussions here, aimed at not talking about what to think about about certain subjects.
+                    To not manipulate you into hating a particlur brand, or to like another... Rather this hopefully will be an additional or a starting point to giving you an idea on how you already think.
+                    Phylosophy is a vital part on realising results, how you got to them and to rationalise what facts and figures can not.
+                </article>
+                <article class="faction-intro-text">
+                    Here, I do not want to convert you to a type of thinking, rather slot yourself in one you already are to begin with, just read... Join in the conversation and slowly conclude
+                    if you were initially correct, or in fact that you find you think differently to the perception you have of yourself. You may think yourself of a narcasist however come to find
+                    your more a theologist where infact you find you believe in something higher than yourself... Or even conclude you are the only thing in existence.
+                </article>
+                <article class="faction-intro-text">
+                    Phylosophical discussions have been going on since civilisation began. Many subjects have been discussed from society, ethics, science to emotions and phylosophy itself. No topic is barred or off topic.
+                    Again its not what you discuss its the decisions made beforehand in order to come to your conclusion.
+                </article>
+            </div>
+        </div>
+        <hr />
+        <div class="row faction-bar-box">
+            <div class="faction-bar">
+                <div class="faction-bar-segments" id="Faction-User">
+                    <div class="faction-segment faction-1"></div>
+                    <div class="faction-segment faction-2"></div>
+                    <div class="faction-segment faction-3"></div>
+                    <div class="faction-segment faction-4"></div>
+                    <div class="faction-segment faction-5"></div>
+                    <div class="faction-segment faction-6"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Theology')">
+                <img src="~/Faction/Logos/Theology.jpg" class="faction-image" />
+                <h4 class="h-speak">Theology</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Narcassism')">
+                <img src="~/Faction/Logos/Narcassism.jpg" class="faction-image" />
+                <h4 class="h-speak">Narcassism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Agnostic')">
+                <img src="~/Faction/Logos/Agnostic.jpg" class="faction-image" />
+                <h4 class="h-speak">Agnostic</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Nihilism')">
+                <img src="~/Faction/Logos/Nihilism.jpg" class="faction-image" />
+                <h4 class="h-speak">Nihilism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('PostModernism')">
+                <img src="~/Faction/Logos/PostModernism.jpg" class="faction-image" />
+                <h4 class="h-speak">Modernism</h4>
+            </div>
+            <div class="col-xs-4 col-md-2 col-sm-2 faction-image-holder"
+                 onclick="MoreInfo('Solipsism')">
+                <img src="~/Faction/Logos/Solipsism.jpg" class="faction-image" />
+                <h4 class="h-speak">Solipsism</h4>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <article class="faction-intro-text">
+                    If there is a faction that is not listed above, that you already feel best suits your thought process please let me know, you can do this by clicking the META tag at the top
+                    of the screen on the navigation bar. This will bring you to a request page which will allow you note down and send your request in. Once reviewed it will be added to the list
+                    of available factions.
+                </article>
+                <article class="faction-intro-text">
+                    In the meta section of your chosen faction, you can introduce your perception of the faction itself. If We can build a big enough dictionary of understandings and reasonings behind each
+                    faction we can help future new and old users better understand themselves and others around them. Use citations, quotes and ideas from famours phylosophers or give your ideas based on the
+                    faction. No statement is wrong.
+                </article>
+                <article class="faction-intro-text">
+                    There are also a number of additional sections and benefits to choosing a faction, there are some lateral thinking puzzles, riddles and ideas to keep you occupied for the duration.
+                </article>
+            </div>
+            <div class="col-md-6">
+                <article class="faction-intro-text">
+                    Click on the images to find out more about each one, if you have made a decision click on the image and click 'Choose'.
+                </article>
+            </div>
+            <div class="col-md-6">
+                <article class="faction-intro-text">
+                    Once chosen you can see your contribution to your faction and what is being discussed.
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Scripts/Faction/Index/js");
